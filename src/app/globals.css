@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    font-size: 16px;
+    line-height: 16px;
+    color: #111;
+    overflow-x: hidden;
+}
+
+:root {
+    --green: #76AB40;
+    --orange: #EF6D44;
+    --black: #111;
+    --secondary: #676767;
+    --grey: #9FA09C;
+}
+
+.container {
+    max-width: 1442px !important;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.text-slider {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 700;
+}
+
+.text-cate {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.text-subheading {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--green);
+    line-height: normal;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.text-heading {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+.text-title {
+    color: var(--secondary);
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-button {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.text-caption {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+
+/* Sub menu header */
+.header-menu {
+    box-shadow: 0px 3px 15px rgba(138, 159, 168, 0.15);
+}
+
+.menu-main .sub-menu {
+    box-shadow: 0px 5px 25px 0px rgba(138, 159, 168, 0.25);
+    padding: 10px 0;
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top center;
+}
+
+.menu-main>ul>li:hover>a,
+.menu-main .sub-menu>li:hover a {
+    color: var(--green);
+}
+
+.menu-main>ul>li:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scaleY(1);
+}
+
+.sub-menu li a {
+    padding: 8px 24px;
+    white-space: nowrap;
+    display: inline-block;
+}
