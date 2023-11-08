@@ -1,7 +1,11 @@
+import TopNavThree from "@/components/Headers/TopNav/TopNavThree"
+import MenuThree from "@/components/Headers/Menu/MenuThree"
+
 const Home3 = () => {
     return (
         <>
-            <h1>Home3 Page</h1>
+            <TopNavThree />
+            <MenuThree />
         </>
     )
 }

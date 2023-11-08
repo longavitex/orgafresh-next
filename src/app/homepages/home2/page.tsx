@@ -1,7 +1,11 @@
+import TopNavTwo from "@/components/Headers/TopNav/TopNavTwo"
+import MenuTwo from "@/components/Headers/Menu/MenuTwo"
+
 const Home2 = () => {
     return (
         <>
-            <h1>Home2 Page</h1>
+            <TopNavTwo />
+            <MenuTwo />
         </>
     )
 }

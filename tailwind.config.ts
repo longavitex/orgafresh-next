@@ -25,6 +25,7 @@ const config: Config = {
       'white': '#ffffff',
       'green': '#76AB40',
       'orange': '#EF6D44',
+      'brown': '#99412B',
       'black': '#1D1D1D',
       'grey': '#9FA09C',
       'secondary': '#676767',

@@ -3,22 +3,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 
-const MenuOne = () => {
+const MenuTwo = () => {
   return (
     <>
       <div className='header-menu style-one md:h-[80px] h-[60px]'>
         <div className="container mx-auto h-full">
           <div className="header-main flex justify-between h-full relative">
-            <Link href={'/'} className='flex items-center justify-center h-full w-fit'>
-              <Image
-                src="/images/Logo.png"
-                width={172}
-                height={43}
-                alt="Logo"
-                className='max-md:w-[120px]'
-              />
-            </Link>
-            <div className="menu-main xl:absolute xl:left-1/2 xl:top-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 h-full max-lg:hidden">
+            
+            <div className="menu-main h-full max-lg:hidden">
               <ul className='flex items-center gap-10 h-full'>
                 <li className='h-full relative'>
                   <a href="#!" className='text-button duration-300 h-full flex items-center justify-center gap-1'>
@@ -27,12 +19,12 @@ const MenuOne = () => {
                   </a>
                   <ul className='absolute sub-menu bg-white duration-300'>
                     <li>
-                      <Link href="/" className='text-button duration-300 active'>
+                      <Link href="/" className='text-button duration-300'>
                         Home Smoothies
                       </Link>
                     </li>
                     <li>
-                      <Link href="/homepages/home2" className='text-button duration-300'>
+                      <Link href="/homepages/home2" className='text-button duration-300 active'>
                         Home Fruit Vegetables
                       </Link>
                     </li>
@@ -93,23 +85,32 @@ const MenuOne = () => {
                 </li>
               </ul>
             </div>
-            <div className="right-content flex gap-6">
+            <Link href={'/'} className='flex items-center justify-center h-full w-fit xl:absolute xl:left-1/2 xl:top-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2'>
+              <Image
+                src="/images/Logo.png"
+                width={172}
+                height={43}
+                alt="Logo"
+                className='max-md:w-[120px]'
+              />
+            </Link>
+            <div className="right-content flex gap-8">
               <div className="login-block flex items-center justify-center max-md:hidden">
                 <Link href={'/login'} className='text-caption text-secondary'>Login/Register</Link>
               </div>
               <div className="list-icon flex">
-                <div className="max-[450px]:hidden search-icon flex items-center justify-center md:pl-7 md:pr-7 md:border-x pl-2.5 pr-2.5 border-line cursor-pointer">
+                <div className="max-[450px]:hidden search-icon flex items-center justify-center md:pr-5 pr-3 cursor-pointer">
                   <Icon.MagnifyingGlass size={24} color='black'/>
                 </div>
-                <div className="max-[450px]:hidden wishlist-icon flex items-center justify-center md:pl-7 md:pr-7 md:border-r pl-2.5 pr-2.5 border-line relative cursor-pointer">
+                <div className="max-[450px]:hidden wishlist-icon flex items-center justify-center md:pr-7 pr-4 relative cursor-pointer">
                   <Icon.Heart size={24} color='black' />
-                  <span className="quantity wishlist-quantity absolute md:right-5 md:top-5 right-1 top-2.5 text-xs text-white bg-orange px-1.5 pt-0.5 pb-0.5 rounded-full">0</span>
+                  <span className="quantity wishlist-quantity absolute md:right-5 md:top-5 right-2 top-2.5 text-xs text-white bg-orange px-1.5 pt-0.5 pb-0.5 rounded-full">0</span>
                 </div>
-                <div className="max-[450px]:hidden cart-icon flex items-center justify-center md:pl-7 md:pr-7 pl-2.5 pr-2.5 relative cursor-pointer">
+                <div className="max-[450px]:hidden cart-icon flex items-center justify-center relative cursor-pointer">
                   <Icon.Bag size={24} color='black' />
-                  <span className="quantity cart-quantity absolute md:right-5 md:top-5 right-1 top-2.5 text-xs text-white bg-orange px-1.5 pt-0.5 pb-0.5 rounded-full">0</span>
+                  <span className="quantity cart-quantity absolute md:top-5 -right-2 top-2.5 text-xs text-white bg-orange px-1.5 pt-0.5 pb-0.5 rounded-full">0</span>
                 </div>
-                <div className="menu-bumburger-icon flex items-center justify-center md:pl-7 md:pr-3 pl-2.5 lg:hidden cursor-pointer">
+                <div className="menu-bumburger-icon flex items-center justify-center md:pl-7 pl-4 lg:hidden cursor-pointer">
                   <Icon.List size={24} color='black' />
                 </div>
               </div>
@@ -122,4 +123,4 @@ const MenuOne = () => {
   )
 }
 
-export default MenuOne
+export default MenuTwo
