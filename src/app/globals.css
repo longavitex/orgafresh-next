@@ -30,7 +30,8 @@ select {
     --green: #76AB40;
     --orange: #EF6D44;
     --brown: #99412B;
-    --black: #111;
+    --black: #1D1D1D;
+    --white: #FFFFFF;
     --secondary: #676767;
     --grey: #9FA09C;
 }
@@ -40,11 +41,12 @@ select {
     width: 100%;
     padding-right: 16px;
     padding-left: 16px;
+    margin: 0 auto;
 }
 
 .text-slider {
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 52px;
+    line-height: 62px;
     font-weight: 700;
 }
 
@@ -90,20 +92,33 @@ select {
     font-weight: 400;
 }
 
-
-/* Sub menu header */
-.header-menu {
+.box-shadow {
     box-shadow: 0px 3px 15px rgba(138, 159, 168, 0.15);
 }
 
+
+/* Button */
+.button-main {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--orange);
+    padding: 12px 40px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+
+/* Sub menu header */
 .menu-main .sub-menu {
-    box-shadow: 0px 5px 25px 0px rgba(138, 159, 168, 0.25);
     padding: 10px 0;
     left: -40px;
     opacity: 0;
     visibility: hidden;
     transform: scaleY(0);
     transform-origin: top center;
+    box-shadow: 0px 5px 25px 0px rgba(138, 159, 168, 0.25);
 }
 
 .menu-main>ul>li:hover>a,
@@ -122,4 +137,10 @@ select {
     padding: 8px 24px;
     white-space: nowrap;
     display: inline-block;
+}
+
+
+/* Slider */
+.slider-content .sub-img img {
+    width: 100%;
 }

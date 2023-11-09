@@ -6,7 +6,7 @@ import Image from 'next/image';
 const TopNavThree = () => {
     return (
         <>
-            <div className='top-nav style-two md:h-[80px] h-[60px] bg-white'>
+            <div className='top-nav style-three box-shadow md:h-[80px] h-[60px] bg-white'>
                 <div className="container mx-auto h-full">
                     <div className="header-main flex justify-between h-full relative">
                         <Link href={'/'} className='flex items-center justify-center h-full w-fit'>

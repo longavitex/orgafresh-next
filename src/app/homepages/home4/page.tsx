@@ -1,7 +1,11 @@
+import TopNavFour from "@/components/Headers/TopNav/TopNavFour"
+import MenuFour from "@/components/Headers/Menu/MenuFour"
+
 const Home4 = () => {
     return (
         <>
-            <h1>Home4 Page</h1>
+            <TopNavFour />
+            <MenuFour />
         </>
     )
 }

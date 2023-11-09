@@ -6,7 +6,7 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 const MenuOne = () => {
   return (
     <>
-      <div className='header-menu style-one md:h-[80px] h-[60px]'>
+      <div className='header-menu style-one box-shadow md:h-[80px] h-[60px]'>
         <div className="container mx-auto h-full">
           <div className="header-main flex justify-between h-full relative">
             <Link href={'/'} className='flex items-center justify-center h-full w-fit'>
@@ -117,7 +117,6 @@ const MenuOne = () => {
           </div>
         </div>
       </div>
-      <div className="slider h-[1000px]"></div>
     </>
   )
 }
