@@ -99,7 +99,7 @@ const MenuOne = () => {
               </div>
               <div className="list-icon flex">
                 <div className="max-[450px]:hidden search-icon flex items-center justify-center md:pl-7 md:pr-7 md:border-x pl-2.5 pr-2.5 border-line cursor-pointer">
-                  <Icon.MagnifyingGlass size={24} color='black'/>
+                  <Icon.MagnifyingGlass size={24} color='black' />
                 </div>
                 <div className="max-[450px]:hidden wishlist-icon flex items-center justify-center md:pl-7 md:pr-7 md:border-r pl-2.5 pr-2.5 border-line relative cursor-pointer">
                   <Icon.Heart size={24} color='black' />
