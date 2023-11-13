@@ -29,6 +29,7 @@ const config: Config = {
       'black': '#1D1D1D',
       'grey': '#9FA09C',
       'secondary': '#676767',
+      'surface': '#F6F4ED',
       'line': 'rgba(0,0,0,0.1)',
     },
   },
