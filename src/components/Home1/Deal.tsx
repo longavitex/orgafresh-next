@@ -1,8 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Product from '../Product/Product'
+import { ProductType } from '@/type/ProductType'
 
-const Deal = () => {
+interface DealProps {
+    data: Array<ProductType>;
+    limit: number;
+}
+
+const Deal: React.FC<DealProps> = ({ data, limit }) => {
     return (
         <>
             <div className="deal-block pt-20 pb-20">
@@ -20,7 +27,11 @@ const Deal = () => {
                         </div>
                     </div>
                     <div className="list-product mt-8 pt-5 pb-8 px-5 border-2 border-orange rounded-lg">
-                        
+                        {data.slice(0, limit).map((p, index) => (
+                            <div key={index} className="product-block">
+                                <Product data={p} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

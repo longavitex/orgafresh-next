@@ -4,6 +4,7 @@ import MenuOne from '@/components/Headers/Menu/MenuOne'
 import SliderOne from '@/components/Slider/SliderOne'
 import Category from '@/components/Home1/Category'
 import Deal from '@/components/Home1/Deal'
+import productData from '@/data/Product.json'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <MenuOne />
       <SliderOne />
       <Category />
-      <Deal />
+      <Deal data={productData} limit={4} />
     </>
   )
 }
