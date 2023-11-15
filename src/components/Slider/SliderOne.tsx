@@ -19,7 +19,7 @@ const SliderOne = () => {
                     <Swiper
                         spaceBetween={0}
                         slidesPerView={1}
-                        // navigation
+                        loop={true}
                         pagination={{ clickable: true }}
                         modules={[Pagination, Autoplay]}
                         className='h-full relative'

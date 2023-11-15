@@ -26,23 +26,26 @@ const Product: React.FC<ProductProps> = ({ data }) => {
                         width={500}
                         height={500}
                         alt={data.name}
-                        className='w-full'
+                        className='product-img w-full h-full object-cover duration-300'
                     />
-                    <div className="list-action flex items-center gap-2">
-                        <div className="quick-view-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300">
-                            <Icon.MagnifyingGlass size={18} />
+                    <div className="list-action flex flex-col items-center gap-2 max-lg:hidden">
+                        <div className="quick-view-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative">
+                            <div className="tag-action bg-black text-white text-xs p-1 rounded-sm">Quick View</div>
+                            <Icon.MagnifyingGlass size={18} weight='bold' />
                         </div>
-                        <div className="add-wishlist-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300">
-                            <Icon.Bag size={18} />
+                        <div className="add-cart-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative">
+                            <div className="tag-action bg-black text-white text-xs p-1 rounded-sm">Add To Cart</div>
+                            <Icon.Bag size={18} weight='bold' />
                         </div>
-                        <div className="add-wishlist-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300">
-                            <Icon.Heart size={18} />
+                        <div className="add-wishlist-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative">
+                            <div className="tag-action bg-black text-white text-xs p-1 rounded-sm">Add To Wishlist</div>
+                            <Icon.Heart size={18} weight='bold' />
                         </div>
                     </div>
                 </div>
                 <div className="product-infor flex flex-col items-center justify-center py-5 bg-white">
                     <Rate currentRate={data.rate}></Rate>
-                    <div className="product-name text-title mt-1">{data.name}</div>
+                    <div className="product-name font-semibold text-base mt-1 duration-300">{data.name}</div>
                     <div className="product-price-block flex items-center gap-3 mt-1">
                         <div className="product-price text-button">${data.price}.0</div>
                         {data.sale && (

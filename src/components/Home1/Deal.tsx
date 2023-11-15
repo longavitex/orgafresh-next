@@ -33,10 +33,25 @@ const Deal: React.FC<DealProps> = ({ data, limit }) => {
                     </div>
                     <div className="list-product mt-8 border-2 border-orange rounded-lg">
                         <Swiper
-                            spaceBetween={30}
-                            slidesPerView={4}
+                            spaceBetween={20}
+                            slidesPerView={1}
                             navigation
+                            loop={true}
                             modules={[Navigation, Autoplay]}
+                            breakpoints={{
+                                576: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 20,
+                                },
+                                768: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 20,
+                                },
+                                1200: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 30,
+                                },
+                            }}
                             className='h-full relative pt-5 pb-8 px-5'
                         >
                             {data.slice(0, limit).map((p, index) => (

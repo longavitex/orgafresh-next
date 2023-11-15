@@ -1,0 +1,56 @@
+/* 
+**
+**** Best Product Home1
+**
+*/
+.best-product-block .cate-item .rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 1064px) {
+    .best-product-block .list-cate .cate-name {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .best-product-block .list-cate .cate-img {
+        width: 40px;
+    }
+
+    .best-product-block .list-cate .cate-item>img {
+        width: 40%;
+    }
+
+    .best-product-block .list-cate .cate-item:last-child>img {
+        width: 30%;
+    }
+
+    .best-product-block .list-cate:last-child .cate-item>img {
+        width: 32%;
+    }
+
+    .best-product-block .list-cate:last-child .cate-item:last-child>img {
+        width: 25%;
+    }
+}
+
+@media (max-width: 767.99px) {
+    .best-product-block .list-cate .cate-name {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+        .best-product-block .list-cate .cate-img {
+            width: 32px;
+        }
+}
+
+
+/* 
+**
+**** Best Seller Home1
+**
+*/
+/* .best-seller-block .list .list-product {
+    width: calc(100% - 240px);
+} */
