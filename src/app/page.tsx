@@ -12,7 +12,7 @@ export default function Home() {
       <MenuOne />
       <SliderOne />
       <Category />
-      <Deal data={productData} limit={4} />
+      <Deal data={productData} limit={7} />
     </>
   )
 }

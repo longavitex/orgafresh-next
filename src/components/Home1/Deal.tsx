@@ -1,7 +1,12 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Product from '../Product/Product'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css/bundle';
 import { ProductType } from '@/type/ProductType'
 
 interface DealProps {
@@ -26,12 +31,20 @@ const Deal: React.FC<DealProps> = ({ data, limit }) => {
                             <div className="time bg-orange w-[42px] h-[38px] flex items-center justify-center text-white text-cate rounded-md second">11</div>
                         </div>
                     </div>
-                    <div className="list-product mt-8 pt-5 pb-8 px-5 border-2 border-orange rounded-lg">
-                        {data.slice(0, limit).map((p, index) => (
-                            <div key={index} className="product-block">
-                                <Product data={p} />
-                            </div>
-                        ))}
+                    <div className="list-product mt-8 border-2 border-orange rounded-lg">
+                        <Swiper
+                            spaceBetween={30}
+                            slidesPerView={4}
+                            navigation
+                            modules={[Navigation, Autoplay]}
+                            className='h-full relative pt-5 pb-8 px-5'
+                        >
+                            {data.slice(0, limit).map((p, index) => (
+                                <SwiperSlide key={index}>
+                                    <Product data={p} />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 </div>
             </div>

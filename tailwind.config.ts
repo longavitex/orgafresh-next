@@ -27,6 +27,7 @@ const config: Config = {
       'orange': '#EF6D44',
       'brown': '#99412B',
       'black': '#1D1D1D',
+      'star': '#FDA72F',
       'grey': '#9FA09C',
       'secondary': '#676767',
       'surface': '#F6F4ED',

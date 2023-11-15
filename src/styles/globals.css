@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(product.css);
+
 
 html,
 body {
@@ -30,6 +32,7 @@ select {
     --green: #76AB40;
     --orange: #EF6D44;
     --brown: #99412B;
+    --star: #FDA72F;
     --black: #1D1D1D;
     --white: #FFFFFF;
     --secondary: #676767;
@@ -74,11 +77,9 @@ select {
 }
 
 .text-title {
-    color: var(--secondary);
     font-size: 16px;
     line-height: 26px;
     font-weight: 400;
-    font-style: normal;
 }
 
 .text-button {
@@ -211,12 +212,12 @@ select {
 }
 
 /* Swiper Pagination */
-    .swiper-pagination-fraction,
-    .swiper-pagination-custom,
-    .swiper-horizontal>.swiper-pagination-bullets,
-    .swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: 24px !important;
-    }
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 24px !important;
+}
 
 .swiper-pagination .swiper-pagination-bullet-active {
     background: var(--black);

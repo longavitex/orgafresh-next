@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { EffectFade } from 'swiper/modules';
 import 'swiper/css/bundle';
 import 'swiper/css/effect-fade';
 // import 'swiper/css/navigation';
@@ -26,7 +25,6 @@ const SliderOne = () => {
                         className='h-full relative'
                         autoplay={{
                             delay: 4000,
-                            // disableOnInteraction: false,
                         }}
                     >
                         <SwiperSlide>
@@ -88,7 +86,7 @@ const SliderOne = () => {
                                             <div className="text-subheading">Sale Off 50%</div>
                                             <div className="text-slider">Smoothie Fruits
                                                 Organic Health Recipe</div>
-                                            <div className="text-title md:mt-5 mt-3">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                                            <div className="text-title text-secondary md:mt-5 mt-3">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                                             <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-6">Shop Now</Link>
                                         </div>
                                     </div>
@@ -114,7 +112,7 @@ const SliderOne = () => {
                                             <div className="text-subheading">Sale Off 50%</div>
                                             <div className="text-slider">Smoothie Fruits
                                                 Organic Health Recipe</div>
-                                            <div className="text-title md:mt-5 mt-3">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                                            <div className="text-title text-secondary md:mt-5 mt-3">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                                             <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-6">Shop Now</Link>
                                         </div>
                                     </div>
