@@ -5,12 +5,12 @@ import Product from '../Product/Product'
 import { ProductType } from '@/type/ProductType'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 
-interface DealProps {
+interface Props {
     data: Array<ProductType>;
     limit: number;
 }
 
-const BestSeller: React.FC<DealProps> = ({ data, limit }) => {
+const BestSeller: React.FC<Props> = ({ data, limit }) => {
     return (
         <>
             <div className="best-seller-block pt-20 pb-20">
@@ -45,8 +45,8 @@ const BestSeller: React.FC<DealProps> = ({ data, limit }) => {
                     </div>
                     <div className="list mt-8">
                         <div className="list-product grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 w-full">
-                            {data.slice(8, limit).map((p, index) => (
-                                <Product key={index} data={p} />
+                            {data.slice(8, limit).map((prd, index) => (
+                                <Product key={index} data={prd} type='col' />
                             ))}
                         </div>
                     </div>

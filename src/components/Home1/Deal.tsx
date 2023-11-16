@@ -9,12 +9,12 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/bundle';
 import { ProductType } from '@/type/ProductType'
 
-interface DealProps {
+interface Props {
     data: Array<ProductType>;
     limit: number;
 }
 
-const Deal: React.FC<DealProps> = ({ data, limit }) => {
+const Deal: React.FC<Props> = ({ data, limit }) => {
     return (
         <>
             <div className="deal-block pt-20 pb-20">
@@ -54,9 +54,9 @@ const Deal: React.FC<DealProps> = ({ data, limit }) => {
                             }}
                             className='h-full relative pt-5 pb-8 px-5'
                         >
-                            {data.slice(0, limit).map((p, index) => (
+                            {data.slice(0, limit).map((prd, index) => (
                                 <SwiperSlide key={index}>
-                                    <Product data={p} />
+                                    <Product data={prd} type='col' />
                                 </SwiperSlide>
                             ))}
                         </Swiper>

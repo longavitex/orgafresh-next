@@ -40,9 +40,9 @@
         line-height: 20px;
     }
 
-        .best-product-block .list-cate .cate-img {
-            width: 32px;
-        }
+    .best-product-block .list-cate .cate-img {
+        width: 32px;
+    }
 }
 
 
@@ -54,4 +54,18 @@
 .best-seller-block .list-cate .cate-item.active {
     background-color: var(--green);
     color: var(--white);
+}
+
+
+/* 
+**
+**** Special Product Home1
+**
+*/
+@media (max-width: 1024px) {
+    .list-product.special-product .product-item:nth-child(1),
+    .list-product.special-product .product-item:nth-child(2),
+    .list-product.special-product .product-item:nth-child(3) {
+        display: none;
+    }
 }

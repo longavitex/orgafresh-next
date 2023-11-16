@@ -5,7 +5,7 @@ import Link from 'next/link'
 const BestProduct = () => {
     return (
         <>
-            <div className="best-product-block relative flex items-center justify-center h-[660px] max-lg:h-[600px] max-md:h-[560px] max-[400px]:h-[450px]">
+            <div className="best-product-block relative flex items-center justify-center">
                 <div className="bg-img absolute top-0 left-0 w-full h-full -z-10">
                     <Image
                         src={'/images/other/best-product-bg.png'}
@@ -15,7 +15,7 @@ const BestProduct = () => {
                         className='w-full h-full object-cover'
                     />
                 </div>
-                <div className="container">
+                <div className="container py-16">
                     <div className="heading text-center">
                         <div className="text-subheading">Best Products</div>
                         <div className="text-heading mt-2">Organic Carrot Smothie</div>

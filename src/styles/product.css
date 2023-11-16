@@ -1,6 +1,6 @@
 /* 
 **
-**** Product
+**** Product Item
 **
 */
 .list-product .swiper {
@@ -109,4 +109,8 @@
 
 .product-item:hover .product-name {
     color: var(--orange);
+}
+
+.product-item.row-type .product-infor::before {
+    display: none;
 }

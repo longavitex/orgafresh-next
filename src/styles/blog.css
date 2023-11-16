@@ -1,0 +1,12 @@
+/* 
+**
+**** Blog Item
+**
+*/
+.blog-item:hover .bg-img img {
+    transform: translate(0) scale(1.05);
+}
+
+.blog-item:hover .blog-title {
+    color: var(--orange);
+}
