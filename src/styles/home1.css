@@ -51,6 +51,7 @@
 **** Best Seller Home1
 **
 */
-/* .best-seller-block .list .list-product {
-    width: calc(100% - 240px);
-} */
+.best-seller-block .list-cate .cate-item.active {
+    background-color: var(--green);
+    color: var(--white);
+}

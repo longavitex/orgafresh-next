@@ -15,82 +15,36 @@ const BestSeller: React.FC<DealProps> = ({ data, limit }) => {
         <>
             <div className="best-seller-block pt-20 pb-20">
                 <div className="container">
-                    <div className="heading flex items-end justify-between flex-wrap gap-2">
-                        <div className="left">
-                            <div className="text-subheading">Best Sellers</div>
-                            <div className="text-heading mt-2">Shop By Categories</div>
-                        </div>
-                        <Link href={'/shop/shop-grid-fullwidth'} className='text-lg max-md:text-base border-b border-green border-b-2'>Shop All</Link>
+                    <div className="heading text-center">
+                        <div className="text-subheading">Best Sellers</div>
+                        <div className="text-heading mt-2">Shop By Categories</div>
                     </div>
-                    <div className="list flex justify-between mt-8">
-                        <div className="list-cate bg-white p-7 rounded-2xl flex flex-col gap-3 w-fit box-shadow">
-                            <div className="cate-item flex items-center justify-between cursor-pointer hover:text-green">
-                                <div className="left flex items-center gap-4 pr-6">
-                                    <div className="cate-icon">
-                                        <Icon.Carrot size={18} color="#141414" />
-                                    </div>
-                                    <div className="cate-name text-button duration-200 whitespace-nowrap">Carrot</div>
-                                </div>
-                                <Icon.CaretRight size={16} color="#9FA09C" />
-                            </div>
-                            <div className="cate-item flex items-center justify-between cursor-pointer hover:text-green">
-                                <div className="left flex items-center gap-4 pr-6">
-                                    <div className="cate-icon">
-                                        <Icon.Carrot size={18} color="#141414" />
-                                    </div>
-                                    <div className="cate-name text-button duration-200 whitespace-nowrap">Blueberry</div>
-                                </div>
-                                <Icon.CaretRight size={16} color="#9FA09C" />
-                            </div>
-                            <div className="cate-item flex items-center justify-between cursor-pointer hover:text-green">
-                                <div className="left flex items-center gap-4 pr-6">
-                                    <div className="cate-icon">
-                                        <Icon.Carrot size={18} color="#141414" />
-                                    </div>
-                                    <div className="cate-name text-button duration-200 whitespace-nowrap">Strawberry</div>
-                                </div>
-                                <Icon.CaretRight size={16} color="#9FA09C" />
-                            </div>
-                            <div className="cate-item flex items-center justify-between cursor-pointer hover:text-green">
-                                <div className="left flex items-center gap-4 pr-6">
-                                    <div className="cate-icon">
-                                        <Icon.Carrot size={18} color="#141414" />
-                                    </div>
-                                    <div className="cate-name text-button duration-200 whitespace-nowrap">Water Melon</div>
-                                </div>
-                                <Icon.CaretRight size={16} color="#9FA09C" />
-                            </div>
-                            <div className="cate-item flex items-center justify-between cursor-pointer hover:text-green">
-                                <div className="left flex items-center gap-4 pr-6">
-                                    <div className="cate-icon">
-                                        <Icon.Carrot size={18} color="#141414" />
-                                    </div>
-                                    <div className="cate-name text-button duration-200 whitespace-nowrap">Mango</div>
-                                </div>
-                                <Icon.CaretRight size={16} color="#9FA09C" />
-                            </div>
-                            <div className="cate-item flex items-center justify-between cursor-pointer hover:text-green">
-                                <div className="left flex items-center gap-4 pr-6">
-                                    <div className="cate-icon">
-                                        <Icon.Carrot size={18} color="#141414" />
-                                    </div>
-                                    <div className="cate-name text-button duration-200 whitespace-nowrap">Apple</div>
-                                </div>
-                                <Icon.CaretRight size={16} color="#9FA09C" />
-                            </div>
-                            <div className="cate-item flex items-center justify-between cursor-pointer hover:text-green">
-                                <div className="left flex items-center gap-4 pr-6">
-                                    <div className="cate-icon">
-                                        <Icon.Carrot size={18} color="#141414" />
-                                    </div>
-                                    <div className="cate-name text-button duration-200 whitespace-nowrap">Mixed Juice</div>
-                                </div>
-                                <Icon.CaretRight size={16} color="#9FA09C" />
-                            </div>
-
+                    <div className="list-cate flex items-center lg:justify-center gap-4 mt-6">
+                        <div className="active cate-item text-button px-4 py-3 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white">
+                            Carrot
+                        </div>
+                        <div className="cate-item text-button px-4 py-3 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white">
+                            Blueberry
+                        </div>
+                        <div className="cate-item text-button px-4 py-3 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white">
+                            Strawberry
+                        </div>
+                        <div className="cate-item text-button px-4 py-3 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white">
+                            Water Melon
+                        </div>
+                        <div className="cate-item text-button px-4 py-3 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white">
+                            Mango
+                        </div>
+                        <div className="cate-item text-button px-4 py-3 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white">
+                            Apple
+                        </div>
+                        <div className="cate-item text-button px-4 py-3 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white">
+                            Mixed Juice
                         </div>
 
-                        <div className="list-product grid grid-cols-4 gap-5 pl-6 w-full">
+                    </div>
+                    <div className="list mt-8">
+                        <div className="list-product grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 w-full">
                             {data.slice(8, limit).map((p, index) => (
                                 <Product key={index} data={p} />
                             ))}
