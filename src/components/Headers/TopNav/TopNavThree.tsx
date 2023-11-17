@@ -1,7 +1,7 @@
 import React from 'react'
-import * as Icon from "@phosphor-icons/react/dist/ssr";
 import Link from 'next/link';
 import Image from 'next/image';
+import * as Icon from "@phosphor-icons/react/dist/ssr";
 
 const TopNavThree = () => {
     return (

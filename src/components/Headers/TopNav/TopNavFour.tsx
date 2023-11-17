@@ -11,16 +11,16 @@ const TopNavFour = () => {
                         <div className="left-content flex items-center gap-7">
                             <div className="list-social-header flex items-center gap-2 pr-7 border-r border-line h-full max-[600px]:hidden">
                                 <Link href={'https://www.facebook.com/'} target='_blank'>
-                                    <Icon.FacebookLogo size={16} weight="bold" />
+                                    <Icon.FacebookLogo size={16} weight="fill" className='hover:fill-orange duration-300' />
                                 </Link>
                                 <Link href={'https://twitter.com/'} target='_blank'>
-                                    <Icon.TwitterLogo size={16} weight="fill" />
+                                    <Icon.TwitterLogo size={16} weight="fill" className='hover:fill-orange duration-300' />
                                 </Link>
                                 <Link href={'https://www.instagram.com/'} target='_blank'>
-                                    <Icon.InstagramLogo size={16} weight="bold" />
+                                    <Icon.InstagramLogo size={16} weight="fill" className='hover:fill-orange duration-300' />
                                 </Link>
                                 <Link href={'https://www.youtube.com/'} target='_blank'>
-                                    <Icon.YoutubeLogo size={16} weight="fill" />
+                                    <Icon.YoutubeLogo size={16} weight="fill" className='hover:fill-orange duration-300' />
                                 </Link>
                             </div>
                             <div className="mail flex items-center gap-2 max-[450px]:hidden">

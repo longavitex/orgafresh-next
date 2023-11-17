@@ -19,7 +19,7 @@ const BestSeller: React.FC<Props> = ({ data, limit }) => {
                         <div className="text-subheading">Best Sellers</div>
                         <div className="text-heading mt-2">Shop By Categories</div>
                     </div>
-                    <div className="list-cate flex items-center lg:justify-center gap-4 mt-6">
+                    <div className="list-cate flex items-center lg:justify-center gap-4 mt-6 max-sm:mt-2 max-sm:pb-3">
                         <div className="active cate-item text-button px-4 py-3 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white">
                             Carrot
                         </div>

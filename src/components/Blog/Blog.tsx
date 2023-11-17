@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BlogType } from '@/type/BlogType'
-import Rate from '@/other/Rate'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 
 interface BlogProps {

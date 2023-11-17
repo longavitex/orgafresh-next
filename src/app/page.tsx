@@ -10,6 +10,9 @@ import BestSeller from '@/components/Home1/BestSeller'
 import SpecialProduct from '@/components/Home1/SpecialProduct'
 import Blog from '@/components/Home1/BlogSection'
 import blogData from '@/data/Blog.json'
+import ReviewSection from '@/components/Home1/ReviewSection'
+import reviewData from '@/data/Review.json'
+import Footer from '@/components/Footer/Footer'
 
 export default function Home() {
   return (
@@ -22,7 +25,8 @@ export default function Home() {
       <BestSeller data={productData} limit={12} />
       <SpecialProduct data={productData} limit={20} />
       <Blog data={blogData} limit={3} />
-      <div className='h-[1000px]'></div>
+      <ReviewSection data={reviewData} limit={3} />
+      <Footer />
     </>
   )
 }
