@@ -1,9 +1,14 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
+import { usePathname } from 'next/navigation';
 
 const MenuTwo = () => {
+  const pathname = usePathname()
+
   return (
     <>
       <div className='header-menu style-two box-shadow md:h-[80px] h-[60px]'>
@@ -13,10 +18,10 @@ const MenuTwo = () => {
             <div className="menu-main h-full max-lg:hidden">
               <ul className='flex items-center gap-10 h-full'>
                 <li className='h-full relative'>
-                  <a href="#!" className='text-button duration-300 h-full flex items-center justify-center gap-1'>
+                  <Link href="#!" className='text-button duration-300 h-full flex items-center justify-center gap-1'>
                     Home
                     <Icon.CaretDown size={12} color='grey' />
-                  </a>
+                  </Link>
                   <ul className='absolute sub-menu bg-white duration-300'>
                     <li>
                       <Link href="/" className='text-button duration-300'>
@@ -24,7 +29,7 @@ const MenuTwo = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/homepages/home2" className='text-button duration-300 active'>
+                      <Link href="/homepages/home2" className={`text-button duration-300 ${pathname === '/homepages/home2' ? 'active' : ''}`}>
                         Home Fruit Vegetables
                       </Link>
                     </li>
@@ -46,23 +51,23 @@ const MenuTwo = () => {
                   </ul>
                 </li>
                 <li className='h-full relative'>
-                  <a href="#!" className='text-button duration-300 h-full flex items-center justify-center gap-1'>
+                  <Link href="#!" className={`text-button duration-300 h-full flex items-center justify-center gap-1 first-letter ${pathname.includes('/shop/') ? 'active' : ''}`}>
                     Shop
                     <Icon.CaretDown size={12} color='grey' />
-                  </a>
+                  </Link>
                   <ul className='absolute sub-menu bg-white duration-300'>
                     <li>
-                      <Link href="/shop/shop-grid-fullwidth" className='text-button duration-300'>
+                      <Link href="/shop/shop-grid-fullwidth" className={`text-button duration-300 ${pathname === '/shop/shop-grid-fullwidth' ? 'active' : ''}`}>
                         Shop Grid Fullwidth
                       </Link>
                     </li>
                     <li>
-                      <Link href="/shop/shop-grid-sidebar" className='text-button duration-300'>
+                      <Link href="/shop/shop-grid-sidebar" className={`text-button duration-300 ${pathname === '/shop/shop-grid-sidebar' ? 'active' : ''}`}>
                         Shop Grid Sidebar
                       </Link>
                     </li>
                     <li>
-                      <Link href="/shop/shop-list-sidebar" className='text-button duration-300'>
+                      <Link href="/shop/shop-list-sidebar" className={`text-button duration-300 ${pathname === '/shop/shop-list-sidebar' ? 'active' : ''}`}>
                         Shop List Sidebar
                       </Link>
                     </li>
@@ -118,7 +123,6 @@ const MenuTwo = () => {
           </div>
         </div>
       </div>
-      <div className="slider h-[1000px]"></div>
     </>
   )
 }

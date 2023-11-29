@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 import MenuOne from '@/components/Headers/Menu/MenuOne'
 import SliderOne from '@/components/Slider/SliderOne'
@@ -16,7 +15,7 @@ import Footer from '@/components/Footer/Footer'
 
 export default function Home() {
   return (
-    <>
+    <div className='home-one'>
       <MenuOne />
       <SliderOne />
       <Category />
@@ -26,7 +25,7 @@ export default function Home() {
       <SpecialProduct data={productData} limit={20} />
       <Blog data={blogData} limit={3} />
       <ReviewSection data={reviewData} limit={3} />
-      <Footer />
-    </>
+      <Footer borderTop={false} />
+    </div>
   )
 }

@@ -7,7 +7,7 @@ const Category = () => {
         <>
             <div className="category-block style-one bg-surface pt-14 pb-12">
                 <div className="container">
-                    <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 2xl:gap-14 lg:gap-8 md:gap-x-20 md:gap-y-8 gap-x-4 gap-y-6">
+                    <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-3 2xl:gap-14 lg:gap-8 md:gap-x-20 md:gap-y-8 gap-x-[10px] gap-y-5">
                         <div className="cate-item">
                             <Link href={'/shop/shop-grid-fullwidth'} className="cate-img block 2xl:rounded-[64px] md:rounded-[32px] rounded-[16px] border-transparent border duration-300 overflow-hidden">
                                 <Image
@@ -33,7 +33,7 @@ const Category = () => {
                                 />
                             </Link>
                             <div className="cate-name text-center text-cate md:mt-5 mt-2">
-                                <Link href={'/shop/shop-grid-fullwidth'} className='duration-300'>Carrot</Link>
+                                <Link href={'/shop/shop-grid-fullwidth'} className='duration-300'>Peach</Link>
                             </div>
                         </div>
                         <div className="cate-item">

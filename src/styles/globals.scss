@@ -1,16 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import url(product.css);
-@import url(blog.css);
-@import url(home1.css);
-@import url(icomoon/style.css);
-
 
 html,
 body {
     font-size: 16px;
-    line-height: 16px;
+    line-height: 26px;
     color: #1D1D1D;
     font-weight: 500;
     overflow-x: hidden;
@@ -41,6 +33,7 @@ select {
     --secondary: #676767;
     --grey: #9FA09C;
     --surface: #F6F4ED;
+    --line: rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -162,7 +155,7 @@ select {
 }
 
 .box-shadow {
-    box-shadow: 0px 3px 15px rgba(138, 159, 168, 0.15);
+    box-shadow: 0px 2px 6px rgba(138, 159, 168, 0.1);
 }
 
 
@@ -230,6 +223,10 @@ select {
 }
 
 /* Swiper Pagination */
+.swiper-slide {
+    height: unset !important;
+}
+
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-horizontal>.swiper-pagination-bullets,

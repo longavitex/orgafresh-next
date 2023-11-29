@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ProductType } from '@/type/ProductType'
-import Rate from '@/other/Rate'
+import Rate from '@/components/Other/Rate'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 
 interface ProductProps {
@@ -18,10 +18,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
 
             {type === "col" ? (
                 <div className="product-item col-type">
-                    <Link href={'#!'} className="product-main bg-white rounded-2xl box-shadow block h-full overflow-hidden">
+                    <Link href={'#!'} className="product-main bg-white rounded-2xl  block h-full overflow-hidden duration-500">
                         <div className="product-thumb relative">
                             {data.sale && (
-                                <div className="product-sale text-xs text-white bg-orange px-3 py-0.5 inline-block rounded-full">
+                                <div className="product-sale text-xs text-white bg-orange md:px-3 px-2 py-0.5 inline-block rounded-full">
                                     -{percentSale}%
                                 </div>
                             )}
@@ -47,9 +47,9 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="product-infor flex flex-col items-center justify-center py-5 bg-white">
+                        <div className="product-infor flex flex-col items-center justify-center md:py-5 py-3 bg-white">
                             <Rate currentRate={data.rate}></Rate>
-                            <div className="product-name font-semibold text-base mt-1 duration-300">{data.name}</div>
+                            <div className="product-name font-semibold md:text-base text-sm capitalize mt-1 px-3 text-center duration-300">{data.name}</div>
                             <div className="product-price-block flex items-center gap-3 mt-1">
                                 <div className="product-price text-button">${data.price}.0</div>
                                 {data.sale && (
@@ -63,34 +63,34 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                 <>
                     {type === 'row-1' ? (
                         <>
-                                <div className="product-item row-type">
-                                    <Link href={'#!'} className="product-main h-full flex items-center gap-4 bg-white rounded-2xl box-shadow overflow-hidden">
-                                        <div className="product-thumb relative">
-                                            {data.sale && (
-                                                <div className="product-sale text-xs text-white bg-orange px-3 py-0.5 inline-block rounded-full">
-                                                    -{percentSale}%
-                                                </div>
-                                            )}
-                                            <Image
-                                                src={data.image}
-                                                width={158}
-                                                height={158}
-                                                alt={data.name}
-                                                className='product-img object-cover duration-300'
-                                            />
-                                        </div>
-                                        <div className="product-infor pr-5 bg-white">
-                                            <Rate currentRate={data.rate}></Rate>
-                                            <div className="product-name font-semibold text-base mt-1 duration-300">{data.name}</div>
-                                            <div className="product-price-block flex items-center gap-3 mt-1">
-                                                <div className="product-price text-button">${data.price}.0</div>
-                                                {data.sale && (
-                                                    <div className="product-origin-price text-button text-grey"><del>${data.originPrice}.0</del></div>
-                                                )}
+                            <div className="product-item row-type">
+                                <Link href={'#!'} className="product-main h-full flex items-center gap-4 bg-white rounded-2xl duration-500 overflow-hidden">
+                                    <div className="product-thumb relative">
+                                        {data.sale && (
+                                            <div className="product-sale text-xs text-white bg-orange px-3 py-0.5 inline-block rounded-full">
+                                                -{percentSale}%
                                             </div>
+                                        )}
+                                        <Image
+                                            src={data.image}
+                                            width={158}
+                                            height={158}
+                                            alt={data.name}
+                                            className='product-img object-cover duration-300'
+                                        />
+                                    </div>
+                                    <div className="product-infor pr-5 bg-white">
+                                        <Rate currentRate={data.rate}></Rate>
+                                        <div className="product-name font-semibold text-base capitalize mt-1 duration-300">{data.name}</div>
+                                        <div className="product-price-block flex items-center gap-3 mt-1">
+                                            <div className="product-price text-button">${data.price}.0</div>
+                                            {data.sale && (
+                                                <div className="product-origin-price text-button text-grey"><del>${data.originPrice}.0</del></div>
+                                            )}
                                         </div>
-                                    </Link>
-                                </div>
+                                    </div>
+                                </Link>
+                            </div>
                         </>
                     ) : (
                         <>

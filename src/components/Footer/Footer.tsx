@@ -3,10 +3,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 
-const Footer = () => {
+interface Props {
+    borderTop: boolean
+}
+
+const Footer: React.FC<Props> = ({ borderTop }) => {
     return (
         <>
-            <div id="footer">
+            <div id="footer" className={`${borderTop === true ? 'border-t border-line' : ''}`}>
                 <div className="container">
                     <div className="heading flex items-center lg:justify-between sm:justify-center flex-wrap max-lg:gap-16 max-lg:gap-y-8 max-sm:gap-y-5 py-10 relative border-b border-line">
                         <div className="item flex items-center sm:gap-5 gap-3">

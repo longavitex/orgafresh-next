@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ReviewType } from '@/type/ReviewType'
-import Rate from '@/other/Rate'
+import Rate from '@/components/Other/Rate'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 
 interface ReviewProps {

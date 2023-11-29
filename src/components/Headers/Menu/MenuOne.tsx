@@ -21,10 +21,10 @@ const MenuOne = () => {
             <div className="menu-main xl:absolute xl:left-1/2 xl:top-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 h-full max-lg:hidden">
               <ul className='flex items-center gap-10 h-full'>
                 <li className='h-full relative'>
-                  <a href="#!" className='text-button duration-300 h-full flex items-center justify-center gap-1'>
+                  <Link href="#!" className='text-button duration-300 h-full flex items-center justify-center gap-1 active'>
                     Home
                     <Icon.CaretDown size={12} color='grey' />
-                  </a>
+                  </Link>
                   <ul className='absolute sub-menu bg-white duration-300'>
                     <li>
                       <Link href="/" className='text-button duration-300 active'>
@@ -54,10 +54,10 @@ const MenuOne = () => {
                   </ul>
                 </li>
                 <li className='h-full relative'>
-                  <a href="#!" className='text-button duration-300 h-full flex items-center justify-center gap-1'>
+                  <Link href="#!" className='text-button duration-300 h-full flex items-center justify-center gap-1'>
                     Shop
                     <Icon.CaretDown size={12} color='grey' />
-                  </a>
+                  </Link>
                   <ul className='absolute sub-menu bg-white duration-300'>
                     <li>
                       <Link href="/shop/shop-grid-fullwidth" className='text-button duration-300'>

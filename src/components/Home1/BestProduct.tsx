@@ -18,7 +18,7 @@ const BestProduct = () => {
                 <div className="container py-16">
                     <div className="heading text-center">
                         <div className="text-subheading">Best Products</div>
-                        <div className="text-heading mt-2">Organic Carrot Smothie</div>
+                        <div className="text-heading mt-2">Organic Smothie Recipes</div>
                         <div className="text-title text-secondary mt-2">Everyday Fresh & Clean with OurProducts</div>
                     </div>
                     <div className="content-main flex items-center justify-center ml-12 mt-10 max-md:ml-0">

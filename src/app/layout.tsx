@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Quicksand } from 'next/font/google'
-import '@/styles/globals.css'
+import '@/styles/style.scss'
 
 const quicksand = Quicksand({ subsets: ['latin'] })
 
