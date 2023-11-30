@@ -9,7 +9,8 @@ export interface ProductType {
     quantity: number;
     image: string;
     subImage: string;
-    taste: string;
+    listImage: Array<string>;
+    type: string;
     description: string;
     slug: string;
 }

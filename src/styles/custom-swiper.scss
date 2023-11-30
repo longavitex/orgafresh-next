@@ -2,3 +2,41 @@
     cursor: grab;
     user-select: none;
 }
+
+/* Swiper Pagination */
+.swiper-slide {
+    height: unset !important;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 24px !important;
+}
+
+@media (max-width: 767px) {
+
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 10px !important;
+    }
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    background: var(--black);
+}
+
+.category-block .cate-item:hover .cate-img {
+    border-color: var(--orange);
+}
+
+.category-block .cate-item:hover .cate-img img {
+    transform: translate(0) rotate(0) scale(1.06);
+}
+
+.category-block .cate-item:hover .cate-name {
+    color: var(--orange);
+}

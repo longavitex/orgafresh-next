@@ -13,7 +13,7 @@ const ShopGridFullwidth = () => {
             <MenuTwo />
             <HeadingPage title="Shop Grid Fullwidth" subTitle="Shop Grid" />
             <div className="container">
-                <ShopProduct data={productData} productPerPage={15} />
+                <ShopProduct data={productData} productPerPage={20} />
             </div>
             <Footer borderTop={true} />
         </div>

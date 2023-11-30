@@ -18,22 +18,22 @@ const Review: React.FC<ReviewProps> = ({ data, type }) => {
                     <div className="review-main block h-full p-8 rounded-3xl bg-white relative">
                         <i className="icon-quote text-2xl text-green absolute -top-3"></i>
                         <div className="user flex items-center gap-4">
-                            <div className="bg-img">
+                            <div className="bg-img md:w-[60px] md:h-[60px] w-[48px] h-[48px]">
                                 <Image
                                     src={data.avatar}
                                     width={60}
                                     height={60}
                                     alt='avatar'
-                                    className='rounded-full'
+                                    className='rounded-full w-full h-full'
                                 />
                             </div>
                             <div className="user-infor">
                                 <div className="text-button-lg">{data.name}</div>
-                                <div className="text-grey mt-1">{data.address}</div>
+                                <div className="text-grey md:mt-1 mt-0">{data.address}</div>
                             </div>
                         </div>
                         <div className="review-infor lg:mt-5 mt-4">
-                            <div className="review-desc lg:text-2xl text-xl">{data.description}</div>
+                            <div className="review-desc lg:text-2xl text-base">{data.description}</div>
                         </div>
                     </div>
                 </div>

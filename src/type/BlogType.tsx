@@ -7,7 +7,7 @@ export interface BlogType {
     author: string;
     thumbImg: string;
     coverImg: string;
-    subImg: string;
+    subImg: Array<string>;
     description: string;
     slug: string;
 }

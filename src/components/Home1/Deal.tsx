@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Product from '../Product/Product'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
 import { ProductType } from '@/type/ProductType'
 
@@ -31,7 +31,7 @@ const Deal: React.FC<Props> = ({ data, limit }) => {
                             <div className="time bg-orange md:w-[42px] md:h-[40px] w-[36px] h-[34px] flex items-center justify-center text-white text-cate rounded-md second">11</div>
                         </div>
                     </div>
-                    <div className="list-product md:mt-8 mt-6 border-2 border-orange rounded-lg">
+                    <div className="list-product deal md:mt-8 mt-6 border-2 border-orange rounded-lg">
                         <Swiper
                             spaceBetween={8}
                             slidesPerView={2}
@@ -41,7 +41,7 @@ const Deal: React.FC<Props> = ({ data, limit }) => {
                             breakpoints={{
                                 576: {
                                     slidesPerView: 2,
-                                    spaceBetween: 20,
+                                    spaceBetween: 8,
                                 },
                                 768: {
                                     slidesPerView: 3,

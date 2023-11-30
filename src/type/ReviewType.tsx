@@ -3,6 +3,7 @@ export interface ReviewType {
     category: string;
     name: string;
     avatar: string;
+    rate: number;
     address: string;
     description: string;
     slug: string;

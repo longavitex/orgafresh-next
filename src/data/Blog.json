@@ -8,7 +8,10 @@
             "author": "Chris Evans",
             "thumbImg": "/images/blog/1.png",
             "coverImg": "/images/blog/1.png",
-            "subImg": "/images/blog/2.png",
+            "subImg": [
+                "/images/blog/2.png",
+                "/images/blog/3.png"
+            ],
             "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
             "slug": "healthy-smoothies"
         },
@@ -21,7 +24,10 @@
             "author": "Alex Balde",
             "thumbImg": "/images/blog/2.png",
             "coverImg": "/images/blog/2.png",
-            "subImg": "/images/blog/3.png",
+            "subImg": [
+                "/images/blog/3.png",
+                "/images/blog/4.png"
+            ],
             "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
             "slug": "healthy-smoothies"
         },
@@ -34,7 +40,10 @@
             "author": "Leona Pablo",
             "thumbImg": "/images/blog/3.png",
             "coverImg": "/images/blog/3.png",
-            "subImg": "/images/blog/1.png",
+            "subImg": [
+                "/images/blog/2.png",
+                "/images/blog/1.png"
+            ],
             "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
             "slug": "healthy-smoothies"
         },
@@ -47,7 +56,10 @@
             "author": "Christina Smith",
             "thumbImg": "/images/blog/4.png",
             "coverImg": "/images/blog/4.png",
-            "subImg": "/images/blog/5.png",
+            "subImg": [
+                "/images/blog/2.png",
+                "/images/blog/5.png"
+            ],
             "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
             "slug": "healthy-smoothies"
         },
@@ -60,7 +72,10 @@
             "author": "Louis Ancelotti",
             "thumbImg": "/images/blog/5.png",
             "coverImg": "/images/blog/5.png",
-            "subImg": "/images/blog/6.png",
+            "subImg": [
+                "/images/blog/3.png",
+                "/images/blog/6.png"
+            ],
             "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
             "slug": "healthy-smoothies"
         },
@@ -73,7 +88,10 @@
             "author": "Davide Alvaro",
             "thumbImg": "/images/blog/6.png",
             "coverImg": "/images/blog/6.png",
-            "subImg": "/images/blog/7.png",
+            "subImg": [
+                "/images/blog/2.png",
+                "/images/blog/7.png"
+            ],
             "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
             "slug": "healthy-smoothies"
         },
@@ -86,7 +104,10 @@
             "author": "Chris Puth",
             "thumbImg": "/images/blog/7.png",
             "coverImg": "/images/blog/7.png",
-            "subImg": "/images/blog/5.png",
+            "subImg": [
+                "/images/blog/1.png",
+                "/images/blog/5.png"
+            ],
             "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
             "slug": "healthy-smoothies"
         }

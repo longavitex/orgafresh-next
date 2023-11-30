@@ -17,8 +17,8 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
         <>
 
             {type === "col" ? (
-                <div className="product-item col-type">
-                    <Link href={'#!'} className="product-main bg-white rounded-2xl  block h-full overflow-hidden duration-500">
+                <div className="product-item col-type h-full">
+                    <Link href={'#!'} className="product-main bg-white rounded-2xl border border-line block h-full overflow-hidden duration-500">
                         <div className="product-thumb relative">
                             {data.sale && (
                                 <div className="product-sale text-xs text-white bg-orange md:px-3 px-2 py-0.5 inline-block rounded-full">

@@ -3,13 +3,13 @@
 **** Product Item
 **
 */
-.list-product .swiper {
+.list-product.deal .swiper {
     padding: 24px 20px 32px;
 }
 
 @media (max-width: 767.99px) {
-    .list-product .swiper {
-        padding: 16px 12px 20px;
+    .list-product.deal .swiper {
+        padding: 16px 8px 20px;
     }
 }
 
@@ -125,7 +125,7 @@
         }
     }
 
-    .product-item.row-type .product-infor::before {
+    &.row-type .product-infor::before {
         display: none;
     }
 }

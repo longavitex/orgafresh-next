@@ -10,7 +10,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/1.png",
         "subImage": "/images/product/smoothies/2.png",
-        "taste": "apple",
+        "listImage": [
+            "/images/product/smoothies/2.png",
+            "/images/product/smoothies/3.png",
+            "/images/product/smoothies/4.png",
+            "/images/product/smoothies/1.png"
+        ],
+        "type": "apple",
         "description": "",
         "slug": "apple-cider"
     },
@@ -25,7 +31,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/3.png",
         "subImage": "/images/product/smoothies/4.png",
-        "taste": "strawberry",
+        "listImage": [
+            "/images/product/smoothies/4.png",
+            "/images/product/smoothies/3.png",
+            "/images/product/smoothies/6.png",
+            "/images/product/smoothies/5.png"
+        ],
+        "type": "strawberry",
         "description": "",
         "slug": "apple-cider"
     },
@@ -40,7 +52,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/5.png",
         "subImage": "/images/product/smoothies/6.png",
-        "taste": "blueberry",
+        "listImage": [
+            "/images/product/smoothies/6.png",
+            "/images/product/smoothies/5.png",
+            "/images/product/smoothies/4.png",
+            "/images/product/smoothies/3.png"
+        ],
+        "type": "blueberry",
         "description": "",
         "slug": "apple-cider"
     },
@@ -55,7 +73,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/7.png",
         "subImage": "/images/product/smoothies/8.png",
-        "taste": "watermelon",
+        "listImage": [
+            "/images/product/smoothies/8.png",
+            "/images/product/smoothies/7.png",
+            "/images/product/smoothies/10.png",
+            "/images/product/smoothies/11.png"
+        ],
+        "type": "watermelon",
         "description": "",
         "slug": "apple-cider"
     },
@@ -70,7 +94,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/9.png",
         "subImage": "/images/product/smoothies/10.png",
-        "taste": "mango",
+        "listImage": [
+            "/images/product/smoothies/10.png",
+            "/images/product/smoothies/9.png",
+            "/images/product/smoothies/12.png",
+            "/images/product/smoothies/13.png"
+        ],
+        "type": "mango",
         "description": "",
         "slug": "apple-cider"
     },
@@ -85,7 +115,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/11.png",
         "subImage": "/images/product/smoothies/12.png",
-        "taste": "mixed juice",
+        "listImage": [
+            "/images/product/smoothies/13.png",
+            "/images/product/smoothies/12.png",
+            "/images/product/smoothies/11.png",
+            "/images/product/smoothies/10.png"
+        ],
+        "type": "mixed juice",
         "description": "",
         "slug": "apple-cider"
     },
@@ -100,7 +136,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/13.png",
         "subImage": "/images/product/smoothies/14.png",
-        "taste": "lemon",
+        "listImage": [
+            "/images/product/smoothies/15.png",
+            "/images/product/smoothies/14.png",
+            "/images/product/smoothies/13.png",
+            "/images/product/smoothies/12.png"
+        ],
+        "type": "lemon",
         "description": "",
         "slug": "apple-cider"
     },
@@ -115,7 +157,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/16.png",
         "subImage": "/images/product/smoothies/17.png",
-        "taste": "cinnamon",
+        "listImage": [
+            "/images/product/smoothies/17.png",
+            "/images/product/smoothies/16.png",
+            "/images/product/smoothies/15.png",
+            "/images/product/smoothies/14.png"
+        ],
+        "type": "cinnamon",
         "description": "",
         "slug": "apple-cider"
     },
@@ -130,7 +178,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/18.png",
         "subImage": "/images/product/smoothies/19.png",
-        "taste": "cumin",
+        "listImage": [
+            "/images/product/smoothies/18.png",
+            "/images/product/smoothies/19.png",
+            "/images/product/smoothies/20.png",
+            "/images/product/smoothies/17.png"
+        ],
+        "type": "cumin",
         "description": "",
         "slug": "apple-cider"
     },
@@ -145,7 +199,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/20.png",
         "subImage": "/images/product/smoothies/19.png",
-        "taste": "peach",
+        "listImage": [
+            "/images/product/smoothies/20.png",
+            "/images/product/smoothies/19.png",
+            "/images/product/smoothies/18.png",
+            "/images/product/smoothies/17.png"
+        ],
+        "type": "peach",
         "description": "",
         "slug": "apple-cider"
     },
@@ -160,7 +220,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/6.png",
         "subImage": "/images/product/smoothies/7.png",
-        "taste": "apple",
+        "listImage": [
+            "/images/product/smoothies/5.png",
+            "/images/product/smoothies/6.png",
+            "/images/product/smoothies/7.png",
+            "/images/product/smoothies/4.png"
+        ],
+        "type": "apple",
         "description": "",
         "slug": "apple-cider"
     },
@@ -175,7 +241,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/8.png",
         "subImage": "/images/product/smoothies/9.png",
-        "taste": "strawberry",
+        "listImage": [
+            "/images/product/smoothies/8.png",
+            "/images/product/smoothies/9.png",
+            "/images/product/smoothies/10.png",
+            "/images/product/smoothies/11.png"
+        ],
+        "type": "strawberry",
         "description": "",
         "slug": "apple-cider"
     },
@@ -190,7 +262,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/10.png",
         "subImage": "/images/product/smoothies/11.png",
-        "taste": "blueberry",
+        "listImage": [
+            "/images/product/smoothies/10.png",
+            "/images/product/smoothies/11.png",
+            "/images/product/smoothies/12.png",
+            "/images/product/smoothies/13.png"
+        ],
+        "type": "blueberry",
         "description": "",
         "slug": "apple-cider"
     },
@@ -205,7 +283,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/12.png",
         "subImage": "/images/product/smoothies/13.png",
-        "taste": "watermelon",
+        "listImage": [
+            "/images/product/smoothies/12.png",
+            "/images/product/smoothies/13.png",
+            "/images/product/smoothies/14.png",
+            "/images/product/smoothies/15.png"
+        ],
+        "type": "watermelon",
         "description": "",
         "slug": "apple-cider"
     },
@@ -220,7 +304,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/14.png",
         "subImage": "/images/product/smoothies/15.png",
-        "taste": "mango",
+        "listImage": [
+            "/images/product/smoothies/14.png",
+            "/images/product/smoothies/15.png",
+            "/images/product/smoothies/16.png",
+            "/images/product/smoothies/17.png"
+        ],
+        "type": "mango",
         "description": "",
         "slug": "apple-cider"
     },
@@ -235,7 +325,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/15.png",
         "subImage": "/images/product/smoothies/16.png",
-        "taste": "mixed juice",
+        "listImage": [
+            "/images/product/smoothies/15.png",
+            "/images/product/smoothies/16.png",
+            "/images/product/smoothies/17.png",
+            "/images/product/smoothies/18.png"
+        ],
+        "type": "mixed juice",
         "description": "",
         "slug": "apple-cider"
     },
@@ -250,7 +346,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/17.png",
         "subImage": "/images/product/smoothies/18.png",
-        "taste": "lemon",
+        "listImage": [
+            "/images/product/smoothies/17.png",
+            "/images/product/smoothies/18.png",
+            "/images/product/smoothies/19.png",
+            "/images/product/smoothies/20.png"
+        ],
+        "type": "lemon",
         "description": "",
         "slug": "apple-cider"
     },
@@ -265,7 +367,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/19.png",
         "subImage": "/images/product/smoothies/20.png",
-        "taste": "cinnamon",
+        "listImage": [
+            "/images/product/smoothies/20.png",
+            "/images/product/smoothies/19.png",
+            "/images/product/smoothies/18.png",
+            "/images/product/smoothies/17.png"
+        ],
+        "type": "cinnamon",
         "description": "",
         "slug": "apple-cider"
     },
@@ -280,7 +388,13 @@
         "quantity": 100,
         "image": "/images/product/smoothies/2.png",
         "subImage": "/images/product/smoothies/3.png",
-        "taste": "cumin",
+        "listImage": [
+            "/images/product/smoothies/2.png",
+            "/images/product/smoothies/3.png",
+            "/images/product/smoothies/4.png",
+            "/images/product/smoothies/5.png"
+        ],
+        "type": "cumin",
         "description": "",
         "slug": "apple-cider"
     },
@@ -288,14 +402,62 @@
         "id": "20",
         "category": "smoothies",
         "name": "Creamy peach smoothie",
-        "rate": 4,
+        "rate": 5,
         "price": 17,
         "originPrice": 25,
         "sale": true,
         "quantity": 100,
         "image": "/images/product/smoothies/4.png",
         "subImage": "/images/product/smoothies/5.png",
-        "taste": "peach",
+        "listImage": [
+            "/images/product/smoothies/3.png",
+            "/images/product/smoothies/4.png",
+            "/images/product/smoothies/5.png",
+            "/images/product/smoothies/6.png"
+        ],
+        "type": "peach",
+        "description": "",
+        "slug": "apple-cider"
+    },
+    {
+        "id": "21",
+        "category": "smoothies",
+        "name": "Sky peach smoothie",
+        "rate": 4,
+        "price": 14,
+        "originPrice": 20,
+        "sale": true,
+        "quantity": 100,
+        "image": "/images/product/smoothies/8.png",
+        "subImage": "/images/product/smoothies/10.png",
+        "listImage": [
+            "/images/product/smoothies/8.png",
+            "/images/product/smoothies/9.png",
+            "/images/product/smoothies/10.png",
+            "/images/product/smoothies/11.png"
+        ],
+        "type": "peach",
+        "description": "",
+        "slug": "apple-cider"
+    },
+    {
+        "id": "22",
+        "category": "smoothies",
+        "name": "Ice peach smoothie",
+        "rate": 5,
+        "price": 10,
+        "originPrice": 15,
+        "sale": true,
+        "quantity": 100,
+        "image": "/images/product/smoothies/12.png",
+        "subImage": "/images/product/smoothies/15.png",
+        "listImage": [
+            "/images/product/smoothies/12.png",
+            "/images/product/smoothies/13.png",
+            "/images/product/smoothies/14.png",
+            "/images/product/smoothies/15.png"
+        ],
+        "type": "peach",
         "description": "",
         "slug": "apple-cider"
     }

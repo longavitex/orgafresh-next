@@ -21,7 +21,7 @@ export default function Home() {
       <Category />
       <Deal data={productData} limit={7} />
       <BestProduct />
-      <BestSeller data={productData} limit={12} />
+      <BestSeller data={productData} limit={4} />
       <SpecialProduct data={productData} limit={20} />
       <Blog data={blogData} limit={3} />
       <ReviewSection data={reviewData} limit={3} />
