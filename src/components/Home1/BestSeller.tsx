@@ -47,32 +47,32 @@ const BestSeller: React.FC<Props> = ({ data, limit }) => {
                             Blueberry
                         </div>
                         <div 
-                            className={`${selectedType === 'Strawberry' ? 'active' : ''} cate-item text-button md:px-4 md:py-3 px-3 py-2 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white`}
-                            onClick={() => handleTasteChange('Strawberry')}
+                            className={`${selectedType === 'strawberry' ? 'active' : ''} cate-item text-button md:px-4 md:py-3 px-3 py-2 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white`}
+                            onClick={() => handleTasteChange('strawberry')}
                             >
                             Strawberry
                         </div>
                         <div 
-                            className={`${selectedType === 'Watermelon' ? 'active' : ''} cate-item text-button md:px-4 md:py-3 px-3 py-2 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white`}
-                            onClick={() => handleTasteChange('Watermelon')}
+                            className={`${selectedType === 'watermelon' ? 'active' : ''} cate-item text-button md:px-4 md:py-3 px-3 py-2 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white`}
+                            onClick={() => handleTasteChange('watermelon')}
                             >
                             Watermelon
                         </div>
                         <div 
-                            className={`${selectedType === 'Mango' ? 'active' : ''} cate-item text-button md:px-4 md:py-3 px-3 py-2 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white`}
-                            onClick={() => handleTasteChange('Mango')}
+                            className={`${selectedType === 'mango' ? 'active' : ''} cate-item text-button md:px-4 md:py-3 px-3 py-2 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white`}
+                            onClick={() => handleTasteChange('mango')}
                             >
                             Mango
                         </div>
                         <div 
-                            className={`${selectedType === 'Apple' ? 'active' : ''} cate-item text-button md:px-4 md:py-3 px-3 py-2 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white`}
-                            onClick={() => handleTasteChange('Apple')}
+                            className={`${selectedType === 'apple' ? 'active' : ''} cate-item text-button md:px-4 md:py-3 px-3 py-2 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white`}
+                            onClick={() => handleTasteChange('apple')}
                             >
                             Apple
                         </div>
                         <div 
-                            className={`${selectedType === 'Mixed Juice' ? 'active' : ''} cate-item text-button md:px-4 md:py-3 px-3 py-2 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white`}
-                            onClick={() => handleTasteChange('Mixed Juice')}
+                            className={`${selectedType === 'mixed-juice' ? 'active' : ''} cate-item text-button md:px-4 md:py-3 px-3 py-2 bg-line rounded-full duration-300 whitespace-nowrap cursor-pointer hover:bg-green hover:text-white`}
+                            onClick={() => handleTasteChange('mixed-juice')}
                             >
                             Mixed Juice
                         </div>

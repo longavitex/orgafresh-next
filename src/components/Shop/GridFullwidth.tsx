@@ -11,7 +11,7 @@ interface Props {
     productPerPage: number
 }
 
-const ShopProduct: React.FC<Props> = ({ data, productPerPage }) => {
+const GridFullwidth: React.FC<Props> = ({ data, productPerPage }) => {
     const [currentPage, setCurrentPage] = useState(0);
     const productsPerPage = productPerPage;
     const offset = currentPage * productsPerPage;
@@ -26,7 +26,7 @@ const ShopProduct: React.FC<Props> = ({ data, productPerPage }) => {
 
     return (
         <>
-            <div className="shop-product md:pt-10 md:pb-20 pt-6 pb-8">
+            <div className="shop-product grid-fullwidth md:pt-10 md:pb-20 pt-6 pb-8">
                 <div className="shop-heading flex items-center justify-between flex-wrap gap-5 gap-y-4">
                     <div className="select-block relative">
                         <select className='text-title py-2 md:pl-4 pl-3 md:pr-10 pr-8 rounded-lg border border-line' name="select-filter" id="selectFilter">
@@ -63,4 +63,4 @@ const ShopProduct: React.FC<Props> = ({ data, productPerPage }) => {
     )
 }
 
-export default ShopProduct
+export default GridFullwidth

@@ -45,3 +45,29 @@
         }
     }
 }
+
+
+.shop-product {
+    .sidebar {
+        .category-filter {
+            .list-cate {
+                .cate-item {
+                    &.active {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .taste-filter {
+            .list-cate {
+                .cate-item {
+                    &.active {
+                        background-color: var(--black);
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+}
