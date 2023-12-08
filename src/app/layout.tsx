@@ -1,21 +1,13 @@
 import type { Metadata } from 'next'
 import { Quicksand } from 'next/font/google'
 import '@/styles/style.scss'
+import { CartProvider } from '@/context/CartContext'
 
 const quicksand = Quicksand({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'OrgaFresh',
   description: 'OrgaFresh - Organic Template',
-  icons: {
-    icon: [
-      {
-        media: '(prefers-color-scheme: light)',
-        url: '/images/fav.png',
-        href: '/images/fav.png',
-      },
-    ],
-  },
 }
 
 export default function RootLayout({
@@ -24,8 +16,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={quicksand.className}>{children}</body>
-    </html>
+    <CartProvider>
+      <html lang="en">
+        <body className={quicksand.className}>
+          <div id="content">
+            {children}
+          </div>
+        </body>
+      </html>
+    </CartProvider>
   )
 }

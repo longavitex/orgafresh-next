@@ -190,3 +190,18 @@ select {
         border-radius: 10px;
     }
 }
+
+.animate__animated.animate__delay-0-4s {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.animate__animated.animate__delay-0-6s {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.animate__animated.animate__delay-0-8s {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}

@@ -1,9 +1,12 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ProductType } from '@/type/ProductType'
 import Rate from '@/components/Other/Rate'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
+import { useCart } from '@/context/CartContext'
 
 interface ProductProps {
     data: ProductType
@@ -12,13 +15,20 @@ interface ProductProps {
 
 const Product: React.FC<ProductProps> = ({ data, type }) => {
     const percentSale = Math.floor(100 - ((data.price / data.originPrice) * 100))
+    const { addToCart } = useCart()
+
+    const handleAddToCart = () => {
+        addToCart(data)
+        console.log(data);
+        
+    }
 
     return (
         <>
 
             {type === "col" ? (
                 <div className="product-item col-type h-full">
-                    <Link href={'#!'} className="product-main bg-white rounded-2xl border border-line block h-full overflow-hidden duration-500">
+                    <Link href={'/cart'} className="product-main bg-white rounded-2xl border border-line block h-full overflow-hidden duration-500">
                         <div className="product-thumb relative">
                             {data.sale && (
                                 <div className="product-sale text-xs text-white bg-orange md:px-3 px-2 py-0.5 inline-block rounded-full">
@@ -37,7 +47,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                     <div className="tag-action bg-black text-white text-xs p-1 rounded-sm">Quick View</div>
                                     <Icon.MagnifyingGlass size={18} weight='bold' />
                                 </div>
-                                <div className="add-cart-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative">
+                                <div
+                                    className="add-cart-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative"
+                                    onClick={handleAddToCart}
+                                >
                                     <div className="tag-action bg-black text-white text-xs p-1 rounded-sm">Add To Cart</div>
                                     <Icon.Bag size={18} weight='bold' />
                                 </div>

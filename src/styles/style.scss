@@ -1,12 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'animate.css';
 @import 'globals.scss';
 @import 'icomoon/style.css';
 @import 'custom-swiper.scss';
 @import 'header.scss';
 @import 'slider.scss';
 @import 'product.scss';
+@import 'tab-active.scss';
 @import 'blog.scss';
 @import 'home1.scss';
 @import 'shop.scss';
+@import 'custom-rc-slide.scss';

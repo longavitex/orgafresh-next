@@ -1,0 +1,15 @@
+/* 
+**
+**** Best Seller Home1
+**
+*/
+.best-seller-block .list-cate .cate-item.active {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.best-seller-block .list-cate {
+    max-width: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
