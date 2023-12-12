@@ -10,7 +10,7 @@ interface Props {
 const BlogSection: React.FC<Props> = ({ data, limit }) => {
     return (
         <>
-            <div className="blog-block py-20">
+            <div className="blog-block md:py-20 py-12">
                 <div className="container">
                     <div className="heading text-center">
                         <div className="text-subheading">News & Events</div>

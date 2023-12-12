@@ -7,7 +7,7 @@
         "price": 24,
         "originPrice": 31,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/1.png",
         "subImage": "/images/product/smoothies/2.png",
         "listImage": [
@@ -28,7 +28,7 @@
         "price": 26,
         "originPrice": 32,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/3.png",
         "subImage": "/images/product/smoothies/4.png",
         "listImage": [
@@ -49,7 +49,7 @@
         "price": 18,
         "originPrice": 28,
         "sale": false,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/5.png",
         "subImage": "/images/product/smoothies/6.png",
         "listImage": [
@@ -70,7 +70,7 @@
         "price": 15,
         "originPrice": 21,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/7.png",
         "subImage": "/images/product/smoothies/8.png",
         "listImage": [
@@ -91,7 +91,7 @@
         "price": 16,
         "originPrice": 22,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/9.png",
         "subImage": "/images/product/smoothies/10.png",
         "listImage": [
@@ -112,7 +112,7 @@
         "price": 16,
         "originPrice": 20,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/11.png",
         "subImage": "/images/product/smoothies/12.png",
         "listImage": [
@@ -133,7 +133,7 @@
         "price": 25,
         "originPrice": 29,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/13.png",
         "subImage": "/images/product/smoothies/14.png",
         "listImage": [
@@ -154,7 +154,7 @@
         "price": 21,
         "originPrice": 26,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/16.png",
         "subImage": "/images/product/smoothies/17.png",
         "listImage": [
@@ -175,7 +175,7 @@
         "price": 19,
         "originPrice": 25,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/18.png",
         "subImage": "/images/product/smoothies/19.png",
         "listImage": [
@@ -196,7 +196,7 @@
         "price": 24,
         "originPrice": 29,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/20.png",
         "subImage": "/images/product/smoothies/19.png",
         "listImage": [
@@ -217,7 +217,7 @@
         "price": 24,
         "originPrice": 34,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/6.png",
         "subImage": "/images/product/smoothies/7.png",
         "listImage": [
@@ -238,7 +238,7 @@
         "price": 32,
         "originPrice": 39,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/8.png",
         "subImage": "/images/product/smoothies/9.png",
         "listImage": [
@@ -259,7 +259,7 @@
         "price": 26,
         "originPrice": 32,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/10.png",
         "subImage": "/images/product/smoothies/11.png",
         "listImage": [
@@ -280,7 +280,7 @@
         "price": 15,
         "originPrice": 24,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/12.png",
         "subImage": "/images/product/smoothies/13.png",
         "listImage": [
@@ -301,7 +301,7 @@
         "price": 17,
         "originPrice": 26,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/14.png",
         "subImage": "/images/product/smoothies/15.png",
         "listImage": [
@@ -322,7 +322,7 @@
         "price": 16,
         "originPrice": 25,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/15.png",
         "subImage": "/images/product/smoothies/16.png",
         "listImage": [
@@ -343,7 +343,7 @@
         "price": 21,
         "originPrice": 28,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/17.png",
         "subImage": "/images/product/smoothies/18.png",
         "listImage": [
@@ -364,7 +364,7 @@
         "price": 24,
         "originPrice": 34,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/19.png",
         "subImage": "/images/product/smoothies/20.png",
         "listImage": [
@@ -385,7 +385,7 @@
         "price": 34,
         "originPrice": 42,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/2.png",
         "subImage": "/images/product/smoothies/3.png",
         "listImage": [
@@ -406,7 +406,7 @@
         "price": 17,
         "originPrice": 25,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/4.png",
         "subImage": "/images/product/smoothies/5.png",
         "listImage": [
@@ -427,7 +427,7 @@
         "price": 14,
         "originPrice": 20,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/8.png",
         "subImage": "/images/product/smoothies/10.png",
         "listImage": [
@@ -448,7 +448,7 @@
         "price": 10,
         "originPrice": 15,
         "sale": true,
-        "quantity": 100,
+        "quantityRemain": 100,
         "image": "/images/product/smoothies/12.png",
         "subImage": "/images/product/smoothies/15.png",
         "listImage": [
@@ -460,5 +460,383 @@
         "type": "peach",
         "description": "",
         "slug": "apple-cider"
+    },
+    {
+        "id": "23",
+        "category": "fruits",
+        "name": "Ice peach fruit",
+        "rate": 5,
+        "price": 6,
+        "originPrice": 9,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/fruits/2.png",
+        "subImage": "/images/product/fruits/7.png",
+        "listImage": [
+            "/images/product/fruits/2.png",
+            "/images/product/fruits/7.png",
+            "/images/product/fruits/3.png",
+            "/images/product/fruits/4.png"
+        ],
+        "type": "peach",
+        "description": "",
+        "slug": "peach-cider"
+    },
+    {
+        "id": "24",
+        "category": "fruits",
+        "name": "Sweet banana fruit",
+        "rate": 5,
+        "price": 4,
+        "originPrice": 4,
+        "sale": false,
+        "quantityRemain": 100,
+        "image": "/images/product/fruits/1.png",
+        "subImage": "/images/product/fruits/6.png",
+        "listImage": [
+            "/images/product/fruits/1.png",
+            "/images/product/fruits/2.png",
+            "/images/product/fruits/3.png",
+            "/images/product/fruits/6.png"
+        ],
+        "type": "banana",
+        "description": "",
+        "slug": "banana-cider"
+    },
+    {
+        "id": "25",
+        "category": "fruits",
+        "name": "America strawberry fruit",
+        "rate": 5,
+        "price": 9,
+        "originPrice": 15,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/fruits/3.png",
+        "subImage": "/images/product/fruits/5.png",
+        "listImage": [
+            "/images/product/fruits/5.png",
+            "/images/product/fruits/2.png",
+            "/images/product/fruits/3.png",
+            "/images/product/fruits/4.png"
+        ],
+        "type": "strawberry",
+        "description": "",
+        "slug": "strawberry-cider"
+    },
+    {
+        "id": "26",
+        "category": "fruits",
+        "name": "Ice grape fruit",
+        "rate": 4,
+        "price": 8,
+        "originPrice": 8,
+        "sale": false,
+        "quantityRemain": 100,
+        "image": "/images/product/fruits/4.png",
+        "subImage": "/images/product/fruits/1.png",
+        "listImage": [
+            "/images/product/fruits/1.png",
+            "/images/product/fruits/7.png",
+            "/images/product/fruits/3.png",
+            "/images/product/fruits/4.png"
+        ],
+        "type": "grape",
+        "description": "",
+        "slug": "grape-cider"
+    },
+    {
+        "id": "27",
+        "category": "fruits",
+        "name": "Sweet pomegranate fruit",
+        "rate": 5,
+        "price": 10,
+        "originPrice": 15,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/fruits/5.png",
+        "subImage": "/images/product/fruits/2.png",
+        "listImage": [
+            "/images/product/fruits/5.png",
+            "/images/product/fruits/2.png",
+            "/images/product/fruits/3.png",
+            "/images/product/fruits/6.png"
+        ],
+        "type": "pomegranate",
+        "description": "",
+        "slug": "pomegranate-cider"
+    },
+    {
+        "id": "28",
+        "category": "fruits",
+        "name": "Sweet kiwi fruit",
+        "rate": 5,
+        "price": 9,
+        "originPrice": 15,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/fruits/6.png",
+        "subImage": "/images/product/fruits/1.png",
+        "listImage": [
+            "/images/product/fruits/6.png",
+            "/images/product/fruits/1.png",
+            "/images/product/fruits/2.png",
+            "/images/product/fruits/4.png"
+        ],
+        "type": "kiwi",
+        "description": "",
+        "slug": "kiwi-cider"
+    },
+    {
+        "id": "29",
+        "category": "fruits",
+        "name": "Red apple fruit",
+        "rate": 4,
+        "price": 7,
+        "originPrice": 10,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/fruits/7.png",
+        "subImage": "/images/product/fruits/3.png",
+        "listImage": [
+            "/images/product/fruits/3.png",
+            "/images/product/fruits/7.png",
+            "/images/product/fruits/2.png",
+            "/images/product/fruits/4.png"
+        ],
+        "type": "apple",
+        "description": "",
+        "slug": "apple-cider"
+    },
+    {
+        "id": "30",
+        "category": "vegetables",
+        "name": "Green broccoli vegetables",
+        "rate": 5,
+        "price": 6,
+        "originPrice": 9,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/vegetables/1.png",
+        "subImage": "/images/product/vegetables/4.png",
+        "listImage": [
+            "/images/product/vegetables/1.png",
+            "/images/product/vegetables/7.png",
+            "/images/product/vegetables/2.png",
+            "/images/product/vegetables/4.png"
+        ],
+        "type": "broccoli",
+        "description": "",
+        "slug": "broccoli-cider"
+    },
+    {
+        "id": "31",
+        "category": "vegetables",
+        "name": "Sweet celery vegetables",
+        "rate": 5,
+        "price": 4,
+        "originPrice": 4,
+        "sale": false,
+        "quantityRemain": 100,
+        "image": "/images/product/vegetables/2.png",
+        "subImage": "/images/product/vegetables/7.png",
+        "listImage": [
+            "/images/product/vegetables/7.png",
+            "/images/product/vegetables/2.png",
+            "/images/product/vegetables/3.png",
+            "/images/product/vegetables/6.png"
+        ],
+        "type": "celery",
+        "description": "",
+        "slug": "celery-cider"
+    },
+    {
+        "id": "32",
+        "category": "vegetables",
+        "name": "America dates vegetables",
+        "rate": 5,
+        "price": 9,
+        "originPrice": 15,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/vegetables/3.png",
+        "subImage": "/images/product/vegetables/5.png",
+        "listImage": [
+            "/images/product/vegetables/5.png",
+            "/images/product/vegetables/2.png",
+            "/images/product/vegetables/3.png",
+            "/images/product/vegetables/4.png"
+        ],
+        "type": "dates",
+        "description": "",
+        "slug": "dates-cider"
+    },
+    {
+        "id": "33",
+        "category": "vegetables",
+        "name": "Bok choy",
+        "rate": 4,
+        "price": 8,
+        "originPrice": 8,
+        "sale": false,
+        "quantityRemain": 100,
+        "image": "/images/product/vegetables/4.png",
+        "subImage": "/images/product/vegetables/1.png",
+        "listImage": [
+            "/images/product/vegetables/1.png",
+            "/images/product/vegetables/7.png",
+            "/images/product/vegetables/3.png",
+            "/images/product/vegetables/4.png"
+        ],
+        "type": "bok-choy",
+        "description": "",
+        "slug": "bok-choy-cider"
+    },
+    {
+        "id": "34",
+        "category": "vegetables",
+        "name": "purple cabbage vegetables",
+        "rate": 5,
+        "price": 10,
+        "originPrice": 15,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/vegetables/5.png",
+        "subImage": "/images/product/vegetables/2.png",
+        "listImage": [
+            "/images/product/vegetables/5.png",
+            "/images/product/vegetables/2.png",
+            "/images/product/vegetables/3.png",
+            "/images/product/vegetables/6.png"
+        ],
+        "type": "purple-cabbage",
+        "description": "",
+        "slug": "purple-cabbage-cider"
+    },
+    {
+        "id": "35",
+        "category": "vegetables",
+        "name": "Sweet tomato vegetables",
+        "rate": 5,
+        "price": 9,
+        "originPrice": 15,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/vegetables/6.png",
+        "subImage": "/images/product/vegetables/1.png",
+        "listImage": [
+            "/images/product/vegetables/6.png",
+            "/images/product/vegetables/1.png",
+            "/images/product/vegetables/2.png",
+            "/images/product/vegetables/4.png"
+        ],
+        "type": "tomato",
+        "description": "",
+        "slug": "tomato-cider"
+    },
+    {
+        "id": "36",
+        "category": "vegetables",
+        "name": "Celery leaves vegetables",
+        "rate": 4,
+        "price": 7,
+        "originPrice": 10,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/vegetables/7.png",
+        "subImage": "/images/product/vegetables/3.png",
+        "listImage": [
+            "/images/product/vegetables/3.png",
+            "/images/product/vegetables/7.png",
+            "/images/product/vegetables/2.png",
+            "/images/product/vegetables/4.png"
+        ],
+        "type": "celery",
+        "description": "",
+        "slug": "celery-cider"
+    },
+    {
+        "id": "37",
+        "category": "meats",
+        "name": "Beef America",
+        "rate": 5,
+        "price": 32,
+        "originPrice": 35,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/meats/1.png",
+        "subImage": "/images/product/meats/3.png",
+        "listImage": [
+            "/images/product/meats/1.png",
+            "/images/product/meats/2.png",
+            "/images/product/meats/3.png",
+            "/images/product/meats/4.png"
+        ],
+        "type": "beef",
+        "description": "",
+        "slug": "beef-cider"
+    },
+    {
+        "id": "38",
+        "category": "meats",
+        "name": "Japan fish meats",
+        "rate": 5,
+        "price": 46,
+        "originPrice": 52,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/meats/2.png",
+        "subImage": "/images/product/meats/4.png",
+        "listImage": [
+            "/images/product/meats/6.png",
+            "/images/product/meats/1.png",
+            "/images/product/meats/2.png",
+            "/images/product/meats/4.png"
+        ],
+        "type": "fish",
+        "description": "",
+        "slug": "fish-cider"
+    },
+    {
+        "id": "39",
+        "category": "meats",
+        "name": "Vietnamese chicken meats",
+        "rate": 5,
+        "price": 24,
+        "originPrice": 32,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/meats/3.png",
+        "subImage": "/images/product/meats/1.png",
+        "listImage": [
+            "/images/product/meats/3.png",
+            "/images/product/meats/1.png",
+            "/images/product/meats/2.png",
+            "/images/product/meats/4.png"
+        ],
+        "type": "chicken",
+        "description": "",
+        "slug": "chicken-cider"
+    },
+    {
+        "id": "40",
+        "category": "meats",
+        "name": "forest Pork",
+        "rate": 5,
+        "price": 9,
+        "originPrice": 15,
+        "sale": true,
+        "quantityRemain": 100,
+        "image": "/images/product/meats/4.png",
+        "subImage": "/images/product/meats/2.png",
+        "listImage": [
+            "/images/product/meats/1.png",
+            "/images/product/meats/2.png",
+            "/images/product/meats/3.png",
+            "/images/product/meats/4.png"
+        ],
+        "type": "pork",
+        "description": "",
+        "slug": "pork-cider"
     }
 ]

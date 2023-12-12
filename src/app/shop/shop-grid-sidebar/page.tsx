@@ -12,6 +12,7 @@ import Footer from '@/components/Footer/Footer'
 const ShopGridSidebar = () => {
     const searchParams = useSearchParams()
     const taste = searchParams.get('taste')
+    const category = searchParams.get('category')
     
     return (
         <div className='shop-grid-sidebar'>
@@ -19,7 +20,7 @@ const ShopGridSidebar = () => {
             <MenuTwo />
             <HeadingPage title="Shop Grid Sidebar" subTitle="Shop Sidebar" />
             <div className="container">
-                <GridSidebar data={productData} productPerPage={12} dataTaste={taste} />
+                <GridSidebar data={productData} productPerPage={12} dataTaste={taste} dataCategory={category} />
             </div>
             <Footer borderTop={true} />
         </div>

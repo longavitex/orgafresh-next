@@ -6,7 +6,7 @@ export interface ProductType {
     price: number;
     originPrice: number;
     sale: boolean;
-    quantity: number;
+    quantityRemain: number;
     image: string;
     subImage: string;
     listImage: Array<string>;

@@ -9,12 +9,13 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css'
 
 interface Props {
-    data: Array<ProductType>;
+    data: Array<ProductType>
     productPerPage: number
     dataTaste: string | null
+    dataCategory: string | null
 }
 
-const GridSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste }) => {
+const GridSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCategory }) => {
     const [currentPage, setCurrentPage] = useState(0);
     const [category, setCategory] = useState<string | null>();
     const [taste, setTaste] = useState<string | null>(dataTaste);
@@ -71,7 +72,7 @@ const GridSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste }) => {
             price: 0,
             originPrice: 0,
             sale: false,
-            quantity: 0,
+            quantityRemain: 0,
             image: 'no-data',
             subImage: 'no-data',
             listImage: [],

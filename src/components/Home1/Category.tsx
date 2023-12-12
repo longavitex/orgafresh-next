@@ -15,7 +15,7 @@ const Category = () => {
 
     return (
         <>
-            <div className="category-block style-one bg-surface pt-14 pb-12">
+            <div className="category-block style-one bg-surface md:pt-14 md:pb-12 pt-9 pb-8">
                 <div className="container">
                     <div className="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-3 2xl:gap-14 lg:gap-8 md:gap-x-20 md:gap-y-8 gap-x-[10px] gap-y-5">
                         <div className="cate-item cursor-pointer" onClick={() => handleCategoryClick('lemon')}>

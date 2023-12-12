@@ -23,7 +23,7 @@ const SpecialProduct: React.FC<Props> = ({ data, limit }) => {
                         className='w-full h-full object-cover'
                     />
                 </div>
-                <div className="container py-16">
+                <div className="container md:py-16 py-10">
                     <div className="heading">
                         <div className="text-subheading">Sale off 30%</div>
                         <div className="text-heading mt-2">Special Products</div>

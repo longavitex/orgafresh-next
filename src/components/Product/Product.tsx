@@ -15,13 +15,11 @@ interface ProductProps {
 
 const Product: React.FC<ProductProps> = ({ data, type }) => {
     const percentSale = Math.floor(100 - ((data.price / data.originPrice) * 100))
-    const { addToCart } = useCart()
+    const { addToCart } = useCart();
 
     const handleAddToCart = () => {
-        addToCart(data)
-        console.log(data);
-        
-    }
+        addToCart(data); // Truyền dữ liệu sản phẩm vào hàm addToCart
+    };
 
     return (
         <>

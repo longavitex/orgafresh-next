@@ -5,9 +5,6 @@ import { useCart } from '@/context/CartContext'
 
 const Cart = () => {
     const { cartState } = useCart();
-    console.log(cartState);
-    console.log(cartState.cartArray);
-    
 
     return (
         <>

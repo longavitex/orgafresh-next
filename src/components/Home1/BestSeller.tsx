@@ -26,7 +26,7 @@ const BestSeller: React.FC<Props> = ({ data, limit }) => {
 
     return (
         <>
-            <div className="best-seller-block md:pt-20 pt-10 md:pb-20 pb-10">
+            <div className="best-seller-block md:pt-20 pt-12 md:pb-20 pb-12">
                 <div className="container">
                     <div className="heading text-center">
                         <div className="text-subheading">Best Sellers</div>

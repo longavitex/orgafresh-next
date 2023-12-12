@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Quicksand } from 'next/font/google'
 import '@/styles/style.scss'
-import { CartProvider } from '@/context/CartContext'
+import GlobalProvider from './GlobalProvider'
 
 const quicksand = Quicksand({ subsets: ['latin'] })
 
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <CartProvider>
+    <GlobalProvider>
       <html lang="en">
         <body className={quicksand.className}>
           <div id="content">
@@ -24,6 +24,6 @@ export default function RootLayout({
           </div>
         </body>
       </html>
-    </CartProvider>
+    </GlobalProvider>
   )
 }

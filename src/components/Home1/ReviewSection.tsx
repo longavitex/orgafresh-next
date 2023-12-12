@@ -22,7 +22,7 @@ const ReviewSection: React.FC<Props> = ({data, limit}) => {
                         className='w-full h-full object-cover'
                     />
                 </div>
-                <div className="container py-20">
+                <div className="container md:py-20 py-12">
                     <div className="list-review grid lg:grid-cols-3 gap-8">
                         {data.slice(0, limit).map((item, index) => (
                             <Review key={index} data={item} type='style-one' />

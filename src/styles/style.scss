@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import 'animate.css';
 @import 'globals.scss';
 @import 'icomoon/style.css';
@@ -11,5 +8,9 @@
 @import 'tab-active.scss';
 @import 'blog.scss';
 @import 'home1.scss';
+@import 'home2.scss';
 @import 'shop.scss';
 @import 'custom-rc-slide.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
