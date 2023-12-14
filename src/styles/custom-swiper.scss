@@ -40,3 +40,15 @@
 .category-block .cate-item:hover .cate-name {
     color: var(--orange);
 }
+
+
+/* Swiper Navigation */
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--secondary) !important;
+    transition: all ease 0.3s;
+
+    &::after {
+        font-size: 28px;
+    }
+}

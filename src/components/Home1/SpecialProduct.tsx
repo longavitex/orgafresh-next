@@ -30,8 +30,11 @@ const SpecialProduct: React.FC<Props> = ({ data, limit }) => {
                     </div>
                     <div className="list-product special-product flex">
                         <div className='xl:basis-3/4 grid lg:grid-cols-3 sm:grid-cols-2 max-lg:w-full gap-5 flex-wrap mt-8'>
-                            {data.slice(11, limit).map((prd, index) => (
-                                <Product key={index} data={prd} type='row-1' />
+                            {data
+                                .filter(product => (Math.floor(100 - ((product.price / product.originPrice) * 100)) > 30) && product.category === 'smoothies')
+                                .slice(0, limit)
+                                .map((product) => (
+                                    <Product key={product.id} data={product} type='row-1' />
                             ))}
                         </div>
                     </div>

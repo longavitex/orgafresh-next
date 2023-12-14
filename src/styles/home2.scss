@@ -65,3 +65,37 @@
         }
     }
 }
+
+
+// Arrival Home2
+.list-product {
+    .swiper.pb-10 {
+        padding-bottom: 40px;
+    }
+
+    &.style-outline {
+
+        .custom-swiper-button-prev,
+        .custom-swiper-button-next {
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            font-size: 24px;
+            color: var(--secondary);
+            cursor: pointer;
+            user-select: none;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .custom-swiper-button-prev {
+            left: -40px;
+        }
+
+        .custom-swiper-button-next {
+            right: -40px;
+        }
+    }
+}

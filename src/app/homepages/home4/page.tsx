@@ -1,7 +1,7 @@
 import TopNavFour from "@/components/Headers/TopNav/TopNavFour"
 import MenuFour from "@/components/Headers/Menu/MenuFour"
 
-const Home4 = () => {
+const Home5 = () => {
     return (
         <>
             <TopNavFour />
@@ -10,4 +10,4 @@ const Home4 = () => {
     )
 }
 
-export default Home4
+export default Home5

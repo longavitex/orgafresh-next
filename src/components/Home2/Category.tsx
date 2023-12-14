@@ -32,9 +32,9 @@ const Category = () => {
                                 navigation
                                 loop={true}
                                 modules={[Navigation, Autoplay]}
-                                // autoplay={{
-                                //     delay: 3000,
-                                // }}
+                                autoplay={{
+                                    delay: 3000,
+                                }}
                                 breakpoints={{
                                     576: {
                                         slidesPerView: 2,

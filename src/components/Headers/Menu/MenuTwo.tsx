@@ -34,11 +34,6 @@ const MenuTwo = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/homepages/home3" className='text-button duration-300'>
-                        Home Fast Food
-                      </Link>
-                    </li>
-                    <li>
                       <Link href="/homepages/home4" className='text-button duration-300'>
                         Home Cake
                       </Link>

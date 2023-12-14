@@ -1,13 +1,13 @@
-import TopNavThree from "@/components/Headers/TopNav/TopNavThree"
+import TopNavFour from "@/components/Headers/TopNav/TopNavFour"
 import MenuThree from "@/components/Headers/Menu/MenuThree"
 
-const Home3 = () => {
+const Home4 = () => {
     return (
         <>
-            <TopNavThree />
+            <TopNavFour />
             <MenuThree />
         </>
     )
 }
 
-export default Home3
+export default Home4

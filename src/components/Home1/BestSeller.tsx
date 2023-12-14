@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 import Product from '../Product/Product'
 import { ProductType } from '@/type/ProductType'
 
@@ -13,16 +11,12 @@ interface Props {
 
 const BestSeller: React.FC<Props> = ({ data, limit }) => {
     const [selectedType, setSelectedType] = useState('peach');
-    const [filteredProducts, setFilteredProducts] = useState(
-        data.filter(product => product.type === 'peach')
-    );
 
     const handleTasteChange = (type: string) => {
         setSelectedType(type);
-        // Lọc danh sách sản phẩm dựa trên type mới được chọn
-        const filtered = data.filter(product => product.type.toLowerCase() === type.toLowerCase());
-        setFilteredProducts(filtered);
     };
+
+    const filteredProducts = data.filter(product => product.type === selectedType && product.category === 'smoothies');
 
     return (
         <>

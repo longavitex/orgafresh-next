@@ -14,12 +14,6 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
-    container: {
-      padding: {
-        DEFAULT: '16px',
-        '2xl': '63px',
-      },
-    },
     colors: {
       transparent: 'transparent',
       'white': '#ffffff',
