@@ -38,9 +38,41 @@ const Review: React.FC<ReviewProps> = ({ data, type }) => {
                     </div>
                 </div>
             ) : (
-                <div className="review-item">
-
-                </div>
+                <>
+                    {type === 'style-two' ? (
+                        <>
+                            <div className="review-item style-two h-full">
+                                <div className="review-main flex flex-col justify-between h-full py-10 px-12 rounded-2xl bg-white relative">
+                                    <div className="review-infor">
+                                            <div className="review-desc text-button-lg font-medium">{String.raw`"`}{data.description}{String.raw`"`}</div>
+                                    </div>
+                                    <div className="flex items-end justify-between md:mt-7 mt-3">
+                                        <div className="user flex items-center gap-4">
+                                            <div className="bg-img md:w-[60px] md:h-[60px] w-[48px] h-[48px]">
+                                                <Image
+                                                    src={data.avatar}
+                                                    width={60}
+                                                    height={60}
+                                                    alt='avatar'
+                                                    className='rounded-full w-full h-full'
+                                                />
+                                            </div>
+                                            <div className="user-infor">
+                                                <div className="text-button-lg">{data.name}</div>
+                                                <div className="text-grey md:mt-1 mt-0">{data.address}</div>
+                                            </div>
+                                        </div>
+                                        <div className="rate flex items-center">
+                                            <Rate currentRate={data.rate} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </>
+                    ) : (
+                        <></>
+                    )}
+                </>
             )
             }
         </>

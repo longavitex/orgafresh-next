@@ -15,7 +15,7 @@ interface Props {
     dataCategory: string | null
 }
 
-const GridSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCategory }) => {
+const ListSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCategory }) => {
     const [sortOption, setSortOption] = useState('');
     const [currentPage, setCurrentPage] = useState(0);
     const [category, setCategory] = useState<string | null>();
@@ -290,12 +290,12 @@ const GridSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCat
                         </div>
                     </div>
 
-                    <div className="list-product grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 md:gap-[30px] md:gap-y-[30px] gap-y-4 gap-3 md:mt-10 mt-6">
+                    <div className="list-product flex flex-col md:gap-10 gap-6 md:mt-10 mt-6">
                         {currentProducts.map((item) => (
                             item.id === 'no-data' ? (
                                 <div key={item.id} className="no-data-product">No products match the selected criteria.</div>
                             ) : (
-                                <Product key={item.id} data={item} type='col' />
+                                <Product key={item.id} data={item} type='list' />
                             )
                         ))}
                     </div>
@@ -311,4 +311,4 @@ const GridSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCat
     )
 }
 
-export default GridSidebar
+export default ListSidebar

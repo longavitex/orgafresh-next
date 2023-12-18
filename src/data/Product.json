@@ -17,7 +17,7 @@
             "/images/product/smoothies/1.png"
         ],
         "type": "apple",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -38,7 +38,7 @@
             "/images/product/smoothies/5.png"
         ],
         "type": "strawberry",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -48,7 +48,7 @@
         "rate": 5,
         "price": 18,
         "originPrice": 28,
-        "sale": false,
+        "sale": true,
         "quantityRemain": 100,
         "image": "/images/product/smoothies/5.png",
         "subImage": "/images/product/smoothies/6.png",
@@ -59,7 +59,7 @@
             "/images/product/smoothies/3.png"
         ],
         "type": "blueberry",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -80,7 +80,7 @@
             "/images/product/smoothies/11.png"
         ],
         "type": "watermelon",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -101,7 +101,7 @@
             "/images/product/smoothies/13.png"
         ],
         "type": "mango",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -122,7 +122,7 @@
             "/images/product/smoothies/10.png"
         ],
         "type": "mixed-juice",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -143,7 +143,7 @@
             "/images/product/smoothies/12.png"
         ],
         "type": "lemon",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -164,7 +164,7 @@
             "/images/product/smoothies/14.png"
         ],
         "type": "cinnamon",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -185,7 +185,7 @@
             "/images/product/smoothies/17.png"
         ],
         "type": "cumin",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -206,7 +206,7 @@
             "/images/product/smoothies/17.png"
         ],
         "type": "peach",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -227,7 +227,7 @@
             "/images/product/smoothies/4.png"
         ],
         "type": "apple",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -248,7 +248,7 @@
             "/images/product/smoothies/11.png"
         ],
         "type": "strawberry",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -269,7 +269,7 @@
             "/images/product/smoothies/13.png"
         ],
         "type": "blueberry",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -290,7 +290,7 @@
             "/images/product/smoothies/15.png"
         ],
         "type": "watermelon",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -311,7 +311,7 @@
             "/images/product/smoothies/17.png"
         ],
         "type": "mango",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -332,7 +332,7 @@
             "/images/product/smoothies/18.png"
         ],
         "type": "mixed-juice",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -353,7 +353,7 @@
             "/images/product/smoothies/20.png"
         ],
         "type": "lemon",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -374,7 +374,7 @@
             "/images/product/smoothies/17.png"
         ],
         "type": "cinnamon",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -395,7 +395,7 @@
             "/images/product/smoothies/5.png"
         ],
         "type": "cumin",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -416,7 +416,7 @@
             "/images/product/smoothies/6.png"
         ],
         "type": "peach",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -437,7 +437,7 @@
             "/images/product/smoothies/11.png"
         ],
         "type": "peach",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -458,7 +458,7 @@
             "/images/product/smoothies/15.png"
         ],
         "type": "peach",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -479,7 +479,7 @@
             "/images/product/fruits/4.png"
         ],
         "type": "peach",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "peach-cider"
     },
     {
@@ -500,7 +500,7 @@
             "/images/product/fruits/6.png"
         ],
         "type": "banana",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "banana-cider"
     },
     {
@@ -521,7 +521,7 @@
             "/images/product/fruits/4.png"
         ],
         "type": "strawberry",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "strawberry-cider"
     },
     {
@@ -542,7 +542,7 @@
             "/images/product/fruits/4.png"
         ],
         "type": "grape",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "grape-cider"
     },
     {
@@ -563,7 +563,7 @@
             "/images/product/fruits/6.png"
         ],
         "type": "pomegranate",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "pomegranate-cider"
     },
     {
@@ -584,7 +584,7 @@
             "/images/product/fruits/4.png"
         ],
         "type": "kiwi",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "kiwi-cider"
     },
     {
@@ -605,7 +605,7 @@
             "/images/product/fruits/4.png"
         ],
         "type": "apple",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "apple-cider"
     },
     {
@@ -626,7 +626,7 @@
             "/images/product/vegetables/4.png"
         ],
         "type": "broccoli",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "broccoli-cider"
     },
     {
@@ -647,7 +647,7 @@
             "/images/product/vegetables/6.png"
         ],
         "type": "celery",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "celery-cider"
     },
     {
@@ -668,7 +668,7 @@
             "/images/product/vegetables/4.png"
         ],
         "type": "dates",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "dates-cider"
     },
     {
@@ -689,7 +689,7 @@
             "/images/product/vegetables/4.png"
         ],
         "type": "bok-choy",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "bok-choy-cider"
     },
     {
@@ -710,7 +710,7 @@
             "/images/product/vegetables/6.png"
         ],
         "type": "purple-cabbage",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "purple-cabbage-cider"
     },
     {
@@ -731,7 +731,7 @@
             "/images/product/vegetables/4.png"
         ],
         "type": "tomato",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "tomato-cider"
     },
     {
@@ -752,7 +752,7 @@
             "/images/product/vegetables/4.png"
         ],
         "type": "celery",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "celery-cider"
     },
     {
@@ -773,7 +773,7 @@
             "/images/product/meats/4.png"
         ],
         "type": "beef",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "beef-cider"
     },
     {
@@ -794,7 +794,7 @@
             "/images/product/meats/4.png"
         ],
         "type": "fish",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "fish-cider"
     },
     {
@@ -815,7 +815,7 @@
             "/images/product/meats/4.png"
         ],
         "type": "chicken",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "chicken-cider"
     },
     {
@@ -836,7 +836,7 @@
             "/images/product/meats/4.png"
         ],
         "type": "pork",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "pork-cider"
     }
 ]

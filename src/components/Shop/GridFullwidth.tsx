@@ -12,9 +12,32 @@ interface Props {
 }
 
 const GridFullwidth: React.FC<Props> = ({ data, productPerPage }) => {
+    const [sortOption, setSortOption] = useState('');
     const [currentPage, setCurrentPage] = useState(0);
     const productsPerPage = productPerPage;
     const offset = currentPage * productsPerPage;
+
+    const handleSortChange = (option: string) => {
+        setSortOption(option);
+    };
+
+    // Tạo một bản sao của mảng đã lọc để sắp xếp
+    let sortedData = [...data];
+
+    if (sortOption === 'discountHighToLow') {
+        sortedData = data
+            .sort((a, b) => (
+                (Math.floor(100 - ((b.price / b.originPrice) * 100))) - (Math.floor(100 - ((a.price / a.originPrice) * 100)))
+            ))
+    }
+
+    if (sortOption === 'priceHighToLow') {
+        sortedData = data.sort((a, b) => b.price - a.price)
+    }
+
+    if (sortOption === 'priceLowToHigh') {
+        sortedData = data.sort((a, b) => a.price - b.price)
+    }
 
     const currentProducts = data.slice(offset, offset + productsPerPage);
 
@@ -22,17 +45,24 @@ const GridFullwidth: React.FC<Props> = ({ data, productPerPage }) => {
         setCurrentPage(selected);
     };
 
-    const pageCount = Math.ceil(data.length / productsPerPage);
+    const pageCount = Math.ceil(sortedData.length / productsPerPage);
 
     return (
         <>
             <div className="shop-product grid-fullwidth md:pt-10 md:pb-20 pt-6 pb-8">
                 <div className="shop-heading flex items-center justify-between flex-wrap gap-5 gap-y-4">
                     <div className="select-block relative">
-                        <select className='text-title py-2 md:pl-4 pl-3 md:pr-10 pr-8 rounded-lg border border-line' name="select-filter" id="selectFilter">
-                            <option value="Best Selling">Best Selling</option>
-                            <option value="Best Reviews">Best Reviews</option>
-                            <option value="Best Discount">Best Discount</option>
+                        <select
+                            id="selectFilter"
+                            name="select-filter"
+                            className='text-title py-2 md:pl-4 pl-3 md:pr-10 pr-8 rounded-lg border border-line'
+                            onChange={(e) => { handleSortChange(e.target.value) }}
+                            defaultValue={'Sorting'}
+                        >
+                            <option value="Sorting" disabled>Sorting</option>
+                            <option value="discountHighToLow">Best Discount</option>
+                            <option value="priceHighToLow">Price High To Low</option>
+                            <option value="priceLowToHigh">Price Low To High</option>
                         </select>
                         <Icon.CaretDown size={12} className='absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
                     </div>

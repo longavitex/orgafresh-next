@@ -51,7 +51,6 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [cartState, dispatch] = useReducer(cartReducer, { cartArray: [] });
 
-
     const addToCart = (item: ProductType) => {
         dispatch({ type: 'ADD_TO_CART', payload: item });
     };

@@ -13,7 +13,7 @@ interface Props {
 const Deal: React.FC<Props> = ({ data, limit }) => {
     return (
         <>
-            <div className="deal-block relative flex items-center justify-center md:mt-10">
+            <div className="deal-block relative flex items-center justify-center md:mt-8">
                 <div className="bg-img absolute top-0 left-0 w-full z-[-1] max-2xl:h-[600px] max-sm:h-[360px]">
                     <Image
                         src={'/images/other/bg-deal2.png'}
@@ -23,7 +23,7 @@ const Deal: React.FC<Props> = ({ data, limit }) => {
                         className='w-full h-full max-h-[640px] object-cover'
                     />
                 </div>
-                <div className="container md:pt-16 md:pb-20 pt-8 pb-10">
+                <div className="container md:pt-16 md:pb-20 pt-8 pb-12">
                     <div className="heading text-center">
                         <div className="text-subheading text-center flex items-center justify-center relative">
                             <Image

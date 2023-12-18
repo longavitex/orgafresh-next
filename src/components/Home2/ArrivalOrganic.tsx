@@ -72,7 +72,7 @@ const ArrivalOrganic: React.FC<Props> = ({ data, limit }) => {
                                         spaceBetween: 24,
                                     },
                                 }}
-                                className='pb-10'
+                                className='pb-12'
                             >
                                 {filteredProducts.slice(0, limit).map((prd) => (
                                     <SwiperSlide key={prd.id}>
