@@ -709,7 +709,7 @@
             "/images/product/vegetables/3.png",
             "/images/product/vegetables/6.png"
         ],
-        "type": "purple-cabbage",
+        "type": "cabbage",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         "slug": "purple-cabbage-cider"
     },

@@ -1,9 +1,14 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
+import ModalCart from '@/components/Modal/ModalCart';
+import { useModalCartContext } from '@/context/ModalCartContext';
 
 const MenuOne = () => {
+  const { openModalCart } = useModalCartContext()
   return (
     <>
       <div className='header-menu style-one box-shadow md:h-[80px] h-[60px]'>
@@ -100,7 +105,10 @@ const MenuOne = () => {
                   <Icon.Heart size={24} color='black' />
                   <span className="quantity wishlist-quantity absolute md:right-5 md:top-5 right-1 top-2.5 text-xs text-white bg-orange px-1.5 pt-0.5 pb-0.5 rounded-full">0</span>
                 </div>
-                <div className="max-[450px]:hidden cart-icon flex items-center justify-center md:pl-7 md:pr-7 pl-2.5 pr-2.5 relative cursor-pointer">
+                <div
+                  className="max-[450px]:hidden cart-icon flex items-center justify-center md:pl-7 md:pr-7 pl-2.5 pr-2.5 relative cursor-pointer"
+                  onClick={openModalCart}
+                >
                   <Icon.Bag size={24} color='black' />
                   <span className="quantity cart-quantity absolute md:right-5 md:top-5 right-1 top-2.5 text-xs text-white bg-orange px-1.5 pt-0.5 pb-0.5 rounded-full">0</span>
                 </div>
@@ -112,6 +120,8 @@ const MenuOne = () => {
           </div>
         </div>
       </div>
+
+      <ModalCart />
     </>
   )
 }

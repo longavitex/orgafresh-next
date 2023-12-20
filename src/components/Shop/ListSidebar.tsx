@@ -130,8 +130,8 @@ const ListSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCat
 
     return (
         <>
-            <div className="shop-product grid-sidebar flex md:pt-10 md:pb-20 pt-6 pb-8">
-                <div className="left sidebar w-[18%]">
+            <div className="shop-product grid-sidebar flex max-sm:flex-col-reverse gap-y-8 md:pt-10 md:pb-20 pt-6 pb-8">
+                <div className="left sidebar lg:w-[18%] sm:w-[25%] w-full">
                     <div className="category-filter">
                         <div className="text-cate">Product categories</div>
                         <div className="list-cate mt-2.5">
@@ -173,7 +173,7 @@ const ListSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCat
                             </div>
                         </div>
                     </div>
-                    <div className="price-filter mt-10">
+                    <div className="price-filter md:mt-10 mt-6">
                         <div className="text-cate">Filter by price</div>
                         <Slider
                             range
@@ -194,7 +194,7 @@ const ListSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCat
                             </div>
                         </div>
                     </div>
-                    <div className="taste-filter mt-10">
+                    <div className="taste-filter md:mt-10 mt-6">
                         <div className="text-cate">Filter by taste</div>
                         <div className="list-cate flex items-center gap-2 flex-wrap mt-3">
                             <div
@@ -260,7 +260,7 @@ const ListSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCat
                         </div>
                     </div>
                 </div>
-                <div className="right pl-[60px] w-[82%]">
+                <div className="right sm:pl-[60px] lg:w-[82%] sm:w-[75%] w-full">
                     <div className="shop-heading flex items-center justify-between flex-wrap gap-5 gap-y-4">
                         <div className="select-block relative">
                             <select

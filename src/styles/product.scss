@@ -75,6 +75,16 @@
                     opacity: 1;
                 }
             }
+
+            @media (max-width: 640px) {
+                width: 34px;
+                height: 34px;
+
+                svg {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
         }
     }
 
@@ -155,6 +165,85 @@
 
             .add-wishlist-btn {
                 transform: translateX(0);
+            }
+        }
+    }
+}
+
+
+// Detail
+.list-img {
+    .mySwiper2 {
+        cursor: pointer;
+
+        .swiper-wrapper {
+            gap: 12px;
+
+            .swiper-slide {
+                border: 1px solid var(--line);
+                width: calc(25% - 9px) !important;
+            }
+
+            .swiper-slide-thumb-active {
+                transition: all ease 0.3s;
+                border-color: var(--black);
+            }
+        }
+    }
+}
+
+.right {
+    .product-infor {
+        .list-action {
+
+            .quick-view-btn,
+            .add-cart-btn,
+            .add-wishlist-btn {
+                position: relative;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--orange);
+                    color: var(--white);
+                    border-color: var(--orange);
+
+                    .tag-action {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .menu-tab-block {
+            .menu-tab {
+                height: 100%;
+                max-width: max-content;
+                overflow-x: auto;
+                overflow-y: hidden;
+
+                .tab-item {
+                    position: relative;
+                    white-space: nowrap;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -13px;
+                        width: 0;
+                        height: 2px;
+                        background-color: var(--orange);
+                        transition: all ease 0.4s;
+                    }
+
+                    &.active,
+                    &:hover {
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }
