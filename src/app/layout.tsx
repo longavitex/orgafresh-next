@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Quicksand } from 'next/font/google'
 import '@/styles/style.scss'
 import GlobalProvider from './GlobalProvider'
+import ModalCart from '@/components/Modal/ModalCart'
+import ModalWishlist from '@/components/Modal/ModalWishlist'
 
 const quicksand = Quicksand({ subsets: ['latin'] })
 
@@ -22,6 +24,8 @@ export default function RootLayout({
           <div id="content">
             {children}
           </div>
+          <ModalCart />
+          <ModalWishlist />
         </body>
       </html>
     </GlobalProvider>

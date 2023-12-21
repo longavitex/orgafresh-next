@@ -8,6 +8,8 @@ import Rate from '@/components/Other/Rate'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useCart } from '@/context/CartContext'
 import { useModalCartContext } from '@/context/ModalCartContext'
+import { useWishlist } from '@/context/WishlistContext'
+import { useModalWishlistContext } from '@/context/ModalWishlistContext'
 import { useRouter } from 'next/navigation'
 
 interface ProductProps {
@@ -17,13 +19,20 @@ interface ProductProps {
 
 const Product: React.FC<ProductProps> = ({ data, type }) => {
     const percentSale = Math.floor(100 - ((data.price / data.originPrice) * 100))
-    const { addToCart } = useCart();
+    const { addToCart, cartState } = useCart();
     const { openModalCart } = useModalCartContext();
+    const { addToWishlist, wishlistState } = useWishlist();
+    const { openModalWishlist } = useModalWishlistContext();
     const router = useRouter()
 
     const handleClickCart = () => {
         addToCart(data); // Truyền dữ liệu sản phẩm vào hàm addToCart
         openModalCart(); //open modal cart
+    };
+
+    const handleClickWishlist = () => {
+        addToWishlist(data); // Truyền dữ liệu sản phẩm vào hàm addToWishlist
+        openModalWishlist(); //open modal cart
     };
 
     const handleDetailProduct = (productId: string | number | null) => {
@@ -64,7 +73,14 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                     <div className="tag-action bg-black text-white text-xs p-1 rounded-sm">Add To Cart</div>
                                     <Icon.Bag size={18} weight='bold' />
                                 </div>
-                                <div className="add-wishlist-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative">
+                                <div
+                                    className=
+                                    {`add-wishlist-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative ${cartState.cartArray.map(item => item.id === data.id ? 'added-wishlist' : '')}`}
+                                    onClick={(e) => {
+                                        handleClickWishlist()
+                                        e.stopPropagation()
+                                    }}
+                                >
                                     <div className="tag-action bg-black text-white text-xs p-1 rounded-sm">Add To Wishlist</div>
                                     <Icon.Heart size={18} weight='bold' />
                                 </div>

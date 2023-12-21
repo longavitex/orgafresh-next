@@ -7,7 +7,7 @@ interface ModalCartContextProps {
 }
 
 interface ModalCartContextValue {
-    isModalOpen: boolean;
+    isModalCartOpen: boolean;
     openModalCart: () => void;
     closeModalCart: () => void;
 }
@@ -23,18 +23,18 @@ export const useModalCartContext = (): ModalCartContextValue => {
 };
 
 export const ModalCartProvider: React.FC<ModalCartContextProps> = ({ children }) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalCartOpen, setIsModalCartOpen] = useState(false);
 
     const openModalCart = () => {
-        setIsModalOpen(true);
+        setIsModalCartOpen(true);
     };
 
     const closeModalCart = () => {
-        setIsModalOpen(false);
+        setIsModalCartOpen(false);
     };
 
     const contextValue: ModalCartContextValue = {
-        isModalOpen,
+        isModalCartOpen,
         openModalCart,
         closeModalCart,
     };

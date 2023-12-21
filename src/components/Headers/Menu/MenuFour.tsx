@@ -98,11 +98,11 @@ const MenuFour = () => {
                                 </div>
                                 <div className="max-[450px]:hidden wishlist-icon flex items-center justify-center md:pr-7 pr-4 relative cursor-pointer">
                                     <Icon.Heart size={24} color='black' />
-                                    <span className="quantity wishlist-quantity absolute md:right-5 md:top-5 right-2 top-2.5 text-xs text-white bg-orange px-1.5 pt-0.5 pb-0.5 rounded-full">0</span>
+                                    <span className="quantity wishlist-quantity absolute md:right-5 md:top-5 right-2 top-2.5 text-xs text-white bg-orange w-5 h-5 flex items-center justify-center rounded-full">0</span>
                                 </div>
                                 <div className="max-[450px]:hidden cart-icon flex items-center justify-center relative cursor-pointer">
                                     <Icon.Bag size={24} color='black' />
-                                    <span className="quantity cart-quantity absolute md:top-5 -right-2 top-2.5 text-xs text-white bg-orange px-1.5 pt-0.5 pb-0.5 rounded-full">0</span>
+                                    <span className="quantity cart-quantity absolute md:top-5 -right-2 top-2.5 text-xs text-white bg-orange w-5 h-5 flex items-center justify-center rounded-full">0</span>
                                 </div>
                                 <div className="menu-bumburger-icon flex items-center justify-center md:pl-7 pl-4 lg:hidden cursor-pointer">
                                     <Icon.List size={24} color='black' />
