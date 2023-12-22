@@ -5,16 +5,24 @@ import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { usePathname } from 'next/navigation';
+import { useWishlist } from '@/context/WishlistContext';
+import { useModalWishlistContext } from '@/context/ModalWishlistContext';
+import { useModalCartContext } from '@/context/ModalCartContext';
+import { useCart } from '@/context/CartContext';
 
 const MenuTwo = () => {
   const pathname = usePathname()
+  const { openModalCart } = useModalCartContext()
+  const { cartState } = useCart()
+  const { openModalWishlist } = useModalWishlistContext()
+  const { wishlistState } = useWishlist()
 
   return (
     <>
       <div className='header-menu style-two box-shadow md:h-[80px] h-[60px]'>
         <div className="container mx-auto h-full">
           <div className="header-main flex justify-between h-full relative">
-            
+
             <div className="menu-main h-full max-lg:hidden">
               <ul className='flex items-center gap-10 h-full'>
                 <li className='h-full relative'>
@@ -100,15 +108,23 @@ const MenuTwo = () => {
               </div>
               <div className="list-icon flex">
                 <div className="max-[450px]:hidden search-icon flex items-center justify-center md:pr-5 pr-3 cursor-pointer">
-                  <Icon.MagnifyingGlass size={24} color='black'/>
+                  <Icon.MagnifyingGlass size={24} color='black' />
                 </div>
-                <div className="max-[450px]:hidden wishlist-icon flex items-center justify-center md:pr-7 pr-4 relative cursor-pointer">
+                <div className="max-[450px]:hidden wishlist-icon flex items-center justify-center md:pr-7 pr-4 relative cursor-pointer"
+                  onClick={openModalWishlist}
+                >
                   <Icon.Heart size={24} color='black' />
-                  <span className="quantity wishlist-quantity absolute md:right-5 md:top-5 right-2 top-2.5 text-xs text-white bg-orange w-5 h-5 flex items-center justify-center rounded-full">0</span>
+                  <span className="quantity wishlist-quantity absolute md:right-5 md:top-5 right-2 top-2.5 text-xs text-white bg-orange w-5 h-5 flex items-center justify-center rounded-full">
+                    {wishlistState.wishlistArray.length}
+                  </span>
                 </div>
-                <div className="max-[450px]:hidden cart-icon flex items-center justify-center relative cursor-pointer">
+                <div className="max-[450px]:hidden cart-icon flex items-center justify-center relative cursor-pointer"
+                  onClick={openModalCart}
+                >
                   <Icon.Bag size={24} color='black' />
-                  <span className="quantity cart-quantity absolute md:top-5 -right-2 top-2.5 text-xs text-white bg-orange w-5 h-5 flex items-center justify-center rounded-full">0</span>
+                  <span className="quantity cart-quantity absolute md:top-5 -right-2 top-2.5 text-xs text-white bg-orange w-5 h-5 flex items-center justify-center rounded-full">
+                    {cartState.cartArray.length}
+                  </span>
                 </div>
                 <div className="menu-bumburger-icon flex items-center justify-center md:pl-7 pl-4 lg:hidden cursor-pointer">
                   <Icon.List size={24} color='black' />

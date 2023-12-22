@@ -48,7 +48,7 @@ const ModalCart = () => {
                                         </div>
                                         <div className="quantity-block border border-line w-[100px] py-2 px-2 flex items-center justify-between rounded-lg mt-2">
                                             <Icon.CaretLeft className='caption1 cursor-pointer' />
-                                            <div className="text-title">1</div>
+                                            <div className="text-title">{product.quantity}</div>
                                             <Icon.CaretRight className='caption1 cursor-pointer' />
                                         </div>
                                     </div>

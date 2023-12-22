@@ -5,6 +5,7 @@ export interface ProductType {
     rate: number;
     price: number;
     originPrice: number;
+    quantityPurchase: number;
     sale: boolean;
     quantityRemain: number;
     image: string;

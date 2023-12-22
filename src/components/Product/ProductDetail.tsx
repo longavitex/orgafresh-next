@@ -11,6 +11,10 @@ import 'swiper/css/bundle';
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import SwiperCore from 'swiper/core';
 import Rate from '../Other/Rate';
+import { useCart } from '@/context/CartContext';
+import { useModalCartContext } from '@/context/ModalCartContext';
+import { useWishlist } from '@/context/WishlistContext';
+import { useModalWishlistContext } from '@/context/ModalWishlistContext';
 
 SwiperCore.use([Navigation, Thumbs]);
 
@@ -21,13 +25,45 @@ interface Props {
 
 const ProductDetail: React.FC<Props> = ({ data, productId }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
+    const { addToCart, updateCart, cartState } = useCart()
+    const { openModalCart } = useModalCartContext()
+    const { addToWishlist, wishlistState } = useWishlist()
+    const { openModalWishlist } = useModalWishlistContext()
+    const productMain = data[Number(productId) - 1]
 
     const handleSwiper = (swiper: SwiperCore) => {
-        // Do something with the thumbsSwiper instance
         setThumbsSwiper(swiper);
     };
 
-    const productMain = data[Number(productId) - 1]
+    const handleAddToWishlist = () => {
+        if (!wishlistState.wishlistArray.find(item => item.id === productMain.id)) {
+            addToWishlist(productMain);
+        }
+        openModalWishlist()
+    };
+
+    const handleIncreaseQuantity = () => {
+        productMain.quantityPurchase += 1
+        updateCart(productMain.id, productMain.quantityPurchase + 1);
+    };
+
+    const handleDecreaseQuantity = () => {
+        if (productMain.quantityPurchase > 1) {
+            productMain.quantityPurchase -= 1
+            updateCart(productMain.id, productMain.quantityPurchase - 1);
+        }
+    };
+
+    const handleAddToCart = () => {
+        if (!cartState.cartArray.find(item => item.id === productMain.id)) {
+            addToCart({ ...productMain });
+            updateCart(productMain.id, productMain.quantityPurchase)
+        } else {
+            updateCart(productMain.id, productMain.quantityPurchase)
+        }
+        openModalCart()
+    };
+
 
     return (
         <>
@@ -43,7 +79,7 @@ const ProductDetail: React.FC<Props> = ({ data, productId }) => {
                                 className="mySwiper border border-line overflow-hidden"
                             >
                                 {productMain.listImage.map((item, index) => (
-                                    <SwiperSlide>
+                                    <SwiperSlide key={index}>
                                         <Image
                                             key={index}
                                             src={item}
@@ -65,7 +101,7 @@ const ProductDetail: React.FC<Props> = ({ data, productId }) => {
                                 className="mySwiper2 mt-3"
                             >
                                 {productMain.listImage.map((item, index) => (
-                                    <SwiperSlide>
+                                    <SwiperSlide key={index}>
                                         <Image
                                             key={index}
                                             src={item}
@@ -106,11 +142,11 @@ const ProductDetail: React.FC<Props> = ({ data, productId }) => {
                             <div className="list-action flex items-center flex-wrap gap-5 mt-5 lg:pb-10 pb-6 border-b border-line">
                                 <div className="text-title text-secondary">Quantity:</div>
                                 <div className="quantity-block md:p-3 p-1 flex items-center justify-between rounded-lg border border-line w-[120px] h-[50px]">
-                                    <Icon.Minus size={16} className='cursor-pointer' />
-                                    <div className="body1 font-semibold">1</div>
-                                    <Icon.Plus size={16} className='cursor-pointer' />
+                                    <Icon.Minus size={16} className='cursor-pointer' onClick={handleDecreaseQuantity} />
+                                    <div className="body1 font-semibold">{productMain.quantityPurchase}</div>
+                                    <Icon.Plus size={16} className='cursor-pointer' onClick={handleIncreaseQuantity} />
                                 </div>
-                                <div className="button-main bg-orange cursor-pointer h-[50px] flex items-center gap-2">
+                                <div className="button-main bg-orange cursor-pointer h-[50px] flex items-center gap-2" onClick={handleAddToCart}>
                                     <span>
                                         <Icon.Bag size={18} weight='bold' />
                                     </span>
@@ -118,6 +154,7 @@ const ProductDetail: React.FC<Props> = ({ data, productId }) => {
                                 </div>
                                 <div
                                     className="add-wishlist-btn w-[50px] h-[50px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative"
+                                    onClick={handleAddToWishlist}
                                 >
                                     <Icon.Heart size={20} weight='bold' />
                                 </div>
@@ -174,11 +211,29 @@ const ProductDetail: React.FC<Props> = ({ data, productId }) => {
                                 }}
                                 className='pb-12'
                             >
-                                {data.slice(5, 10).map((prd, index) => (
-                                    <SwiperSlide key={index}>
-                                        <Product data={prd} type='col' />
-                                    </SwiperSlide>
-                                ))}
+                                {
+                                    data.slice(Number(productId), Number(productId) + 5).length < 5 ? (
+                                        <>
+                                            {
+                                                data.slice(1, 6).map((prd, index) => (
+                                                    <SwiperSlide key={index}>
+                                                        <Product data={prd} type='col' />
+                                                    </SwiperSlide>
+                                                ))
+                                            }
+                                        </>
+                                    ) : (
+                                        <>
+                                            {
+                                                data.slice(Number(productId), Number(productId) + 5).map((prd, index) => (
+                                                    <SwiperSlide key={index}>
+                                                        <Product data={prd} type='col' />
+                                                    </SwiperSlide>
+                                                ))
+                                            }
+                                        </>
+                                    )
+                                }
                             </Swiper>
                         </div>
                     </div>
