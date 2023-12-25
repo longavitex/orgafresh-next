@@ -14,3 +14,15 @@
         }
     }
 }
+
+
+// blog-page
+.blog-page {
+    .list-blog {
+        .blog-item {
+            &:first-child {
+                grid-column: span 2 / span 2;
+            }
+        }
+    }
+}

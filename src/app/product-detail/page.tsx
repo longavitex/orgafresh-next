@@ -6,7 +6,6 @@ import TopNavTwo from '@/components/Headers/TopNav/TopNavTwo'
 import MenuTwo from '@/components/Headers/Menu/MenuTwo'
 import HeadingPage from '@/components/Other/HeadingPage'
 import productData from '@/data/Product.json'
-import GridSidebar from '@/components/Shop/GridSidebar'
 import ProductDetail from '@/components/Product/ProductDetail';
 import Footer from '@/components/Footer/Footer'
 

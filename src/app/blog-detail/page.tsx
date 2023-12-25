@@ -1,100 +1,65 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image'
 import TopNavTwo from '@/components/Headers/TopNav/TopNavTwo'
 import MenuTwo from '@/components/Headers/Menu/MenuTwo'
-import HeadingPage from '@/components/Other/HeadingPage'
 import blogData from '@/data/Blog.json'
-import Blog from '@/components/Blog/Blog'
-import HandlePagination from '@/components/Other/HandlePagination'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import Footer from '@/components/Footer/Footer'
-import { useRouter } from 'next/navigation'
 
-const BlogPage = () => {
-    const [currentPage, setCurrentPage] = useState(0);
-    const productsPerPage = 7;
-    const offset = currentPage * productsPerPage;
+const BlogDetail = () => {
     const router = useRouter()
     const searchParams = useSearchParams()
-    let dataCategory = searchParams.get('category')
-    const [category, setCategory] = useState<string | null>(dataCategory);
-
-    const handleCategory = (category: string) => {
-        setCategory(prevCategory => prevCategory === category ? null : category)
+    let blogId = searchParams.get('id')
+    if (blogId === null) {
+        blogId = '1'
     }
+
+    const blogMain = blogData[Number(blogId) - 1]
 
     const handleBlogClick = (blogId: string) => {
         // Go to blog detail with blogId selected
         router.push(`/blog-detail?id=${blogId}`);
     };
 
-
-    let filteredData = blogData.filter(product => {
-        let isCategoryMatched = true;
-        if (category) {
-            isCategoryMatched = product.category === category;
-        }
-
-        return isCategoryMatched
-    })
-
-    if (filteredData.length === 0) {
-        filteredData = [{
-            id: "no-data",
-            category: "no-data",
-            tag: "no-data",
-            title: "no-data",
-            date: "no-data",
-            author: "no-data",
-            thumbImg: "no-data",
-            coverImg: "no-data",
-            subImg: [
-                "no-data",
-                "no-data"
-            ],
-            shortDesc: "no-data",
-            description: "no-data",
-            slug: "no-data"
-        }];
-    }
-
-    const pageCount = Math.ceil(filteredData.length / productsPerPage);
-
-    // If page number 0, set current page = 0
-    if (pageCount === 0) {
-        setCurrentPage(0);
-    }
-
-    const currentProducts = filteredData.slice(offset, offset + productsPerPage);
-
-    const handlePageChange = (selected: number) => {
-        setCurrentPage(selected);
-    };
-
     return (
         <>
             <TopNavTwo />
             <MenuTwo />
-            <HeadingPage title="Our Blog" subTitle="Our Blog" />
-            <div className="blog-page md:py-20 py-12">
+            <div className="blog-page ">
+                <div className="bg-img">
+                    <Image
+                        src={blogMain.thumbImg}
+                        width={4000}
+                        height={3000}
+                        alt={blogMain.thumbImg}
+                        className='w-full object-cover h-[600px]'
+                    />
+                </div>
                 <div className="container">
-                    <div className="flex justify-between">
-                        <div className="left w-2/3 pr-4">
-                            <div className="list-blog grid grid-cols-2 gap-y-10 gap-8">
-                                {currentProducts.map(item => (
-                                    <Blog key={item.id} data={item} type='style-main' />
-                                ))}
-                            </div>
-                            {pageCount > 1 && (
-                                <div className="list-pagination flex items-center md:mt-10 mt-6">
-                                    <HandlePagination pageCount={pageCount} onPageChange={handlePageChange} />
+                    <div className="bg-white -mt-16 px-10 md:pb-20 pb-12 md:pt-16 pt-12 flex justify-between relative">
+                        <div className="left w-2/3">
+                            <div className="text-subheading">{blogMain.tag}</div>
+                            <div className="text-heading mt-3">{blogMain.title}</div>
+                            <div className="flex items-center gap-6 gap-y-2 flex-wrap text-caption text-grey mt-4">
+                                <div className="left flex items-center gap-2">
+                                    <Icon.CalendarBlank size={12} className='text-caption text-grey' />
+                                    <div className="date">{blogMain.date}</div>
                                 </div>
-                            )}
+                                <div className="right flex items-center gap-2">
+                                    <Icon.User size={12} className='text-caption text-grey' />
+                                    <div className="author">{blogMain.author}</div>
+                                </div>
+                            </div>
+                            <div className="desc mt-8">
+                                <div className="text-title text-secondary">{blogMain.description}</div>
+                                <div className="text-title text-secondary mt-6">I think of this as a sheet pan sandwich recipe. You roast a bunch of mushrooms and scallions in a hot oven as your main components. And you whip up a simple poblano yogurt while those are roasting. Pile everything high on top of hearty slices of well-toasted bread, and you're set.</div>
+                            </div>
                         </div>
-                        <div className="right w-1/4 pl-4">
+                        <div className="right w-1/4">
                             <form className='form-search relative w-full h-[42px]'>
                                 <input className='py-2 px-4 w-full h-full border border-line rounded-lg' type="text" placeholder='Search' />
                                 <button>
@@ -104,18 +69,22 @@ const BlogPage = () => {
                             <div className="filter-category md:mt-10 mt-6">
                                 <div className="text-button-lg">Categories</div>
                                 <div className="list-cate mt-4">
-                                    {['smoothies', 'fruit vegetables', 'cakes', 'grains'].map((item, index) => (
-                                        <div
-                                            key={index}
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === item ? 'active' : ''}`}
-                                            onClick={() => handleCategory(item)}
-                                        >
-                                            <div className='capitalize'>{item}</div>
-                                            <div className="text-title text-secondary">
-                                                4
-                                            </div>
-                                        </div>
-                                    ))}
+                                    <div className="cate-item flex items-center justify-between cursor-pointer">
+                                        <div>Smoothies</div>
+                                        <div className="text-title text-secondary">12</div>
+                                    </div>
+                                    <div className="cate-item flex items-center justify-between cursor-pointer mt-2">
+                                        <div>Fruit Vegetables</div>
+                                        <div className="text-title text-secondary">12</div>
+                                    </div>
+                                    <div className="cate-item flex items-center justify-between cursor-pointer mt-2">
+                                        <div>Cakes</div>
+                                        <div className="text-title text-secondary">12</div>
+                                    </div>
+                                    <div className="cate-item flex items-center justify-between cursor-pointer mt-2">
+                                        <div>Grains</div>
+                                        <div className="text-title text-secondary">12</div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="recent md:mt-10 mt-6">
@@ -161,4 +130,4 @@ const BlogPage = () => {
     )
 }
 
-export default BlogPage
+export default BlogDetail

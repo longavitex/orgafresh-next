@@ -8,6 +8,7 @@ export interface BlogType {
     thumbImg: string;
     coverImg: string;
     subImg: Array<string>;
+    shortDesc: string;
     description: string;
     slug: string;
 }

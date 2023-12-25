@@ -76,6 +76,7 @@ const GridSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCat
             rate: 0,
             price: 0,
             originPrice: 0,
+            quantityPurchase: 0,
             sale: false,
             quantityRemain: 0,
             image: 'no-data',
