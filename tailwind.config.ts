@@ -24,7 +24,7 @@ const config: Config = {
       'star': '#FDA72F',
       'grey': '#9FA09C',
       'secondary': '#676767',
-      'surface': '#F6F4ED',
+      'surface': '#F7F7F7',
       'line': 'rgba(0,0,0,0.1)',
     },
   },

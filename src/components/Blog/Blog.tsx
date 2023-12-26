@@ -57,7 +57,7 @@ const Blog: React.FC<BlogProps> = ({ data, type }) => {
             ) : (
                 <>
                     {type === "style-main" ? (
-                        <div className="blog-item cursor-pointer pb-6 border-b border-line" onClick={() => handleBlogClick(data.id)}>
+                        <div className="blog-item cursor-pointer" onClick={() => handleBlogClick(data.id)}>
                             <div className="blog-main block h-full">
                                 <div className="bg-img relative overflow-hidden rounded-2xl">
                                     <Image
@@ -69,9 +69,9 @@ const Blog: React.FC<BlogProps> = ({ data, type }) => {
                                     />
                                     <div className="blog-tag absolute left-0 bottom-0 bg-black text-white capitalize text-xs px-3 py-1 inline-block rounded-sm">{data.tag}</div>
                                 </div>
-                                <div className="blog-infor lg:mt-4 mt-3">
+                                <div className="blog-infor mt-3">
                                         <div className="blog-title text-cate duration-300">{data.title}</div>
-                                        <div className="text-title text-secondary mt-4">{data.shortDesc}</div>
+                                        <div className="text-title text-secondary mt-2">{data.shortDesc}</div>
                                     <div className="flex items-center gap-6 gap-y-2 flex-wrap text-caption text-grey lg:mt-3 mt-2">
                                         <div className="left flex items-center gap-2">
                                             <Icon.CalendarBlank size={12} color='#888888' />

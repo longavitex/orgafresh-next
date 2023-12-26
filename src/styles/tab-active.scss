@@ -60,3 +60,11 @@
         }
     }
 }
+
+.active {
+    .has-line {
+        &::before {
+            width: 100%;
+        }
+    }
+}

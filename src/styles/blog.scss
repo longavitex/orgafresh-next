@@ -19,9 +19,33 @@
 // blog-page
 .blog-page {
     .list-blog {
-        .blog-item {
-            &:first-child {
-                grid-column: span 2 / span 2;
+        @media (min-width: 640px) {
+            .blog-item {
+                &:first-child {
+                    grid-column: span 2 / span 2;
+                }
+            }
+        }
+    }
+
+    .list-recent {
+        .item {
+            &:hover {
+                .text-title {
+                    color: var(--orange);
+                }
+            }
+        }
+    }
+
+    .next-pre {
+
+        .left,
+        .right {
+            &:hover {
+                .text-title {
+                    color: var(--orange);
+                }
             }
         }
     }

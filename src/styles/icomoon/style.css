@@ -63,6 +63,9 @@
   content: "\e90a";
   color: #fff;
 }
+.icon-help.text-green:before {
+  color: var(--green);
+}
 .icon-house-plant:before {
   content: "\e90b";
   color: #1ab2c6;

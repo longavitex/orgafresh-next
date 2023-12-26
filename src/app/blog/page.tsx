@@ -81,9 +81,9 @@ const BlogPage = () => {
             <HeadingPage title="Our Blog" subTitle="Our Blog" />
             <div className="blog-page md:py-20 py-12">
                 <div className="container">
-                    <div className="flex justify-between">
-                        <div className="left w-2/3 pr-4">
-                            <div className="list-blog grid grid-cols-2 gap-y-10 gap-8">
+                    <div className="flex justify-between max-lg:flex-col gap-y-12">
+                        <div className="left lg:w-2/3 lg:pr-4">
+                            <div className="list-blog grid sm:grid-cols-2 sm:gap-y-10 gap-8">
                                 {currentProducts.map(item => (
                                     <Blog key={item.id} data={item} type='style-main' />
                                 ))}
@@ -94,7 +94,7 @@ const BlogPage = () => {
                                 </div>
                             )}
                         </div>
-                        <div className="right w-1/4 pl-4">
+                        <div className="right xl:w-1/4 lg:w-1/3 xl:pl-4 lg:pl-10">
                             <form className='form-search relative w-full h-[42px]'>
                                 <input className='py-2 px-4 w-full h-full border border-line rounded-lg' type="text" placeholder='Search' />
                                 <button>
@@ -110,9 +110,9 @@ const BlogPage = () => {
                                             className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === item ? 'active' : ''}`}
                                             onClick={() => handleCategory(item)}
                                         >
-                                            <div className='capitalize'>{item}</div>
+                                            <div className='capitalize has-line line-black'>{item}</div>
                                             <div className="text-title text-secondary">
-                                                4
+                                                {blogData.filter(blog => blog.category === item).length}
                                             </div>
                                         </div>
                                     ))}
@@ -128,7 +128,7 @@ const BlogPage = () => {
                                                 width={500}
                                                 height={400}
                                                 alt={item.thumbImg}
-                                                className='w-[100px] object-cover flex-shrink-0'
+                                                className='w-[100px] rounded-lg object-cover flex-shrink-0'
                                             />
                                             <div>
                                                 <div className="text-title">{item.title}</div>
