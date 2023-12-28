@@ -1,6 +1,4 @@
-'use client'
-
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link';
 import TopNavTwo from '@/components/Headers/TopNav/TopNavTwo'
 import MenuTwo from '@/components/Headers/Menu/MenuTwo'

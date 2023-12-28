@@ -1,0 +1,9 @@
+.style-about {
+    .review-block {
+        padding-bottom: 42px;
+
+        @media (min-width: 768px) {
+            padding-bottom: 80px;
+        }
+    }
+}
