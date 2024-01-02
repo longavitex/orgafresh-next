@@ -37,6 +37,9 @@ const Deal: React.FC<Props> = ({ data, limit }) => {
                                 navigation
                                 loop={true}
                                 modules={[Navigation, Autoplay]}
+                                autoplay={{
+                                    delay: 5000,
+                                }}
                                 breakpoints={{
                                     576: {
                                         slidesPerView: 2,

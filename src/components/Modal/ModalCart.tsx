@@ -6,10 +6,18 @@ import Image from 'next/image'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useModalCartContext } from '@/context/ModalCartContext'
 import { useCart } from '@/context/CartContext'
+import { useRouter } from 'next/navigation'
 
 const ModalCart = () => {
     const { isModalCartOpen, closeModalCart } = useModalCartContext();
     const { cartState, removeFromCart } = useCart()
+    const router = useRouter()
+
+    const handleDetailProduct = (productId: string | number | null) => {
+        // Chuyển hướng đến trang shop với category được chọn
+        router.push(`/product-detail?id=${productId}`);
+        closeModalCart()
+    };
 
     return (
         <>
@@ -29,7 +37,11 @@ const ModalCart = () => {
                     </div>
                     <div className="list-product pb-6 sm:px-8 px-5">
                         {cartState.cartArray.map((product) => (
-                            <div key={product.id} className='item sm:py-6 py-5 flex items-center justify-between border-b border-line'>
+                            <div
+                                key={product.id}
+                                className='item sm:py-6 py-5 flex items-center justify-between border-b border-line cursor-pointer'
+                                onClick={() => handleDetailProduct(product.id)}
+                            >
                                 <div className="infor flex items-center gap-4">
                                     <div className="bg-img">
                                         <Image
@@ -65,7 +77,13 @@ const ModalCart = () => {
                             <div className="text-button-lg text-green">$135.0</div>
                         </div>
                         <div className="block-button mt-7">
-                            <Link href={'/cart'} className='button-main w-full text-center uppercase'>View cart</Link>
+                            <Link
+                                href={'/cart'}
+                                className='button-main w-full text-center uppercase'
+                                onClick={closeModalCart}
+                            >
+                                View cart
+                            </Link>
                         </div>
                     </div>
                 </div>

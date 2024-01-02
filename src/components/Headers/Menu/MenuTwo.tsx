@@ -26,7 +26,7 @@ const MenuTwo = () => {
             <div className="menu-main h-full max-lg:hidden">
               <ul className='flex items-center gap-10 h-full'>
                 <li className='h-full relative'>
-                  <Link href="#!" className='text-button duration-300 h-full flex items-center justify-center gap-1'>
+                  <Link href="#!" className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/homepages/') ? 'active' : ''}`}>
                     Home
                     <Icon.CaretDown size={12} color='grey' />
                   </Link>
@@ -42,12 +42,12 @@ const MenuTwo = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/homepages/home4" className='text-button duration-300'>
+                      <Link href="/homepages/home3" className='text-button duration-300'>
                         Home Cake
                       </Link>
                     </li>
                     <li>
-                      <Link href="/homepages/home5" className='text-button duration-300'>
+                      <Link href="/homepages/home4" className='text-button duration-300'>
                         Home Grain & nuts
                       </Link>
                     </li>
@@ -77,17 +77,17 @@ const MenuTwo = () => {
                   </ul>
                 </li>
                 <li className='h-full'>
-                  <Link href="/about" className='text-button duration-300 h-full flex items-center justify-center'>
+                  <Link href="/about" className={`text-button duration-300 h-full flex items-center justify-center ${pathname.includes('/about') ? 'active' : ''}`}>
                     About
                   </Link>
                 </li>
                 <li className='h-full'>
-                  <Link href="/blog" className='text-button duration-300 h-full flex items-center justify-center'>
+                  <Link href="/blog" className={`text-button duration-300 h-full flex items-center justify-center ${pathname.includes('/blog') ? 'active' : ''}`}>
                     Blog
                   </Link>
                 </li>
                 <li className='h-full'>
-                  <Link href="/contact" className='text-button duration-300 h-full flex items-center justify-center'>
+                  <Link href="/contact" className={`text-button duration-300 h-full flex items-center justify-center ${pathname.includes('/contact') ? 'active' : ''}`}>
                     Contact
                   </Link>
                 </li>

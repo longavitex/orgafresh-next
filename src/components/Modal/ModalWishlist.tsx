@@ -6,10 +6,18 @@ import Image from 'next/image'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useModalWishlistContext } from '@/context/ModalWishlistContext'
 import { useWishlist } from '@/context/WishlistContext'
+import { useRouter } from 'next/navigation'
 
 const ModalWishlist = () => {
     const { isModalWishlistOpen, closeModalWishlist } = useModalWishlistContext();
     const { wishlistState, removeFromWishlist } = useWishlist()
+    const router = useRouter()
+
+    const handleDetailProduct = (productId: string | number | null) => {
+        // Chuyển hướng đến trang shop với category được chọn
+        router.push(`/product-detail?id=${productId}`);
+        closeModalWishlist()
+    };
 
     return (
         <>
@@ -29,7 +37,11 @@ const ModalWishlist = () => {
                     </div>
                     <div className="list-product pb-6 sm:px-8 px-5">
                         {wishlistState.wishlistArray.map((product) => (
-                            <div key={product.id} className='item sm:py-6 py-5 flex items-center justify-between border-b border-line'>
+                            <div 
+                            key={product.id} 
+                                className='item sm:py-6 py-5 flex items-center justify-between border-b border-line cursor-pointer'
+                                onClick={() => handleDetailProduct(product.id)}
+                            >
                                 <div className="infor flex items-center gap-3">
                                     <div className="bg-img">
                                         <Image

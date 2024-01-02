@@ -86,6 +86,14 @@
                 }
             }
         }
+
+        .added-wishlist {
+            &:hover {
+                svg {
+                    color: var(--white);
+                }
+            }
+        }
     }
 
     &:hover {
@@ -189,6 +197,13 @@
                 border-color: var(--black);
             }
         }
+    }
+}
+
+.quantity-block {
+    .disabled {
+        cursor: default;
+        color: var(--grey);
     }
 }
 
