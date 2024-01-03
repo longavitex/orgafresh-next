@@ -15,26 +15,21 @@ import productData from '@/data/Product.json'
 const Cart = () => {
     const { cartState, updateCart, addToCart, removeFromCart } = useCart();
     const router = useRouter()
-    const [productQuantity, setProductQuantity] = useState<Record<string, number>>({});
 
     const handleQuantityChange = (productId: string, newQuantity: number) => {
-        setProductQuantity((prevQuantity) => ({
-            ...prevQuantity,
-            [productId]: newQuantity,
-        }));
+        // Tìm sản phẩm trong giỏ hàng
+        const itemToUpdate = cartState.cartArray.find((item) => item.id === productId);
+
+        // Kiểm tra xem sản phẩm có tồn tại không
+        if (itemToUpdate) {
+            // Truyền giá trị hiện tại của selectedSize và selectedColor
+            updateCart(productId, newQuantity);
+        }
     };
 
-    const handleDecreaseQuantity = (productId: string) => {
-        const currentQuantity = productQuantity[productId] || 0;
-        const newQuantity = currentQuantity > 1 ? currentQuantity - 1 : 1;
-        handleQuantityChange(productId, newQuantity);
-    };
+    let [totalCart, setTotalCart] = useState<number>(0)
 
-    const handleIncreaseQuantity = (productId: string) => {
-        const currentQuantity = productQuantity[productId] || 0;
-        const newQuantity = currentQuantity + 1;
-        handleQuantityChange(productId, newQuantity);
-    };
+    cartState.cartArray.map(item => totalCart += item.price * item.quantity)
 
     const handleDetailProduct = (productId: string | number | null) => {
         // Chuyển hướng đến trang shop với category được chọn
@@ -45,7 +40,7 @@ const Cart = () => {
         <>
             <TopNavTwo />
             <MenuTwo />
-            <HeadingPage title="About Us" subTitle="About Us" />
+            <HeadingPage title="Shoping Cart" subTitle="Shoping Cart" />
             <div className="cart-product md:py-20 py-12">
                 <div className="container">
                     <div className="content-main">
@@ -64,7 +59,7 @@ const Cart = () => {
                                         className="item md:mt-8 mt-5"
                                     >
                                         <div className="flex items-center">
-                                            <div className="flex items-center gap-6 basis-5/12 cursor-pointer"
+                                            <div className="left flex items-center gap-6 basis-5/12 cursor-pointer"
                                                 onClick={() => handleDetailProduct(product.id)}
                                             >
                                                 <div className="bg-img md:w-32 w-24 md:h-32 h-24 border border-line rounded-lg overflow-hidden">
@@ -77,7 +72,7 @@ const Cart = () => {
                                                     />
                                                 </div>
                                                 <div>
-                                                    <div className="text-button-lg capitalize">{product.name}</div>
+                                                    <div className="name text-button-lg capitalize duration-300">{product.name}</div>
                                                     <div className="text-title text-grey capitalize mt-2">{product.type}</div>
                                                 </div>
                                             </div>
@@ -85,17 +80,21 @@ const Cart = () => {
                                             <div className="basis-1/6 flex items-center justify-center">
                                                 <div className="quantity-block md:p-3 p-2 flex items-center justify-between rounded-lg border border-line w-[120px] h-[50px]">
                                                     <Icon.Minus
-                                                        onClick={() => handleDecreaseQuantity(product.id)}
-                                                        className={`text-xl max-md:text-base cursor-pointer ${productQuantity[product.id] === 1 ? 'disabled' : ''}`}
+                                                        onClick={() => {
+                                                            if (product.quantity > 1) {
+                                                                handleQuantityChange(product.id, product.quantity - 1)
+                                                            }
+                                                        }}
+                                                        className={`text-xl max-md:text-base cursor-pointer ${product.quantity === 1 ? 'disabled' : ''}`}
                                                     />
-                                                    <div className="body1 font-semibold">{productQuantity[product.id] || 1}</div>
+                                                    <div className="body1 font-semibold">{product.quantity || 1}</div>
                                                     <Icon.Plus
-                                                        onClick={() => handleIncreaseQuantity(product.id)}
+                                                        onClick={() => handleQuantityChange(product.id, product.quantity + 1)}
                                                         className='text-xl max-md:text-base cursor-pointer'
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="text-button-lg basis-1/6 text-center">${product.price * (productQuantity[product.id] || 1)}.0</div>
+                                            <div className="text-button-lg basis-1/6 text-center">${product.price * (product.quantity || 1)}.0</div>
                                             <div className="text-button-lg basis-1/12 flex items-center justify-end">
                                                 <Icon.XCircle weight='fill' className='text-orange text-button-lg duration-300 cursor-pointer hover:text-black' onClick={() => removeFromCart(product.id)} />
                                             </div>
@@ -110,8 +109,8 @@ const Cart = () => {
                         <div className="total-block bg-[#ECECEC] px-8 py-6 rounded-2xl w-[360px]">
                             <div className="text-button  uppercase pb-2 border-b border-line">Cart total</div>
                             <div className="flex items-center justify-between mt-3">
-                                <div className="text-caption">Total</div>
-                                <div className="text-button">$500.0</div>
+                                <div className="text-button font-medium">Total</div>
+                                <div className="text-button">${totalCart}.0</div>
                             </div>
                             <Link href={'/checkout'} className="button-main mt-4 w-full text-center">PROCEED TO CHECKOUT</Link>
                         </div>

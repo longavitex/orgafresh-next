@@ -10,8 +10,19 @@ import { useRouter } from 'next/navigation'
 
 const ModalCart = () => {
     const { isModalCartOpen, closeModalCart } = useModalCartContext();
-    const { cartState, removeFromCart } = useCart()
+    const { cartState, updateCart, removeFromCart } = useCart()
     const router = useRouter()
+
+    const handleQuantityChange = (productId: string, newQuantity: number) => {
+        // Tìm sản phẩm trong giỏ hàng
+        const itemToUpdate = cartState.cartArray.find((item) => item.id === productId);
+
+        // Kiểm tra xem sản phẩm có tồn tại không
+        if (itemToUpdate) {
+            // Truyền giá trị hiện tại của selectedSize và selectedColor
+            updateCart(productId, newQuantity);
+        }
+    };
 
     const handleDetailProduct = (productId: string | number | null) => {
         // Chuyển hướng đến trang shop với category được chọn
@@ -39,10 +50,12 @@ const ModalCart = () => {
                         {cartState.cartArray.map((product) => (
                             <div
                                 key={product.id}
-                                className='item sm:py-6 py-5 flex items-center justify-between border-b border-line cursor-pointer'
-                                onClick={() => handleDetailProduct(product.id)}
+                                className='item sm:py-6 py-5 flex items-center justify-between border-b border-line'
                             >
-                                <div className="infor flex items-center gap-4">
+                                <div
+                                    className="infor flex items-center gap-4 cursor-pointer"
+                                    onClick={() => handleDetailProduct(product.id)}
+                                >
                                     <div className="bg-img">
                                         <Image
                                             src={product.image}
@@ -59,9 +72,23 @@ const ModalCart = () => {
                                             <div className="product-origin-price text-title text-grey"><del>${product.originPrice}.0</del></div>
                                         </div>
                                         <div className="quantity-block border border-line w-[100px] py-2 px-2 flex items-center justify-between rounded-lg mt-2">
-                                            <Icon.CaretLeft className='caption1 cursor-pointer' />
+                                            <Icon.CaretLeft
+                                                onClick={(e) => {
+                                                    e.stopPropagation()
+                                                    if (product.quantity > 1) {
+                                                        handleQuantityChange(product.id, product.quantity - 1)
+                                                    }
+                                                }}
+                                                className={`caption1 cursor-pointer ${product.quantity === 1 ? 'disabled' : ''}`}
+                                            />
                                             <div className="text-title">{product.quantity}</div>
-                                            <Icon.CaretRight className='caption1 cursor-pointer' />
+                                            <Icon.CaretRight
+                                                onClick={(e) => {
+                                                    e.stopPropagation()
+                                                    handleQuantityChange(product.id, product.quantity + 1)
+                                                }}
+                                                className='caption1 cursor-pointer'
+                                            />
                                         </div>
                                     </div>
                                 </div>

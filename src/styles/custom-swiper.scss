@@ -1,6 +1,12 @@
-.swiper:hover {
-    cursor: grab;
-    user-select: none;
+.swiper {
+    &.pb-2 {
+        padding-bottom: 8px;
+    }
+
+    &:hover {
+        cursor: grab;
+        user-select: none;
+    }
 }
 
 /* Swiper Pagination */
@@ -52,4 +58,3 @@
         font-size: 24px;
     }
 }
-

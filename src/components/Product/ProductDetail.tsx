@@ -76,7 +76,7 @@ const ProductDetail: React.FC<Props> = ({ data, productId }) => {
                                 spaceBetween={0}
                                 thumbs={{ swiper: thumbsSwiper }}
                                 modules={[Thumbs]}
-                                className="mySwiper border border-line overflow-hidden"
+                                className="mySwiper border border-line rounded-2xl overflow-hidden"
                             >
                                 {productMain.listImage.map((item, index) => (
                                     <SwiperSlide key={index}>
@@ -101,7 +101,7 @@ const ProductDetail: React.FC<Props> = ({ data, productId }) => {
                                 className="mySwiper2 mt-3"
                             >
                                 {productMain.listImage.map((item, index) => (
-                                    <SwiperSlide key={index}>
+                                    <SwiperSlide key={index} className='rounded-xl'>
                                         <Image
                                             key={index}
                                             src={item}
@@ -142,9 +142,17 @@ const ProductDetail: React.FC<Props> = ({ data, productId }) => {
                             <div className="list-action flex items-center flex-wrap gap-5 mt-5 lg:pb-10 pb-6 border-b border-line">
                                 <div className="text-title text-secondary">Quantity:</div>
                                 <div className="quantity-block md:p-3 p-1 flex items-center justify-between rounded-lg border border-line w-[120px] h-[50px]">
-                                    <Icon.Minus size={16} className='cursor-pointer' onClick={handleDecreaseQuantity} />
+                                    <Icon.Minus
+                                        size={16}
+                                        className={`cursor-pointer ${productMain.quantityPurchase === 1 ? 'disabled' : ''}`}
+                                        onClick={handleDecreaseQuantity}
+                                    />
                                     <div className="body1 font-semibold">{productMain.quantityPurchase}</div>
-                                    <Icon.Plus size={16} className='cursor-pointer' onClick={handleIncreaseQuantity} />
+                                    <Icon.Plus
+                                        size={16}
+                                        className='cursor-pointer'
+                                        onClick={handleIncreaseQuantity}
+                                    />
                                 </div>
                                 <div className="button-main bg-orange cursor-pointer h-[50px] flex items-center gap-2" onClick={handleAddToCart}>
                                     <span>

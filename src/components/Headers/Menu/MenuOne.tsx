@@ -101,7 +101,7 @@ const MenuOne = () => {
             </div>
             <div className="right-content flex gap-6">
               <div className="login-block flex items-center justify-center max-md:hidden">
-                <Link href={'/login'} className='text-caption text-secondary'>Login/Register</Link>
+                <Link href={'/login'} className='text-caption text-secondary hover:text-black duration-300'>Login/Register</Link>
               </div>
               <div className="list-icon flex">
                 <div className="max-[450px]:hidden search-icon flex items-center justify-center md:pl-7 md:pr-7 md:border-x pl-2.5 pr-2.5 border-line cursor-pointer">

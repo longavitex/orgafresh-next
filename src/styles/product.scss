@@ -207,6 +207,21 @@
     }
 }
 
+.add-wishlist-btn {
+    &:hover {
+        background-color: var(--orange);
+        color: var(--white);
+    }
+
+    &.added-wishlist {
+        &:hover {
+            svg {
+                color: var(--white);
+            }
+        }
+    }
+}
+
 .right {
     .product-infor {
         .list-action {

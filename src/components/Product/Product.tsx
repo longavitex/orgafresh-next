@@ -10,6 +10,7 @@ import { useCart } from '@/context/CartContext'
 import { useModalCartContext } from '@/context/ModalCartContext'
 import { useWishlist } from '@/context/WishlistContext'
 import { useModalWishlistContext } from '@/context/ModalWishlistContext'
+import { useModalQuickviewContext } from '@/context/ModalQuickviewContext'
 import { useRouter } from 'next/navigation'
 
 interface ProductProps {
@@ -23,6 +24,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
     const { openModalCart } = useModalCartContext();
     const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist();
     const { openModalWishlist } = useModalWishlistContext();
+    const { openQuickview, closeQuickview } = useModalQuickviewContext()
     const router = useRouter()
 
     const handleClickCart = () => {
@@ -43,6 +45,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
         }
         openModalWishlist(); //open modal cart
     };
+
+    const handleQuickviewOpen = () => {
+        openQuickview(data)
+    }
 
     const handleDetailProduct = (productId: string | number | null) => {
         // Chuyển hướng đến trang shop với category được chọn
@@ -68,7 +74,13 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                 className='product-img w-full h-full object-cover duration-300'
                             />
                             <div className="list-action flex flex-col items-center gap-2 max-lg:hidden">
-                                <div className="quick-view-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative">
+                                <div
+                                    className="quick-view-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative"
+                                    onClick={(e) => {
+                                        e.stopPropagation()
+                                        handleQuickviewOpen()
+                                    }}
+                                >
                                     <div className="tag-action bg-black text-white text-xs p-1 rounded-sm">Quick View</div>
                                     <Icon.MagnifyingGlass size={18} weight='bold' />
                                 </div>

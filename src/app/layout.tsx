@@ -4,6 +4,7 @@ import '@/styles/style.scss'
 import GlobalProvider from './GlobalProvider'
 import ModalCart from '@/components/Modal/ModalCart'
 import ModalWishlist from '@/components/Modal/ModalWishlist'
+import ModalQuickview from '@/components/Modal/ModalQuickview'
 
 const quicksand = Quicksand({ subsets: ['latin'] })
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           </div>
           <ModalCart />
           <ModalWishlist />
+          <ModalQuickview />
         </body>
       </html>
     </GlobalProvider>
