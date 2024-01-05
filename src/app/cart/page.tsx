@@ -105,7 +105,7 @@ const Cart = () => {
                         </div>
                     </div>
                     <div className="action flex justify-between flex-wrap gap-5 md:mt-10 mt-6">
-                        <Link href={'/'} className="button-main bg-[#ECECEC] text-black uppercase hover:bg-orange hover:text-white h-fit">Continute shopping</Link>
+                        <Link href={'/shop/shop-grid-sidebar'} className="button-main bg-[#ECECEC] text-black uppercase hover:bg-orange hover:text-white h-fit">Continute shopping</Link>
                         <div className="total-block bg-[#ECECEC] px-8 py-6 rounded-2xl w-[360px]">
                             <div className="text-button  uppercase pb-2 border-b border-line">Cart total</div>
                             <div className="flex items-center justify-between mt-3">

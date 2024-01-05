@@ -24,7 +24,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
     const { openModalCart } = useModalCartContext();
     const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist();
     const { openModalWishlist } = useModalWishlistContext();
-    const { openQuickview, closeQuickview } = useModalQuickviewContext()
+    const { openQuickview } = useModalQuickviewContext()
     const router = useRouter()
 
     const handleClickCart = () => {
