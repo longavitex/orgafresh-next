@@ -78,13 +78,14 @@
 
         .custom-swiper-button-prev,
         .custom-swiper-button-next {
-            top: 50%;
+            top: calc(50% - 24px);
             transform: translateY(-50%);
             position: absolute;
             font-size: 24px;
             color: var(--secondary);
             cursor: pointer;
             user-select: none;
+            z-index: 2;
 
             &::after {
                 display: none;
@@ -97,6 +98,16 @@
 
         .custom-swiper-button-next {
             right: -40px;
+        }
+
+        @media (max-width: 1530px) {
+            .custom-swiper-button-prev {
+                left: 0px;
+            }
+
+            .custom-swiper-button-next {
+                right: 0px;
+            }
         }
     }
 }

@@ -42,7 +42,7 @@ const SliderTwo = () => {
                                     <div className="container w-full h-full flex items-center relative">
                                         <div className="text-content md:w-[50%] w-2/3 max-lg:pt-12 max-lg:pb-16">
                                             <div className="text-subheading animate__animated animate__fadeInUp animate__delay-0-6s">Sale Off 50%</div>
-                                            <div className="text-slider mt-3 animate__animated animate__fadeInUp animate__delay-0-8s">Fresh and Flavorful Smoothies</div>
+                                            <div className="text-slider mt-3 animate__animated animate__fadeInUp animate__delay-0-8s">Organic Shop Fruits & Vegetables</div>
                                             <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-6 animate__animated animate__fadeInUp animate__delay-1s">Shop Now</Link>
                                         </div>
                                     </div>
@@ -66,7 +66,7 @@ const SliderTwo = () => {
                                     <div className="container w-full h-full flex items-center relative">
                                         <div className="text-content md:w-[50%] w-2/3 max-lg:pt-12 max-lg:pb-16">
                                             <div className="text-subheading animate__animated animate__fadeInUp animate__delay-0-6s">Sale Off 50%</div>
-                                            <div className="text-slider mt-3 animate__animated animate__fadeInUp animate__delay-0-8s">Exotic Twists for Your Palate</div>
+                                            <div className="text-slider mt-3 animate__animated animate__fadeInUp animate__delay-0-8s">Organic Shop Fruits & Vegetables</div>
                                             <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-6 animate__animated animate__fadeInUp animate__delay-1s">Shop Now</Link>
                                         </div>
                                     </div>
@@ -90,7 +90,7 @@ const SliderTwo = () => {
                                     <div className="container w-full h-full flex items-center relative">
                                         <div className="text-content md:w-[40%] w-2/3  max-lg:pt-12 max-lg:pb-16">
                                             <div className="text-subheading animate__animated animate__fadeInUp animate__delay-0-6s">Sale Off 50%</div>
-                                            <div className="text-slider mt-3 animate__animated animate__fadeInUp animate__delay-0-8s">Revitalize Your Day with Health</div>
+                                            <div className="text-slider mt-3 animate__animated animate__fadeInUp animate__delay-0-8s">Organic Shop Fruits & Vegetables</div>
                                             <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-6 animate__animated animate__fadeInUp animate__delay-1s">Shop Now</Link>
                                         </div>
                                     </div>

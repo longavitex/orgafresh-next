@@ -49,11 +49,6 @@ const MenuOne = () => {
                     </li>
                     <li>
                       <Link href="/homepages/home3" className='text-button duration-300'>
-                        Home Cake
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/homepages/home4" className='text-button duration-300'>
                         Home Grain & nuts
                       </Link>
                     </li>

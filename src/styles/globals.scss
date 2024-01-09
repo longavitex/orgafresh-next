@@ -133,6 +133,13 @@ select {
     font-weight: 400;
 }
 
+.text-caption-uppercase {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 .box-shadow {
     box-shadow: 0px 5px 10px rgba(138, 159, 168, 0.2);
 }

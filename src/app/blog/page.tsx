@@ -104,7 +104,7 @@ const BlogPage = () => {
                             <div className="filter-category md:mt-10 mt-6">
                                 <div className="text-button-lg">Categories</div>
                                 <div className="list-cate mt-4">
-                                    {['smoothies', 'fruit vegetables', 'cakes', 'grains'].map((item, index) => (
+                                    {['smoothies', 'fruit', 'vegetables', 'grains'].map((item, index) => (
                                         <div
                                             key={index}
                                             className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === item ? 'active' : ''}`}
@@ -147,7 +147,6 @@ const BlogPage = () => {
                                     <div className="tags bg-surface py-1 px-3 rounded cursor-pointer duration-300 hover:bg-black hover:text-white">Smoothies</div>
                                     <div className="tags bg-surface py-1 px-3 rounded cursor-pointer duration-300 hover:bg-black hover:text-white">Vegetables</div>
                                     <div className="tags bg-surface py-1 px-3 rounded cursor-pointer duration-300 hover:bg-black hover:text-white">Fruits</div>
-                                    <div className="tags bg-surface py-1 px-3 rounded cursor-pointer duration-300 hover:bg-black hover:text-white">Cakes</div>
                                     <div className="tags bg-surface py-1 px-3 rounded cursor-pointer duration-300 hover:bg-black hover:text-white">Health</div>
                                     <div className="tags bg-surface py-1 px-3 rounded cursor-pointer duration-300 hover:bg-black hover:text-white">Grains</div>
                                 </div>

@@ -161,12 +161,6 @@ const ListSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCat
                                 Fresh Meats
                             </div>
                             <div
-                                className={`cate-item cursor-pointer block w-fit hover:underline mt-2 ${category === 'cakes' ? 'active' : ''}`}
-                                onClick={() => handleCategory('cakes')}
-                            >
-                                Cakes
-                            </div>
-                            <div
                                 className={`cate-item cursor-pointer block w-fit hover:underline mt-2 ${category === 'grain' ? 'active' : ''}`}
                                 onClick={() => handleCategory('grain')}
                             >

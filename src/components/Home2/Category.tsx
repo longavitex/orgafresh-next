@@ -27,7 +27,6 @@ const Category = () => {
                             <Swiper
                                 spaceBetween={0}
                                 slidesPerView={2}
-                                initialSlide={1}
                                 speed={300}
                                 navigation
                                 loop={true}
@@ -136,14 +135,14 @@ const Category = () => {
                                         <div className="main">
                                             <div className="bg-img">
                                                 <Image
-                                                    src={'/images/category/cakes.png'}
+                                                    src={'/images/category/nuts.png'}
                                                     width={1000}
                                                     height={1000}
-                                                    alt='cakes'
+                                                    alt='nuts'
                                                     className='w-full'
                                                 />
                                             </div>
-                                            <div className="text-cate text-center">cakes</div>
+                                            <div className="text-cate text-center">nuts</div>
                                         </div>
                                     </div>
                                 </SwiperSlide>
