@@ -9,6 +9,7 @@
 }
 
 @media (max-width: 640px) {
+
     .menu-tab,
     .best-seller-block .list-cate {
         max-width: 100%;
@@ -39,6 +40,12 @@
     &.line-black {
         &::before {
             background-color: var(--black);
+        }
+    }
+
+    &.line-orange {
+        &::before {
+            background-color: var(--orange);
         }
     }
 

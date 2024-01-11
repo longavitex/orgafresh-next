@@ -1,70 +1,110 @@
-'use client'
+"use client"
 
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
 const Category = () => {
     const router = useRouter()
 
     const handleCategoryClick = (category: string) => {
-        router.push(`/shop/shop-grid-sidebar?category=${category}`);
+        // Chuyển hướng đến trang shop với category được chọn
+        router.push(`/shop/shop-grid-sidebar?taste=${category}`);
     };
 
     return (
         <>
-            <div className="category-block style-three md:pt-20 pt-12">
+            <div className="category-block style-one relative md:py-[60px] py-10 md:mt-20 mt-12">
+                <div className="bg-img">
+                    <Image
+                        src={'/images/other/bg-cate3.png'}
+                        width={3000}
+                        height={1000}
+                        alt='bg-img'
+                        className='absolute top-0 left-0 w-full h-full object-cover'
+                    />
+                </div>
                 <div className="container">
-                    <div className="list-cate grid lg:grid-cols-3 sm:grid-cols-2 gap-[30px]">
-                        <div
-                            className="item rounded-xl overflow-hidden relative cursor-pointer"
-                            onClick={() => handleCategoryClick('grains')}
-                        >
-                            <Image
-                                src={'/images/category/cate4-1.png'}
-                                width={2000}
-                                height={1500}
-                                alt='cate'
-                                className='w-full duration-500'
-                            />
-                            <div className="text-content z-[2] absolute left-7 top-1/2 -translate-y-1/2">
-                                <div className="text-caption-uppercase text-white">New products</div>
-                                <div className="md:text-3xl text-2xl text-white mt-3">Fresh Fruice</div>
-                                <div className="text-caption text-white has-line line-white line-2px active inline-block uppercase mt-3">Shop now</div>
+                    <div className="sm:flex max-sm:grid grid-cols-2 items-center sm:justify-between justify-center max-sm:flex-wrap gap-8">
+                        <div className="item banner-img md:w-[200px] md:h-[200px] overflow-hidden rounded-full cursor-pointer relative" onClick={() => handleCategoryClick('vegetables')}>
+                            <div className="block">
+                                <Image
+                                    src="/images/category/vegetables3.png"
+                                    width={500}
+                                    height={500}
+                                    alt="Logo"
+                                    className='w-full h-full object-cover duration-500'
+                                />
+                            </div>
+                            <div className="cate-name w-full sm:px-8 px-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <div className='text-button-lg capitalize w-full text-center py-2 bg-white rounded-xl duration-500 hover:bg-black hover:text-white'>
+                                    vegetables
+                                </div>
                             </div>
                         </div>
-                        <div
-                            className="item rounded-xl overflow-hidden relative cursor-pointer"
-                            onClick={() => handleCategoryClick('grains')}
-                        >
-                            <Image
-                                src={'/images/category/cate4-2.png'}
-                                width={2000}
-                                height={1500}
-                                alt='cate'
-                                className='w-full duration-500'
-                            />
-                            <div className="text-content z-[2] absolute left-7 top-1/2 -translate-y-1/2">
-                                <div className="text-caption-uppercase text-white">Sale of 30%</div>
-                                <div className="md:text-3xl text-2xl text-white mt-3">Organic Oats</div>
-                                <div className="text-caption text-white has-line line-white line-2px active inline-block uppercase mt-3">Shop now</div>
+                        <div className="item banner-img md:w-[200px] md:h-[200px] overflow-hidden rounded-full cursor-pointer relative" onClick={() => handleCategoryClick('grains')}>
+                            <div className="block">
+                                <Image
+                                    src="/images/category/grains3.png"
+                                    width={500}
+                                    height={500}
+                                    alt="Logo"
+                                    className='w-full h-full object-cover duration-500'
+                                />
+                            </div>
+                            <div className="cate-name w-full sm:px-8 px-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <div className='text-button-lg capitalize w-full text-center py-2 bg-white rounded-xl duration-500 hover:bg-black hover:text-white'>
+                                    grains
+                                </div>
                             </div>
                         </div>
-                        <div
-                            className="item rounded-xl overflow-hidden relative cursor-pointer max-lg:hidden"
-                            onClick={() => handleCategoryClick('grains')}
-                        >
-                            <Image
-                                src={'/images/category/cate4-3.png'}
-                                width={2000}
-                                height={1500}
-                                alt='cate'
-                                className='w-full duration-500'
-                            />
-                            <div className="text-content z-[2] absolute left-7 top-1/2 -translate-y-1/2">
-                                <div className="text-caption-uppercase text-white">Special recipe</div>
-                                <div className="md:text-3xl text-2xl text-white mt-3">Fruits Dried</div>
-                                <div className="text-caption text-white has-line line-white line-2px active inline-block uppercase mt-3">Shop now</div>
+                        <div className="item banner-img md:w-[200px] md:h-[200px] overflow-hidden rounded-full cursor-pointer relative" onClick={() => handleCategoryClick('nuts')}>
+                            <div className="block">
+                                <Image
+                                    src="/images/category/nuts3.png"
+                                    width={500}
+                                    height={500}
+                                    alt="Logo"
+                                    className='w-full h-full object-cover duration-500'
+                                />
+                            </div>
+                            <div className="cate-name w-full sm:px-8 px-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <div className='text-button-lg capitalize w-full text-center py-2 bg-white rounded-xl duration-500 hover:bg-black hover:text-white'>
+                                    nuts
+                                </div>
+                            </div>
+                        </div>
+                        <div className="item banner-img md:w-[200px] md:h-[200px] overflow-hidden rounded-full cursor-pointer relative max-lg:hidden max-sm:block" onClick={() => handleCategoryClick('smoothies')}>
+                            <div className="block">
+                                <Image
+                                    src="/images/category/smoothies3.png"
+                                    width={500}
+                                    height={500}
+                                    alt="Logo"
+                                    className='w-full h-full object-cover duration-500'
+                                />
+                            </div>
+                            <div className="cate-name w-full sm:px-8 px-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <div className='text-button-lg capitalize w-full text-center py-2 bg-white rounded-xl duration-500 hover:bg-black hover:text-white'>
+                                    smoothies
+                                </div>
+                            </div>
+                        </div>
+                        <div className="item banner-img md:w-[200px] md:h-[200px] overflow-hidden rounded-full cursor-pointer relative max-xl:hidden" onClick={() => handleCategoryClick('fruits')}>
+                            <div className="block">
+                                <Image
+                                    src="/images/category/fruits3.png"
+                                    width={500}
+                                    height={500}
+                                    alt="Logo"
+                                    className='w-full h-full object-cover duration-500'
+                                />
+                            </div>
+                            <div className="cate-name w-full sm:px-8 px-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <div className='text-button-lg capitalize w-full text-center py-2 bg-white rounded-xl duration-500 hover:bg-black hover:text-white'>
+                                    fruits
+                                </div>
                             </div>
                         </div>
                     </div>
