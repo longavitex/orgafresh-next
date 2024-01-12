@@ -10,7 +10,7 @@ const Category = () => {
 
     const handleCategoryClick = (category: string) => {
         // Chuyển hướng đến trang shop với category được chọn
-        router.push(`/shop/shop-grid-sidebar?taste=${category}`);
+        router.push(`/shop/shop-grid-sidebar?category=${category}`);
     };
 
     return (
@@ -27,7 +27,7 @@ const Category = () => {
                 </div>
                 <div className="container">
                     <div className="sm:flex max-sm:grid grid-cols-2 items-center sm:justify-between justify-center max-sm:flex-wrap gap-8">
-                        <div className="item banner-img md:w-[200px] md:h-[200px] overflow-hidden rounded-full cursor-pointer relative" onClick={() => handleCategoryClick('vegetables')}>
+                        <div className="item banner-img md:w-[200px] md:h-[200px] overflow-hidden rounded-full cursor-pointer relative" onClick={() => handleCategoryClick('vegetable')}>
                             <div className="block">
                                 <Image
                                     src="/images/category/vegetables3.png"
@@ -75,7 +75,7 @@ const Category = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="item banner-img md:w-[200px] md:h-[200px] overflow-hidden rounded-full cursor-pointer relative max-lg:hidden max-sm:block" onClick={() => handleCategoryClick('smoothies')}>
+                        <div className="item banner-img md:w-[200px] md:h-[200px] overflow-hidden rounded-full cursor-pointer relative max-lg:hidden max-sm:block" onClick={() => handleCategoryClick('smoothie')}>
                             <div className="block">
                                 <Image
                                     src="/images/category/smoothies3.png"
@@ -91,7 +91,7 @@ const Category = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="item banner-img md:w-[200px] md:h-[200px] overflow-hidden rounded-full cursor-pointer relative max-xl:hidden" onClick={() => handleCategoryClick('fruits')}>
+                        <div className="item banner-img md:w-[200px] md:h-[200px] overflow-hidden rounded-full cursor-pointer relative max-xl:hidden" onClick={() => handleCategoryClick('fruit')}>
                             <div className="block">
                                 <Image
                                     src="/images/category/fruits3.png"

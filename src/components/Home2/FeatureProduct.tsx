@@ -40,7 +40,7 @@ const FeatureProduct: React.FC<Props> = ({ data, limit }) => {
                     </div>
 
                     <div className="list-product grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-10">
-                        <Link href={"/shop/shop-grid-sidebar"} className="banner-img rounded-[12px] overflow-hidden relative">
+                        <Link href={"/shop/shop-grid-sidebar"} className="banner-img has-before rounded-[12px] overflow-hidden relative">
                             <Image
                                 src={'/images/other/banner-feature2.png'}
                                 width={1000}

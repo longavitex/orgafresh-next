@@ -20,8 +20,8 @@ const FeatureProduct: React.FC<Props> = ({ data }) => {
                         <div className="text-heading">Feature Products</div>
                         <Link href={'/shop/shop-grid-sidebar'} className='has-line line-2px line-orange active'>View All</Link>
                     </div>
-                    <div className="list-product grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-10">
-                        <Link href={"/shop/shop-grid-sidebar"} className="banner-img rounded-[12px] overflow-hidden relative">
+                    <div className="list-product grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] md:mt-10 mt-6">
+                        <Link href={"/shop/shop-grid-sidebar"} className="banner-img has-before rounded-[12px] overflow-hidden relative">
                             <Image
                                 src={'/images/other/banner-feature3.png'}
                                 width={1000}

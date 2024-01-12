@@ -161,8 +161,8 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                             {type === 'row-2' ? (
                                 <>
                                     <div className="product-item row-type">
-                                        <div onClick={() => handleDetailProduct(data.id)} className="product-main h-full flex items-center gap-4 bg-white rounded-2xl duration-500 overflow-hidden cursor-pointer">
-                                            <div className="product-thumb relative">
+                                        <div onClick={() => handleDetailProduct(data.id)} className="product-main h-full flex items-center gap-3 bg-white rounded-xl border border-line duration-500 overflow-hidden cursor-pointer">
+                                            <div className="product-thumb relative flex-shrink-0">
                                                 {data.sale && (
                                                     <div className="product-sale text-xs text-white bg-orange px-3 py-0.5 inline-block rounded-full">
                                                         -{percentSale}%
@@ -170,20 +170,31 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                                 )}
                                                 <Image
                                                     src={data.image}
-                                                    width={158}
-                                                    height={158}
+                                                    width={500}
+                                                    height={500}
                                                     alt={data.name}
-                                                    className='product-img object-cover duration-300'
+                                                    className='product-img md:w-[158px] w-[136px] object-cover duration-300 flex-shrink-0'
                                                 />
                                             </div>
-                                            <div className="product-infor pr-5 bg-white">
-                                                <Rate currentRate={data.rate}></Rate>
-                                                <div className="product-name font-semibold text-base capitalize mt-1 duration-300">{data.name}</div>
-                                                <div className="product-price-block flex items-center gap-3 mt-1">
-                                                    <div className="product-price text-button">${data.price}.0</div>
-                                                    {data.sale && (
-                                                        <div className="product-origin-price text-button text-grey"><del>${data.originPrice}.0</del></div>
-                                                    )}
+                                            <div className="product-infor flex items-center justify-between gap-3 xl:pr-7 pr-4 bg-white w-full">
+                                                <div>
+                                                    <Rate currentRate={data.rate}></Rate>
+                                                    <div className="product-name font-semibold text-base capitalize mt-1 duration-300">{data.name}</div>
+                                                    <div className="product-price-block flex items-center gap-3 mt-1">
+                                                        <div className="product-price text-button">${data.price}.0</div>
+                                                        {data.sale && (
+                                                            <div className="product-origin-price text-button text-grey"><del>${data.originPrice}.0</del></div>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className="add-cart-btn w-9 h-9 flex-shrink-0 flex items-center justify-center border border-line rounded-lg bg-white duration-300 relative hover:bg-orange hover:text-white"
+                                                    onClick={(e) => {
+                                                        handleClickCart()
+                                                        e.stopPropagation()
+                                                    }}
+                                                >
+                                                    <Icon.Bag size={16} />
                                                 </div>
                                             </div>
                                         </div>

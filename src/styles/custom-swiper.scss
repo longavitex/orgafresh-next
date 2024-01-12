@@ -3,6 +3,10 @@
         padding-bottom: 8px;
     }
 
+    &.pb-12 {
+        padding-bottom: 48px;
+    }
+
     &:hover {
         cursor: grab;
         user-select: none;
@@ -19,6 +23,12 @@
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 24px !important;
+}
+
+.swiper.pb-12 {
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 0 !important;
+    }
 }
 
 @media (max-width: 767px) {

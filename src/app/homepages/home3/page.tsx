@@ -8,7 +8,8 @@ import Deal from "@/components/Home3/Deal"
 import FeatureProduct from "@/components/Home3/FeatureProduct"
 import Category from "@/components/Home3/Category"
 import dataReview from "@/data/Review.json"
-import ReviewSection from "@/components/Home2/ReviewSection"
+import ReviewSection from "@/components/Home3/ReviewSection"
+import BestSeller from "@/components/Home3/BestSeller"
 import Footer from "@/components/Footer/Footer"
 
 const Home3 = () => {
@@ -22,6 +23,8 @@ const Home3 = () => {
             <Deal />
             <FeatureProduct data={productData} />
             <Category />
+            <ReviewSection data={dataReview} limit={5} />
+            <BestSeller data={productData} />
             <Footer borderTop={true} />
         </>
     )

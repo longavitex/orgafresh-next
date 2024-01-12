@@ -62,11 +62,11 @@ const ModalCart = () => {
                                             width={300}
                                             height={300}
                                             alt={product.name}
-                                            className='w-[90px] aspect-square block border border-line'
+                                            className='w-[90px] aspect-square flex-shrink-0 block border border-line'
                                         />
                                     </div>
                                     <div className=''>
-                                        <div className="name text-button">{product.name}</div>
+                                        <div className="name text-button capitalize">{product.name}</div>
                                         <div className="flex items-center gap-2 mt-1">
                                             <div className="product-price text-title">${product.price}.0</div>
                                             <div className="product-origin-price text-title text-grey"><del>${product.originPrice}.0</del></div>

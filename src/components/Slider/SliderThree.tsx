@@ -31,11 +31,11 @@ const SliderThree = () => {
                                     <Image
                                         src="/images/slider/bg-slider3-1.png"
                                         width={4000}
-                                        height={4000}
+                                        height={3000}
                                         alt='bg-slider'
                                         sizes="100vw"
                                         style={{ width: '100%', height: '100%' }}
-                                        className='object-cover'
+                                        className='w-full object-cover'
                                     />
                                 </div>
                                 <div className="slider-content w-full h-full">
@@ -55,11 +55,11 @@ const SliderThree = () => {
                                     <Image
                                         src="/images/slider/bg-slider3-2.png"
                                         width={4000}
-                                        height={4000}
+                                        height={3000}
                                         alt='bg-slider'
                                         sizes="100vw"
                                         style={{ width: '100%', height: '100%' }}
-                                        className='object-cover'
+                                        className='w-full object-cover'
                                     />
                                 </div>
                                 <div className="slider-content w-full h-full">
@@ -79,11 +79,11 @@ const SliderThree = () => {
                                     <Image
                                         src="/images/slider/bg-slider3-3.png"
                                         width={4000}
-                                        height={4000}
+                                        height={3000}
                                         alt='bg-slider'
                                         sizes="100vw"
                                         style={{ width: '100%', height: '100%' }}
-                                        className='object-cover'
+                                        className='w-full object-cover'
                                     />
                                 </div>
                                 <div className="slider-content w-full h-full">

@@ -44,7 +44,7 @@ const Review: React.FC<ReviewProps> = ({ data, type }) => {
                             <div className="review-item style-two h-full">
                                 <div className="review-main flex flex-col justify-between h-full py-10 px-12 rounded-2xl bg-white relative">
                                     <div className="review-infor">
-                                            <div className="review-desc text-button-lg font-medium">{String.raw`"`}{data.description}{String.raw`"`}</div>
+                                        <div className="review-desc text-button-lg font-medium">{String.raw`"`}{data.description}{String.raw`"`}</div>
                                     </div>
                                     <div className="flex items-end justify-between md:mt-7 mt-3">
                                         <div className="user flex items-center gap-4">
@@ -70,7 +70,28 @@ const Review: React.FC<ReviewProps> = ({ data, type }) => {
                             </div>
                         </>
                     ) : (
-                        <></>
+                        <>
+                            {type === 'style-three' && (
+                                <>
+                                    <div className="review-item style-three h-full">
+                                        <div className="review-main flex flex-col justify-between h-full py-10 px-8 rounded-3xl bg-white relative">
+                                            <div className="review-infor">
+                                                <div className="review-desc text-button-lg font-medium text-center">{String.raw`"`}{data.description}{String.raw`"`}</div>
+                                            </div>
+                                            <div className="flex flex-col items-center justify-center md:mt-5 mt-3">
+                                                <div className="user flex flex-col items-center">
+                                                    <div className="text-button-lg">{data.name}</div>
+                                                    <div className="text-grey md:mt-1 mt-0">{data.address}</div>
+                                                </div>
+                                                <div className="rate flex items-center justify-center mt-2">
+                                                    <Rate currentRate={data.rate} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </>
+                            )}
+                        </>
                     )}
                 </>
             )
