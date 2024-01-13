@@ -12,7 +12,7 @@ import 'swiper/css/effect-fade';
 const SliderTwo = () => {
     return (
         <>
-            <div className="slider-block style-one xl:h-[680px] lg:h-[560px] md:h-[440px] h-[300px] w-full">
+            <div className="slider-block style-two xl:h-[680px] lg:h-[560px] md:h-[440px] h-[320px] w-full">
                 <div className="slider-main h-full w-full">
                     <Swiper
                         spaceBetween={0}
@@ -27,7 +27,7 @@ const SliderTwo = () => {
                     >
                         <SwiperSlide>
                             <div className="slider-item h-full w-full relative overflow-hidden">
-                                <div className="slider-bg-img absolute top-0 right-0 bottom-0 left-0 w-full h-full -z-10">
+                                <div className="sub-img absolute top-0 right-0 bottom-0 left-0 w-full h-full -z-10">
                                     <Image
                                         src="/images/slider/bg-slider2-1.png"
                                         width={4000}
@@ -41,9 +41,9 @@ const SliderTwo = () => {
                                 <div className="slider-content w-full h-full">
                                     <div className="container w-full h-full flex items-center relative">
                                         <div className="text-content md:w-[50%] w-2/3 max-lg:pt-12 max-lg:pb-16">
-                                            <div className="text-subheading animate__animated animate__fadeInUp animate__delay-0-6s">Sale Off 50%</div>
-                                            <div className="text-slider mt-3 animate__animated animate__fadeInUp animate__delay-0-8s">Organic Shop Fruits & Vegetables</div>
-                                            <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-6 animate__animated animate__fadeInUp animate__delay-1s">Shop Now</Link>
+                                            <div className="text-subheading">Sale Off 50%</div>
+                                            <div className="text-slider mt-3">Organic Shop Fruits & Vegetables</div>
+                                            <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-6">Shop Now</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@ const SliderTwo = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="slider-item h-full w-full relative overflow-hidden">
-                                <div className="slider-bg-img absolute top-0 right-0 bottom-0 left-0 w-full h-full -z-10">
+                                <div className="sub-img absolute top-0 right-0 bottom-0 left-0 w-full h-full -z-10">
                                     <Image
                                         src="/images/slider/bg-slider2-2.png"
                                         width={4000}
@@ -65,9 +65,9 @@ const SliderTwo = () => {
                                 <div className="slider-content w-full h-full">
                                     <div className="container w-full h-full flex items-center relative">
                                         <div className="text-content md:w-[50%] w-2/3 max-lg:pt-12 max-lg:pb-16">
-                                            <div className="text-subheading animate__animated animate__fadeInUp animate__delay-0-6s">Sale Off 50%</div>
-                                            <div className="text-slider mt-3 animate__animated animate__fadeInUp animate__delay-0-8s">Organic Shop Fruits & Vegetables</div>
-                                            <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-6 animate__animated animate__fadeInUp animate__delay-1s">Shop Now</Link>
+                                            <div className="text-subheading">Sale Off 50%</div>
+                                            <div className="text-slider mt-3">Organic Shop Fruits & Vegetables</div>
+                                            <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-6">Shop Now</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@ const SliderTwo = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="slider-item h-full w-full relative overflow-hidden">
-                                <div className="slider-bg-img absolute top-0 right-0 bottom-0 left-0 w-full h-full -z-10">
+                                <div className="sub-img absolute top-0 right-0 bottom-0 left-0 w-full h-full -z-10">
                                     <Image
                                         src="/images/slider/bg-slider2-3.png"
                                         width={4000}
@@ -89,9 +89,9 @@ const SliderTwo = () => {
                                 <div className="slider-content w-full h-full">
                                     <div className="container w-full h-full flex items-center relative">
                                         <div className="text-content md:w-[40%] w-2/3  max-lg:pt-12 max-lg:pb-16">
-                                            <div className="text-subheading animate__animated animate__fadeInUp animate__delay-0-6s">Sale Off 50%</div>
-                                            <div className="text-slider mt-3 animate__animated animate__fadeInUp animate__delay-0-8s">Organic Shop Fruits & Vegetables</div>
-                                            <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-6 animate__animated animate__fadeInUp animate__delay-1s">Shop Now</Link>
+                                            <div className="text-subheading">Sale Off 50%</div>
+                                            <div className="text-slider mt-3">Organic Shop Fruits & Vegetables</div>
+                                            <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-6">Shop Now</Link>
                                         </div>
                                     </div>
                                 </div>

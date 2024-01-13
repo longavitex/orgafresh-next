@@ -190,7 +190,7 @@ const BlogDetail = () => {
                                                 </div>
                                                 <div className="user">
                                                     <div className="text-button">David Luiz</div>
-                                                    <div className="text-caption text-grey">August 13, 2022</div>
+                                                    <div className="text-caption text-grey">August 13, 2024</div>
                                                 </div>
                                             </div>
                                             <div className="more-action cursor-pointer">
@@ -214,7 +214,7 @@ const BlogDetail = () => {
                                                 </div>
                                                 <div className="user">
                                                     <div className="text-button">Alex Vidal</div>
-                                                    <div className="text-caption text-grey">August 13, 2022</div>
+                                                    <div className="text-caption text-grey">August 13, 2024</div>
                                                 </div>
                                             </div>
                                             <div className="more-action cursor-pointer">
@@ -238,7 +238,7 @@ const BlogDetail = () => {
                                                 </div>
                                                 <div className="user">
                                                     <div className="text-button">Christin Haley</div>
-                                                    <div className="text-caption text-grey">August 13, 2022</div>
+                                                    <div className="text-caption text-grey">August 13, 2024</div>
                                                 </div>
                                             </div>
                                             <div className="more-action cursor-pointer">

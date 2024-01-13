@@ -27,19 +27,22 @@ const ProductDetail: React.FC<Props> = ({ data, productId }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
     const { addToCart, updateCart, cartState } = useCart()
     const { openModalCart } = useModalCartContext()
-    const { addToWishlist, wishlistState } = useWishlist()
+    const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist()
     const { openModalWishlist } = useModalWishlistContext()
     const productMain = data[Number(productId) - 1]
+    const [activeTab, setActiveTab] = useState<string | undefined>('description')
 
     const handleSwiper = (swiper: SwiperCore) => {
         setThumbsSwiper(swiper);
     };
 
     const handleAddToWishlist = () => {
-        if (!wishlistState.wishlistArray.find(item => item.id === productMain.id)) {
+        if (wishlistState.wishlistArray.some(item => item.id === productMain.id)) {
+            removeFromWishlist(productMain.id)
+        } else {
             addToWishlist(productMain);
         }
-        openModalWishlist()
+        openModalWishlist();
     };
 
     const handleIncreaseQuantity = () => {
@@ -64,6 +67,9 @@ const ProductDetail: React.FC<Props> = ({ data, productId }) => {
         openModalCart()
     };
 
+    const handleActiveTab = (tab: string) => {
+        setActiveTab(tab)
+    }
 
     return (
         <>
@@ -161,20 +167,96 @@ const ProductDetail: React.FC<Props> = ({ data, productId }) => {
                                     Add To Cart
                                 </div>
                                 <div
-                                    className="add-wishlist-btn w-[50px] h-[50px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative"
+                                    className={`add-wishlist-btn w-[50px] h-[50px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative ${wishlistState.wishlistArray.some(item => item.id === productMain.id) ? 'added-wishlist' : ''}`}
                                     onClick={handleAddToWishlist}
                                 >
-                                    <Icon.Heart size={20} weight='bold' />
+                                    {
+                                        wishlistState.wishlistArray.some(item => item.id === productMain.id) ?
+                                            <Icon.Heart size={20} weight='fill' className='text-orange' /> :
+                                            <Icon.Heart size={20} weight='bold' />
+                                    }
                                 </div>
                             </div>
                             <div className="menu-tab-block lg:mt-10 mt-6">
                                 <div className="menu-tab flex items-center lg:gap-8 gap-6 pb-3 border-b border-line">
-                                    <div className="tab-item text-button cursor-pointer active">Description</div>
-                                    <div className="tab-item text-button cursor-pointer">Additional information</div>
-                                    <div className="tab-item text-button cursor-pointer">Reviews (5)</div>
+                                    <div
+                                        className={`tab-item text-button cursor-pointer ${activeTab === 'description' ? 'active' : ''}`}
+                                        onClick={() => handleActiveTab('description')}
+                                    >
+                                        Description</div>
+                                    <div
+                                        className={`tab-item text-button cursor-pointer ${activeTab === 'additional' ? 'active' : ''}`}
+                                        onClick={() => handleActiveTab('additional')}
+                                    >
+                                        Additional information</div>
+                                    <div
+                                        className={`tab-item text-button cursor-pointer ${activeTab === 'reviews' ? 'active' : ''}`}
+                                        onClick={() => handleActiveTab('reviews')}
+                                    >
+                                        Reviews (2)</div>
                                 </div>
-                                <div className="text-caption text-secondary mt-4">Etiam cursus condimentum vulputate. Nulla nisi orci, vulputate at dolor et, malesuada ultrices nisi. Ut varius ex ut purus porttitor, a facilisis orci condimentum. Nullam in elit et sapien ornare pellentesque at ac lorem. Cras suscipit, sapien in pellentesque hendrerit, dolor quam ornare nisl, vitae tempus nibh urna eget sem. Duis non interdum arcu, sit amet pellentesque odio. In sit amet aliquet augue.
-                                    Sed lobortis elit nec lacus congue tristique. Sed nunc orci, imperdiet et accumsan ac, tempor ut ante. Fusce ac magna maximus, malesuada tellus sed, sodales ligula. Sed a justo vel erat mollis vulputate. Donec dolor justo, porta sit amet ultricies ut, pulvinar a metus.
+                                <div className="desc-block mt-8">
+                                    <div className={`desc-item description ${activeTab === 'description' ? 'open' : ''}`}>
+                                        <div className="text-caption text-secondary">Etiam cursus condimentum vulputate. Nulla nisi orci, vulputate at dolor et, malesuada ultrices nisi. Ut varius ex ut purus porttitor, a facilisis orci condimentum. Nullam in elit et sapien ornare pellentesque at ac lorem. Cras suscipit, sapien in pellentesque hendrerit, dolor quam ornare nisl, vitae tempus nibh urna eget sem. Duis non interdum arcu, sit amet pellentesque odio. In sit amet aliquet augue.
+                                            Sed lobortis elit nec lacus congue tristique. Sed nunc orci, imperdiet et accumsan ac, tempor ut ante. Fusce ac magna maximus, malesuada tellus sed, sodales ligula.
+                                        </div>
+                                    </div>
+                                    <div className={`desc-item description ${activeTab === 'additional' ? 'open' : ''}`}>
+                                        <div className="flex items-center gap-2">
+                                            <div className="text-button">Weight:</div>
+                                            <div className="text-caption text-secondary ">50g, 60g, 70g, 80g, 90g.</div>
+                                        </div>
+                                        <div className="flex items-center gap-2 mt-2">
+                                            <div className="text-button">Health Benefits:</div>
+                                            <div className="text-caption text-secondary ">Vitamin A, B, C, D.</div>
+                                        </div>
+                                        <div className="flex items-center gap-2 mt-2">
+                                            <div className="text-button">Nutrition:</div>
+                                            <div className="text-caption text-secondary ">Copper, Magnesium, Zinc, Phosphorous, Selenium</div>
+                                        </div>
+                                    </div>
+                                    <div className={`desc-item description ${activeTab === 'reviews' ? 'open' : ''}`}>
+                                        <div className="item">
+                                            <div className="heading flex items-center justify-between">
+                                                <div className="user-infor flex gap-3">
+                                                    <div className="avatar">
+                                                        <Image
+                                                            src={'/images/avatar/3.jpg'}
+                                                            width={200}
+                                                            height={200}
+                                                            alt='img'
+                                                            className='w-[48px] aspect-square rounded-full'
+                                                        />
+                                                    </div>
+                                                    <div className="user">
+                                                        <div className="text-button">Christin Haley</div>
+                                                        <div className="text-caption text-grey">August 13, 2024</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="text-title text-secondary mt-2">Metus vestibulum condimentum condimentum interdum suspendisse nostra id viverra aliquam curae dictum habitant cum venenatis a sem parturient eu ipsum suspendisse morbi suspendisse imperdiet curae commodo class.</div>
+                                        </div>
+                                        <div className="item mt-4">
+                                            <div className="heading flex items-center justify-between">
+                                                <div className="user-infor flex gap-3">
+                                                    <div className="avatar">
+                                                        <Image
+                                                            src={'/images/avatar/2.jpg'}
+                                                            width={200}
+                                                            height={200}
+                                                            alt='img'
+                                                            className='w-[48px] aspect-square rounded-full'
+                                                        />
+                                                    </div>
+                                                    <div className="user">
+                                                        <div className="text-button">Smith Rowie</div>
+                                                        <div className="text-caption text-grey">August 29, 2024</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="text-title text-secondary mt-2">Metus vestibulum condimentum condimentum interdum suspendisse nostra id viverra aliquam curae dictum habitant cum venenatis a sem parturient eu ipsum suspendisse morbi suspendisse imperdiet curae commodo class.</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

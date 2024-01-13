@@ -52,7 +52,7 @@ const Cart = () => {
                                 <div className="text-cate basis-1/6 text-center">Total</div>
                                 <div className="text-cate basis-1/12 text-center"></div>
                             </div>
-                            <div className="list-product md:pb-8 pb-5 border-b border-line">
+                            <div className="list-product mt-5 md:pb-8 pb-5 border-b border-line">
                                 {cartState.cartArray.map((product) => (
                                     <div
                                         key={product.id}

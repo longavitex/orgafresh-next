@@ -11,44 +11,110 @@
             }
         }
     }
+
+    .swiper-slide {
+        .sub-img {
+            img {
+                transition: all ease 0.5s;
+            }
+        }
+
+        &.swiper-slide-active {
+            .slider-item {
+                animation: opacityAnimate 1s ease;
+
+                .text-content {
+
+                    .text-subheading,
+                    .text-sub-display {
+                        animation: animateY .8s ease;
+                    }
+
+                    .text-slider {
+                        animation: animateY 1.1s ease;
+                    }
+
+                    .button-main {
+                        animation: animateY 1.2s ease;
+                    }
+                }
+            }
+
+            .sub-img {
+                img {
+                    animation: ScaleImg .8s ease;
+                }
+            }
+        }
+    }
+
+    &.style-two {
+        .swiper-slide {
+            &.swiper-slide-active {
+                .slider-item {
+                    .text-content {
+
+                        .text-subheading,
+                        .text-sub-display {
+                            animation: animateX .7s ease;
+                        }
+
+                        .text-slider {
+                            animation: animateX 1s ease;
+                        }
+
+                        .button-main {
+                            animation: animateX 1.15s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@keyframes opacityAnimate {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ScaleImg {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes animateX {
     0% {
-        transform: translateX(10px);
-    }
-
-    50% {
-        transform: translateX(-10px);
+        opacity: 0;
+        transform: translateX(-60px);
     }
 
     100% {
-        transform: translateX(10px);
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
 @keyframes animateY {
     0% {
-        transform: translateY(10px);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(10px);
-    }
-}
-
-@keyframes opacityFade {
-    0% {
         opacity: 0;
-        transform: scale(1.1);
+        transform: translateY(60px);
     }
 
     100% {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
     }
 }

@@ -12,8 +12,12 @@ import dataReview from "@/data/Review.json"
 import ReviewSection from "@/components/Home2/ReviewSection"
 import Instagram from "@/components/Home2/Instagram"
 import Footer from "@/components/Footer/Footer"
+import CountdownTimeType from "@/type/CountdownType"
+import { countdownTime } from "@/components/Other/countdownTime"
 
 const Home2 = () => {
+    const serverTimeLeft: CountdownTimeType = countdownTime();
+    
     return (
         <>
             <TopNavTwo />
@@ -21,7 +25,7 @@ const Home2 = () => {
             <SliderTwo />
             <Category />
             <ArrivalOrganic data={productData} limit={6} />
-            <Deal data={productData} limit={6} />
+            <Deal data={productData} limit={6} serverTimeLeft={serverTimeLeft} />
             <WhyChooseUs />
             <Banner />
             <FeatureProduct data={productData} limit={5} />

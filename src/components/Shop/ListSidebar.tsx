@@ -30,16 +30,19 @@ const ListSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCat
 
     const handleCategory = (category: string) => {
         setCategory(prevCategory => prevCategory === category ? null : category)
+        setCurrentPage(0);
     }
 
     const handlePriceChange = (values: number | number[]) => {
         if (Array.isArray(values)) {
             setPriceRange({ min: values[0], max: values[1] });
         }
+        setCurrentPage(0);
     };
 
     const handleTaste = (taste: string) => {
         setTaste(prevTaste => prevTaste === taste ? null : taste)
+        setCurrentPage(0);
     }
 
     // Filter product data by dataTaste
@@ -161,10 +164,16 @@ const ListSidebar: React.FC<Props> = ({ data, productPerPage, dataTaste, dataCat
                                 Fresh Meats
                             </div>
                             <div
-                                className={`cate-item cursor-pointer block w-fit hover:underline mt-2 ${category === 'grain' ? 'active' : ''}`}
-                                onClick={() => handleCategory('grain')}
+                                className={`cate-item cursor-pointer block w-fit hover:underline mt-2 ${category === 'grains' ? 'active' : ''}`}
+                                onClick={() => handleCategory('grains')}
                             >
-                                Grain & Nuts
+                                Fresh Grains
+                            </div>
+                            <div
+                                className={`cate-item cursor-pointer block w-fit hover:underline mt-2 ${category === 'nuts' ? 'active' : ''}`}
+                                onClick={() => handleCategory('nuts')}
+                            >
+                                Fresh Nuts
                             </div>
                         </div>
                     </div>

@@ -34,16 +34,16 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
         } else {
             updateCart(data.id, 1)
         }
-        openModalCart(); //open modal cart
+        openModalCart();
     };
 
     const handleClickWishlist = () => {
         if (wishlistState.wishlistArray.some(item => item.id === data.id)) {
             removeFromWishlist(data.id)
         } else {
-            addToWishlist(data); // Truyền dữ liệu sản phẩm vào hàm addToWishlist
+            addToWishlist(data);
         }
-        openModalWishlist(); //open modal cart
+        openModalWishlist();
     };
 
     const handleQuickviewOpen = () => {
@@ -51,7 +51,6 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
     }
 
     const handleDetailProduct = (productId: string | number | null) => {
-        // Chuyển hướng đến trang shop với category được chọn
         router.push(`/product-detail?id=${productId}`);
     };
 
@@ -237,7 +236,13 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                                         </div>
                                                     </div>
                                                     <div className="right list-action flex flex-col items-center gap-2">
-                                                        <div className="quick-view-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative">
+                                                        <div
+                                                            className="quick-view-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative"
+                                                            onClick={(e) => {
+                                                                e.stopPropagation()
+                                                                handleQuickviewOpen()
+                                                            }}
+                                                        >
                                                             <div className="tag-action bg-black text-white text-xs p-1 rounded-sm">Quick View</div>
                                                             <Icon.MagnifyingGlass size={18} weight='bold' />
                                                         </div>
@@ -248,9 +253,19 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                                             <div className="tag-action bg-black text-white text-xs p-1 rounded-sm">Add To Cart</div>
                                                             <Icon.Bag size={18} weight='bold' />
                                                         </div>
-                                                        <div className="add-wishlist-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative">
+                                                        <div
+                                                            className={`add-wishlist-btn w-[40px] h-[40px] flex items-center justify-center border border-line rounded-xl bg-white duration-300 relative ${wishlistState.wishlistArray.some(item => item.id === data.id) ? 'added-wishlist' : ''}`}
+                                                            onClick={(e) => {
+                                                                handleClickWishlist()
+                                                                e.stopPropagation()
+                                                            }}
+                                                        >
                                                             <div className="tag-action bg-black text-white text-xs p-1 rounded-sm">Add To Wishlist</div>
-                                                            <Icon.Heart size={18} weight='bold' />
+                                                            {
+                                                                wishlistState.wishlistArray.some(item => item.id === data.id) ?
+                                                                    <Icon.Heart size={18} weight='fill' className='text-orange' /> :
+                                                                    <Icon.Heart size={18} weight='bold' />
+                                                            }
                                                         </div>
                                                     </div>
                                                 </div>

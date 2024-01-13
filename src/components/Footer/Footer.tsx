@@ -104,7 +104,7 @@ const Footer: React.FC<Props> = ({ borderTop }) => {
                 </div>
                 <div className="footer-bottom bg-brown">
                     <div className="container py-2 flex items-center justify-between flex-wrap gap-3 max-[400px]:flex-col">
-                        <div className="copyright text-title text-white">Copyright © 2023 OrgaFresh Inc.</div>
+                        <div className="copyright text-title text-white">Copyright © 2024 OrgaFresh Inc.</div>
                         <div className="list-social flex items-center gap-3">
                             <Link href={'https://www.facebook.com/'} target='_blank'>
                                 <Icon.FacebookLogo size={16} weight='fill' color='#FFFFFF' className='hover:fill-orange duration-300' />

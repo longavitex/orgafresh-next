@@ -11,8 +11,12 @@ import dataReview from "@/data/Review.json"
 import ReviewSection from "@/components/Home3/ReviewSection"
 import BestSeller from "@/components/Home3/BestSeller"
 import Footer from "@/components/Footer/Footer"
+import CountdownTimeType from "@/type/CountdownType"
+import { countdownTime } from "@/components/Other/countdownTime"
 
 const Home3 = () => {
+    const serverTimeLeft: CountdownTimeType = countdownTime();
+
     return (
         <>
             <TopNavThree />
@@ -20,7 +24,7 @@ const Home3 = () => {
             <SliderThree />
             <Banner />
             <ArrivalProduct data={productData} limit={6} />
-            <Deal />
+            <Deal serverTimeLeft={serverTimeLeft} />
             <FeatureProduct data={productData} />
             <Category />
             <ReviewSection data={dataReview} limit={5} />

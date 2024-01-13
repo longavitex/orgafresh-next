@@ -12,14 +12,18 @@ import blogData from '@/data/Blog.json'
 import ReviewSection from '@/components/Home1/ReviewSection'
 import reviewData from '@/data/Review.json'
 import Footer from '@/components/Footer/Footer'
+import CountdownTimeType from '@/type/CountdownType'
+import { countdownTime } from '@/components/Other/countdownTime'
 
-export default function Home() {
+const Home = () => {
+  const serverTimeLeft: CountdownTimeType = countdownTime();
+
   return (
     <div className='home-one'>
       <MenuOne />
       <SliderOne />
       <Category />
-      <Deal data={productData} limit={7} />
+      <Deal data={productData} limit={7} serverTimeLeft={serverTimeLeft} />
       <BestProduct />
       <BestSeller data={productData} limit={4} />
       <SpecialProduct data={productData} limit={20} />
@@ -29,3 +33,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home

@@ -1,8 +1,22 @@
-import React from 'react'
+'use client'
+
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { countdownTime } from '../Other/countdownTime'
+import CountdownTimeType from '@/type/CountdownType'
 
-const Deal = () => {
+const Deal = ({ serverTimeLeft }: { serverTimeLeft: CountdownTimeType }) => {
+    const [timeLeft, setTimeLeft] = useState(serverTimeLeft);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(countdownTime());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <>
             <div className="best-product-block relative flex items-center justify-center">
@@ -31,7 +45,9 @@ const Deal = () => {
                                             alt='bg'
                                             className='sm:w-[70px] sm:h-[70px] w-[48px]'
                                         />
-                                        <div className="day sm:text-4xl text-xl absolute sm:top-[47%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">12</div>
+                                        <div className="day sm:text-4xl text-xl absolute sm:top-[47%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                               {timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days}
+                                        </div>
                                         <div className="text-title absolute top-1/2 sm:left-[65px] left-[44px] -translate-y-1/2">Days</div>
                                     </div>
                                 </div>
@@ -44,7 +60,9 @@ const Deal = () => {
                                             alt='bg'
                                             className='sm:w-[70px] sm:h-[70px] w-[48px]'
                                         />
-                                        <div className="day sm:text-4xl text-xl absolute sm:top-[47%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">23</div>
+                                        <div className="day sm:text-4xl text-xl absolute sm:top-[47%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                               {timeLeft.hours < 10 ? `0${timeLeft.hours}` : timeLeft.hours}
+                                        </div>
                                         <div className="text-title absolute top-1/2 sm:left-[65px] left-[44px] -translate-y-1/2">Hours</div>
                                     </div>
                                 </div>
@@ -57,7 +75,9 @@ const Deal = () => {
                                             alt='bg'
                                             className='sm:w-[70px] sm:h-[70px] w-[48px]'
                                         />
-                                        <div className="day sm:text-4xl text-xl absolute sm:top-[47%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">32</div>
+                                        <div className="day sm:text-4xl text-xl absolute sm:top-[47%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                               {timeLeft.minutes < 10 ? `0${timeLeft.minutes}` : timeLeft.minutes}
+                                        </div>
                                         <div className="text-title absolute top-1/2 sm:left-[65px] left-[44px] -translate-y-1/2">Minutes</div>
                                     </div>
                                 </div>
@@ -70,7 +90,9 @@ const Deal = () => {
                                             alt='bg'
                                             className='sm:w-[70px] sm:h-[70px] w-[48px]'
                                         />
-                                        <div className="day sm:text-4xl text-xl absolute sm:top-[47%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">46</div>
+                                        <div className="day sm:text-4xl text-xl absolute sm:top-[47%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                               {timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}
+                                        </div>
                                         <div className="text-title absolute top-1/2 sm:left-[65px] left-[44px] -translate-y-1/2">Seconds</div>
                                     </div>
                                 </div>
