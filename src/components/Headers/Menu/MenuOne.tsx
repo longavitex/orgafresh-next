@@ -243,17 +243,17 @@ const MenuOne = () => {
                         <ul>
                           <li>
                             <Link href="/shop/shop-grid-fullwidth" className={`nav-item-mobile link duration-300`}>
-                              Home Smoothies
+                              Shop Grid Fullwidth
                             </Link>
                           </li>
                           <li>
                             <Link href="/shop/shop-grid-sidebar" className={`nav-item-mobile link duration-300`}>
-                              Home Fruits Vegetables
+                              Shop Grid Sidebar
                             </Link>
                           </li>
                           <li>
                             <Link href="/shop/shop-list-sidebar" className={`nav-item-mobile link duration-300`}>
-                              Home Grains & nuts
+                              Shop List Sidebar
                             </Link>
                           </li>
                         </ul>

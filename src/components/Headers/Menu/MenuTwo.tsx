@@ -244,17 +244,17 @@ const MenuTwo = () => {
                         <ul>
                           <li>
                             <Link href="/shop/shop-grid-fullwidth" className={`nav-item-mobile link duration-300 ${pathname === '/shop/shop-grid-fullwidth' ? 'active' : ''}`}>
-                              Home Grid fullwidth
+                              Shop Grid fullwidth
                             </Link>
                           </li>
                           <li>
                             <Link href="/shop/shop-grid-sidebar" className={`nav-item-mobile link duration-300 ${pathname === '/shop/shop-grid-sidebar' ? 'active' : ''}`}>
-                              Home grid sidebar
+                              Shop grid sidebar
                             </Link>
                           </li>
                           <li>
                             <Link href="/shop/shop-list-sidebar" className={`nav-item-mobile link duration-300 ${pathname === '/shop/shop-list-sidebar' ? 'active' : ''}`}>
-                              Home list sidebar
+                              Shop list sidebar
                             </Link>
                           </li>
                         </ul>
