@@ -40,7 +40,7 @@ const WhyChooseUs = () => {
                                 className='w-full'
                             />
                         </div>
-                        <div className="right sm:w-1/3 w-full">
+                        <div className="right sm:w-1/3 w-full sm:flex flex-col items-end justify-end">
                             <div className="item flex sm:flex-row-reverse sm:justify-end sm:text-right lg:gap-7 gap-4">
                                 <div className="icon-house-plant lg:text-5xl text-3xl"></div>
                                 <div className="feature">
