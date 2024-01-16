@@ -128,7 +128,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                         <>
                             <div className="product-item row-type">
                                 <div onClick={() => handleDetailProduct(data.id)} className="product-main h-full flex items-center gap-4 bg-white rounded-2xl duration-500 overflow-hidden cursor-pointer">
-                                    <div className="product-thumb relative">
+                                    <div className="product-thumb md:w-[158px] w-[132px] md:h-[158px] h-[132px] flex-shrink-0 relative">
                                         {data.sale && (
                                             <div className="product-sale text-xs text-white bg-orange px-3 py-0.5 inline-block rounded-full">
                                                 -{percentSale}%
@@ -136,10 +136,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                         )}
                                         <Image
                                             src={data.image}
-                                            width={158}
-                                            height={158}
+                                            width={458}
+                                            height={458}
                                             alt={data.name}
-                                            className='product-img object-cover duration-300'
+                                            className='product-img w-full h-full object-cover duration-300'
                                         />
                                     </div>
                                     <div className="product-infor pr-5 bg-white">
