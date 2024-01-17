@@ -9,6 +9,7 @@ import { useWishlist } from '@/context/WishlistContext';
 import { useModalWishlistContext } from '@/context/ModalWishlistContext';
 import { useModalCartContext } from '@/context/ModalCartContext';
 import { useCart } from '@/context/CartContext';
+import { useModalSearchContext } from '@/context/ModalSearchContext';
 
 const MenuThree = () => {
     const pathname = usePathname()
@@ -16,6 +17,7 @@ const MenuThree = () => {
     const { cartState } = useCart()
     const { openModalWishlist } = useModalWishlistContext()
     const { wishlistState } = useWishlist()
+    const { openModalSearch } = useModalSearchContext()
     const [fixedHeader, setFixedHeader] = useState(false)
     const [lastScrollPosition, setLastScrollPosition] = useState(0);
     const [openMenuMobile, setOpenMenuMobile] = useState(false)
@@ -129,7 +131,7 @@ const MenuThree = () => {
                                 <Link href={'/login'} className='text-caption text-secondary'>Login/Register</Link>
                             </div>
                             <div className="list-icon flex">
-                                <div className="max-[450px]:hidden search-icon flex items-center justify-center md:pr-5 pr-3 cursor-pointer">
+                                <div className="max-[450px]:hidden search-icon flex items-center justify-center md:pr-5 pr-3 cursor-pointer" onClick={openModalSearch}>
                                     <Icon.MagnifyingGlass size={24} color='black' />
                                 </div>
                                 <div

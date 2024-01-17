@@ -8,12 +8,14 @@ import { useWishlist } from '@/context/WishlistContext';
 import { useModalWishlistContext } from '@/context/ModalWishlistContext';
 import { useModalCartContext } from '@/context/ModalCartContext';
 import { useCart } from '@/context/CartContext';
+import { useModalSearchContext } from '@/context/ModalSearchContext';
 
 const MenuOne = () => {
   const { openModalCart } = useModalCartContext()
   const { cartState } = useCart()
   const { openModalWishlist } = useModalWishlistContext()
   const { wishlistState } = useWishlist()
+  const { openModalSearch } = useModalSearchContext()
   const [fixedHeader, setFixedHeader] = useState(false)
   const [lastScrollPosition, setLastScrollPosition] = useState(0);
   const [openMenuMobile, setOpenMenuMobile] = useState(false)
@@ -127,7 +129,10 @@ const MenuOne = () => {
                 <Link href={'/login'} className='text-caption text-secondary hover:text-black duration-300'>Login/Register</Link>
               </div>
               <div className="list-icon flex">
-                <div className="max-[450px]:hidden search-icon flex items-center justify-center md:pl-7 md:pr-7 md:border-x pl-2.5 pr-2.5 border-line cursor-pointer">
+                <div
+                  className="max-[450px]:hidden search-icon flex items-center justify-center md:pl-7 md:pr-7 md:border-x pl-2.5 pr-2.5 border-line cursor-pointer"
+                  onClick={openModalSearch}
+                >
                   <Icon.MagnifyingGlass size={24} color='black' />
                 </div>
                 <div

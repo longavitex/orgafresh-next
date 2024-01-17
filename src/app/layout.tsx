@@ -5,6 +5,8 @@ import GlobalProvider from './GlobalProvider'
 import ModalCart from '@/components/Modal/ModalCart'
 import ModalWishlist from '@/components/Modal/ModalWishlist'
 import ModalQuickview from '@/components/Modal/ModalQuickview'
+import ModalSearch from '@/components/Modal/ModalSearch'
+import Head from 'next/head'
 
 const quicksand = Quicksand({ subsets: ['latin'] })
 
@@ -20,6 +22,11 @@ export default function RootLayout({
 }) {
   return (
     <GlobalProvider>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="React NextJs Organic Template" />
+      </Head>
+
       <html lang="en">
         <body className={quicksand.className}>
           <div id="content">
@@ -28,6 +35,7 @@ export default function RootLayout({
           <ModalCart />
           <ModalWishlist />
           <ModalQuickview />
+          <ModalSearch />
         </body>
       </html>
     </GlobalProvider>
