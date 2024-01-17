@@ -10,7 +10,7 @@ const quicksand = Quicksand({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'OrgaFresh',
-  description: 'OrgaFresh - Organic Template',
+  description: 'React NextJs Organic Template',
 }
 
 export default function RootLayout({
