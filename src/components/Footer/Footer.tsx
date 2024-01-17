@@ -31,7 +31,7 @@ const Footer: React.FC<Props> = ({ borderTop }) => {
                                 <div className="text-title mt-1.5">Sign up for weekly newsletter</div>
                             </div>
                         </div>
-                        <form action="" className='h-[50px] flex items-center lg:basis-1/3 sm:w-[80%] w-full'>
+                        <form className='h-[50px] flex items-center lg:basis-1/3 sm:w-[80%] w-full'>
                             <input className='w-full h-full bg-line px-5 border-r-0 rounded-l-full' type="text" placeholder='Enter your email' />
                             <button className='bg-orange text-white h-full sm:px-6 px-3 rounded-r-full text-button'>Subscribe</button>
                         </form>

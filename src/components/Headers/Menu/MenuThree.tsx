@@ -28,10 +28,10 @@ const MenuThree = () => {
             setLastScrollPosition(scrollPosition);
         };
 
-        // Gắn sự kiện cuộn khi component được mount
+        // Add event scroll when component mounted
         window.addEventListener('scroll', handleScroll);
 
-        // Hủy sự kiện khi component bị unmount
+        // Remove event scroll when component mounted
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
