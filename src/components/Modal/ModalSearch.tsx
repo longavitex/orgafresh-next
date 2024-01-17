@@ -20,12 +20,12 @@ const ModalSearch = () => {
         <>
             <div className={`modal-search-block`} onClick={closeModalSearch}>
                 <div
-                    className={`modal-search-main md:p-10 p-6 rounded-[32px] ${isModalOpen ? 'open' : ''}`}
+                    className={`modal-search-main md:p-10 sm:p-6 rounded-[32px] ${isModalOpen ? 'open' : ''}`}
                     onClick={(e) => { e.stopPropagation() }}
                 >
                     <div className="form-search relative">
                         <Icon.MagnifyingGlass
-                            className='absolute heading5 right-6 top-1/2 -translate-y-1/2 cursor-pointer'
+                            className='absolute text-3xl text-white right-3 top-1/2 -translate-y-1/2 cursor-pointer'
                             onClick={() => {
                                 handleSearch(searchKeyword)
                             }}
@@ -33,7 +33,7 @@ const ModalSearch = () => {
                         <input
                             type="text"
                             placeholder='Searching...'
-                            className='text-button-lg h-14 w-full pl-6 pr-12'
+                            className='text-heading h-14 w-full pr-12'
                             value={searchKeyword}
                             onChange={(e) => setSearchKeyword(e.target.value)}
                             onKeyDown={(e) => e.key === 'Enter' && handleSearch(searchKeyword)}

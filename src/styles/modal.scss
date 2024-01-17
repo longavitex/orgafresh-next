@@ -122,6 +122,10 @@
             border-radius: 16px;
         }
     }
+}
+
+.modal-search-block {
+    background: rgba($color: #000000, $alpha: 0.8);
 
     .modal-search-main {
         position: absolute;
@@ -132,37 +136,27 @@
         transition: all ease 0.5s;
         opacity: 0;
         visibility: hidden;
-        overflow: auto;
 
         &.open {
             opacity: 1;
             visibility: visible;
         }
 
-        .list-product {
-            .product-item {
-                .list-action {
-                    grid-template-columns: repeat(1, minmax(0, 1fr));
-                    transform: translateY(120px);
-
-                    >div {
-                        width: 100%;
-                    }
-                }
+        .form-search {
+            input {
+                background-color: transparent;
+                color: var(--white);
+                border: none !important;
+                border-bottom: 1px solid var(--white) !important;
             }
         }
 
         @media (max-width: 1400px) {
-            max-height: calc(100vh - 400px);
-            height: 100%;
-            width: calc(100vw - 200px);
+            width: calc(100vw - 120px);
         }
 
         @media (max-width: 640px) {
-            max-height: calc(100vh - 200px);
-            height: 100%;
             width: calc(100vw - 80px);
-            border-radius: 16px;
         }
     }
 }

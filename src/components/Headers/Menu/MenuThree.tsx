@@ -10,6 +10,7 @@ import { useModalWishlistContext } from '@/context/ModalWishlistContext';
 import { useModalCartContext } from '@/context/ModalCartContext';
 import { useCart } from '@/context/CartContext';
 import { useModalSearchContext } from '@/context/ModalSearchContext';
+import { useRouter } from 'next/navigation'
 
 const MenuThree = () => {
     const pathname = usePathname()
@@ -22,6 +23,14 @@ const MenuThree = () => {
     const [lastScrollPosition, setLastScrollPosition] = useState(0);
     const [openMenuMobile, setOpenMenuMobile] = useState(false)
     const [openSubNavMobile, setOpenSubNavMobile] = useState<number | null>(null)
+    const [searchKeyword, setSearchKeyword] = useState('');
+    const router = useRouter()
+
+    const handleSearch = (value: string) => {
+        router.push(`/search-result?query=${value}`)
+        setSearchKeyword('')
+        setOpenMenuMobile(false)
+    }
 
     useEffect(() => {
         const handleScroll = () => {
@@ -183,8 +192,21 @@ const MenuThree = () => {
                                 </Link>
                             </div>
                             <div className="form-search relative mt-2">
-                                <Icon.MagnifyingGlass size={20} className='absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer' />
-                                <input type="text" placeholder='Search something...' className=' h-12 rounded-lg border border-line text-sm w-full pl-12 pr-4' />
+                                <Icon.MagnifyingGlass
+                                    size={20}
+                                    className='absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer'
+                                    onClick={() => {
+                                        handleSearch(searchKeyword)
+                                    }}
+                                />
+                                <input
+                                    type="text"
+                                    placeholder='Search something...'
+                                    className=' h-12 rounded-lg border border-line text-sm w-full pl-12 pr-4'
+                                    value={searchKeyword}
+                                    onChange={(e) => setSearchKeyword(e.target.value)}
+                                    onKeyDown={(e) => e.key === 'Enter' && handleSearch(searchKeyword)}
+                                />
                             </div>
                             <div className="list-nav mt-6">
                                 <ul>
