@@ -2,11 +2,7 @@
 
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
-import Image from 'next/image'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
-import productData from '@/data/Product.json'
-import Product from '../Product/Product';
 import { useModalSearchContext } from '@/context/ModalSearchContext'
 
 const ModalSearch = () => {
@@ -37,40 +33,11 @@ const ModalSearch = () => {
                         <input
                             type="text"
                             placeholder='Searching...'
-                            className='text-button-lg h-14 rounded-2xl border border-line w-full pl-6 pr-12'
+                            className='text-button-lg h-14 w-full pl-6 pr-12'
                             value={searchKeyword}
                             onChange={(e) => setSearchKeyword(e.target.value)}
                             onKeyDown={(e) => e.key === 'Enter' && handleSearch(searchKeyword)}
                         />
-                    </div>
-                    <div className="keyword mt-8">
-                        <div className="heading5">Feature keywords Today</div>
-                        <div className="list-keyword flex items-center flex-wrap gap-3 mt-4">
-                            <div
-                                className="item px-4 py-1.5 border border-line rounded-full cursor-pointer duration-300 hover:bg-black hover:text-white"
-                                onClick={() => handleSearch('dress')}
-                            >
-                                Dress
-                            </div>
-                            <div
-                                className="item px-4 py-1.5 border border-line rounded-full cursor-pointer duration-300 hover:bg-black hover:text-white"
-                                onClick={() => handleSearch('t-shirt')}
-                            >
-                                T-shirt
-                            </div>
-                            <div
-                                className="item px-4 py-1.5 border border-line rounded-full cursor-pointer duration-300 hover:bg-black hover:text-white"
-                                onClick={() => handleSearch('underwear')}
-                            >
-                                Underwear
-                            </div>
-                            <div
-                                className="item px-4 py-1.5 border border-line rounded-full cursor-pointer duration-300 hover:bg-black hover:text-white"
-                                onClick={() => handleSearch('top')}
-                            >
-                                Top
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -22,11 +22,6 @@ export default function RootLayout({
 }) {
   return (
     <GlobalProvider>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="React NextJs Organic Template" />
-      </Head>
-
       <html lang="en">
         <body className={quicksand.className}>
           <div id="content">
